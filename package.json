@@ -1,0 +1,12 @@
+{
+  "name": "awm",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=packages/core",
+    "test": "npm run test --workspace=packages/core",
+    "test:watch": "npm run test:watch --workspace=packages/core"
+  }
+}

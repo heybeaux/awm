@@ -1,0 +1,30 @@
+{
+  "name": "@heybeaux/awm-core",
+  "version": "0.1.0",
+  "description": "Agent Workflow Model — predictive execution protocol for agent pipelines",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "workflow",
+    "prediction",
+    "bayesian",
+    "pipeline",
+    "orchestration",
+    "world-model"
+  ],
+  "author": "heybeaux",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}
