@@ -1,0 +1,23 @@
+{
+  "name": "@heybeaux/awm-mastra",
+  "version": "0.1.0",
+  "description": "Mastra/Forge middleware for AWM — predictive step hooks for agent pipelines",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@heybeaux/awm-core": "0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": ["awm", "mastra", "forge", "pipeline", "middleware"],
+  "author": "heybeaux",
+  "license": "MIT"
+}
