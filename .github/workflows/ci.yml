@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test & Typecheck
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install core dependencies
+        working-directory: packages/core
+        run: npm ci
+
+      - name: Typecheck core
+        working-directory: packages/core
+        run: npx tsc --noEmit
+
+      - name: Run core tests
+        working-directory: packages/core
+        run: npx vitest run
+
+      - name: Install engram-adapter dependencies
+        working-directory: packages/engram-adapter
+        run: npm install
+
+      - name: Typecheck engram-adapter
+        working-directory: packages/engram-adapter
+        run: npx tsc --noEmit
+
+      - name: Install mastra-middleware dependencies
+        working-directory: packages/mastra-middleware
+        run: npm install
+
+      - name: Typecheck mastra-middleware
+        working-directory: packages/mastra-middleware
+        run: npx tsc --noEmit

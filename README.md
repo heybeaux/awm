@@ -1,5 +1,7 @@
 # AWM — Agent Workflow Model
 
+[![CI](https://github.com/heybeaux/awm/actions/workflows/ci.yml/badge.svg)](https://github.com/heybeaux/awm/actions/workflows/ci.yml)
+
 > Predictive execution protocol for agent pipelines. Learn from history. Adapt before wasting tokens.
 
 AWM is a prediction and outcome modeling layer for multi-agent pipelines. It observes what happened in past runs, predicts what's likely to happen next, and recommends runtime adaptations — model routing, constraint injection, step skipping — before each step executes.
