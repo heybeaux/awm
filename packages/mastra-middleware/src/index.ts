@@ -13,6 +13,18 @@
 import type { StepPrediction, StepTrace, ACRContext } from '../../core/src/types.js';
 import type { Oracle } from '../../core/src/oracle.js';
 
+export { wrapStep } from './step-wrapper.js';
+export type { WrapStepConfig, StepDefinition, AWMStepData } from './step-wrapper.js';
+export { MetricsEngine } from './metrics.js';
+export type {
+  AWMDashboardMetrics,
+  StepMetrics,
+  ProfileMetrics,
+  ModelMetrics,
+  ConstraintMetrics,
+  DailyMetrics,
+} from './metrics.js';
+
 // ─── Configuration ───
 
 export type AWMMode = 'shadow' | 'advisory' | 'active';
