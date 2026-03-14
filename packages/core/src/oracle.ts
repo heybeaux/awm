@@ -61,19 +61,31 @@ export class Oracle {
       context.profileSlug,
     );
 
-    // 3. Get model recommendation — factor in revision risk
-    // Revision cost accounting: a revision means re-running the step,
-    // so the effective cost of a cheap-but-risky model is higher than it looks.
-    // When constraints exist, this step has a KNOWN revision problem — favor quality.
-    const hasRevisionRisk = constraintList.length > 0 || successProb < 0.65;
-    const revisionPenalty = hasRevisionRisk
-      ? (1 - successProb) // estimated re-run cost fraction
-      : 0;
+    // 3. Get model recommendation — QUALITY FIRST
+    // Philosophy: revisions waste human time, pipeline time, and trust.
+    // A cheaper model that causes a revision costs MORE than the expensive one
+    // that gets it right the first time. Save money only when a cheaper model
+    // has PROVEN it can match quality.
+    //
+    // Default: negative cost weight (prefer quality).
+    // Only go positive when: no constraints, high success rate, AND enough data
+    // to be confident the cheap model actually works for this step.
+    const hasConstraints = constraintList.length > 0;
+    // Continuous quality-cost scaling based on evidence
+    // The more we KNOW a step succeeds, the more cost freedom we allow.
+    // dataStrength: 0 (no data) → 1 (abundant data)
+    // reliabilityScore: 0 (always fails) → 1 (always passes, no constraints)
+    const dataStrength = Math.min(1, belief.observations / 20);
+    const reliabilityScore = hasConstraints
+      ? 0  // constraints = known problems = never cheap
+      : successProb * dataStrength;
 
-    // Negative cost weight = prioritize quality over cheapness
-    const effectiveCostWeight = hasRevisionRisk
-      ? -revisionPenalty  // negative flips preference to quality
-      : this.config.costWeight;
+    // Blend from quality-first (negative) to cost-optimized (positive)
+    // At reliabilityScore=0: effectiveCostWeight = -0.35 (strong quality preference)
+    // At reliabilityScore=1: effectiveCostWeight = costWeight (full cost optimization)
+    const effectiveCostWeight = reliabilityScore > 0.7
+      ? this.config.costWeight * (reliabilityScore - 0.5) * 2  // gradually unlock cost savings
+      : -(0.15 + (1 - successProb) * 0.5);  // quality-first with proportional penalty
 
     const modelRec = await this.router.selectModel(
       context.stepType,
