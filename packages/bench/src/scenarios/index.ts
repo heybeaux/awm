@@ -25,6 +25,7 @@ const STANDARD_STEPS: StepConfig[] = [
     baseLatency: 4000,
     profileSensitivity: 0.3,
     modelSensitivity: 0.2,
+    criticality: 'standard',
     revisionReasons: [
       { reason: 'Strategy lacks specificity', probability: 0.4 },
       { reason: 'Wrong audience segment targeted', probability: 0.3 },
@@ -38,6 +39,7 @@ const STANDARD_STEPS: StepConfig[] = [
     baseLatency: 3500,
     profileSensitivity: 0.5,
     modelSensitivity: 0.3,
+    criticality: 'critical',  // high blast radius — subjective, expensive to revise
     revisionReasons: [
       { reason: 'Missing impact statistics', probability: 0.30 },
       { reason: 'Tone inappropriate for audience', probability: 0.25 },
@@ -53,6 +55,7 @@ const STANDARD_STEPS: StepConfig[] = [
     baseLatency: 3000,
     profileSensitivity: 0.4,
     modelSensitivity: 0.15,
+    criticality: 'critical',  // compliance — must not fail
     revisionReasons: [
       { reason: 'Compliance violation detected', probability: 0.35 },
       { reason: 'Cultural sensitivity issue', probability: 0.30 },
@@ -67,6 +70,7 @@ const STANDARD_STEPS: StepConfig[] = [
     baseLatency: 2500,
     profileSensitivity: 0.3,
     modelSensitivity: 0.25,
+    criticality: 'exploratory',  // visual drafts — cheap to iterate
     revisionReasons: [
       { reason: 'Brand colors not applied correctly', probability: 0.30 },
       { reason: 'Image composition poor', probability: 0.25 },

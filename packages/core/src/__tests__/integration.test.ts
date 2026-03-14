@@ -128,11 +128,11 @@ describe('Full Pipeline Lifecycle', () => {
       modelSelections[pred.suggestedModel] = (modelSelections[pred.suggestedModel] || 0) + 1;
     }
 
-    // Should not uniformly distribute — Thompson Sampling should show preference
+    // With exploration decay, Thompson Sampling should strongly prefer
+    // the best-performing model after 50+ training runs
     const values = Object.values(modelSelections);
     const maxSelection = Math.max(...values);
-    const minSelection = Math.min(...values);
-    expect(maxSelection).toBeGreaterThan(minSelection);
+    expect(maxSelection).toBeGreaterThan(50); // dominant model gets majority
 
     // ─── Phase 6: New client starts fresh (profile isolation) ───
     const newClientPrediction = await oracle.predict({

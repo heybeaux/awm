@@ -123,7 +123,18 @@ export interface PredictionContext {
   costBudget?: number;
   /** Previous step outcomes in this run */
   priorSteps?: StepOutcomeSummary[];
+  /** Step criticality classification */
+  criticality?: StepCriticality;
 }
+
+/**
+ * Step criticality classification.
+ * Drives how aggressively AWM optimizes cost vs quality.
+ */
+export type StepCriticality =
+  | 'critical'      // must-pass — never downgrade model (approval gates, compliance, red-team)
+  | 'standard'      // default — quality-first, cost savings when proven safe
+  | 'exploratory';  // safe to experiment — cheap retries acceptable (drafts, brainstorming)
 
 /**
  * ACR capability context provided to AWM.

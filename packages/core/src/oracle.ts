@@ -61,31 +61,45 @@ export class Oracle {
       context.profileSlug,
     );
 
-    // 3. Get model recommendation — QUALITY FIRST
-    // Philosophy: revisions waste human time, pipeline time, and trust.
-    // A cheaper model that causes a revision costs MORE than the expensive one
-    // that gets it right the first time. Save money only when a cheaper model
-    // has PROVEN it can match quality.
+    // 3. Get model recommendation — criticality-aware, quality-first routing
     //
-    // Default: negative cost weight (prefer quality).
-    // Only go positive when: no constraints, high success rate, AND enough data
-    // to be confident the cheap model actually works for this step.
+    // Three routing modes based on step criticality:
+    //   critical:    NEVER downgrade. Always use best available model.
+    //   standard:    Quality-first. Cost savings only when proven safe.
+    //   exploratory: Cost-first. Safe to experiment with cheaper models.
+    //
+    // Within 'standard' mode, uses continuous evidence-based scaling
+    // with a confidence gate: must have enough data AND high enough
+    // success rate before cost optimization unlocks.
+    const criticality = context.criticality || 'standard';
     const hasConstraints = constraintList.length > 0;
-    // Continuous quality-cost scaling based on evidence
-    // The more we KNOW a step succeeds, the more cost freedom we allow.
-    // dataStrength: 0 (no data) → 1 (abundant data)
-    // reliabilityScore: 0 (always fails) → 1 (always passes, no constraints)
-    const dataStrength = Math.min(1, belief.observations / 20);
-    const reliabilityScore = hasConstraints
-      ? 0  // constraints = known problems = never cheap
-      : successProb * dataStrength;
 
-    // Blend from quality-first (negative) to cost-optimized (positive)
-    // At reliabilityScore=0: effectiveCostWeight = -0.35 (strong quality preference)
-    // At reliabilityScore=1: effectiveCostWeight = costWeight (full cost optimization)
-    const effectiveCostWeight = reliabilityScore > 0.7
-      ? this.config.costWeight * (reliabilityScore - 0.5) * 2  // gradually unlock cost savings
-      : -(0.15 + (1 - successProb) * 0.5);  // quality-first with proportional penalty
+    let effectiveCostWeight: number;
+
+    if (criticality === 'critical') {
+      // Must-pass: always prefer quality, strong negative cost weight
+      effectiveCostWeight = -1.0;
+    } else if (criticality === 'exploratory') {
+      // Safe to experiment: use configured cost weight
+      effectiveCostWeight = this.config.costWeight;
+    } else {
+      // Standard: evidence-based scaling with confidence gate
+      const dataStrength = Math.min(1, belief.observations / 20);
+      const reliabilityScore = hasConstraints
+        ? 0  // known revision problems = never cheap
+        : successProb * dataStrength;
+
+      // Confidence gate: need sufficient data AND high confidence
+      const isConfident = dataConfidence > 0.6 && belief.observations >= 8;
+
+      if (reliabilityScore > 0.7 && isConfident) {
+        // Proven reliable — allow cost optimization proportional to evidence
+        effectiveCostWeight = this.config.costWeight * (reliabilityScore - 0.5) * 2;
+      } else {
+        // Not proven — quality-first with proportional penalty
+        effectiveCostWeight = -(0.15 + (1 - successProb) * 0.5);
+      }
+    }
 
     const modelRec = await this.router.selectModel(
       context.stepType,

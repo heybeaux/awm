@@ -65,12 +65,21 @@ function normalRandom(): number {
   return Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
 }
 
+/** Exploration decay: after this many total pulls across all arms,
+ *  start blending Thompson samples toward the posterior mean. */
+const EXPLORATION_DECAY_START = 15;
+const EXPLORATION_DECAY_RATE = 0.05; // per pull beyond start
+
 export class ModelRouter {
   constructor(private store: AWMStore) {}
 
   /**
-   * Select the best model for a step using Thompson Sampling.
-   * Returns the model name and the sampled reward.
+   * Select the best model for a step using Thompson Sampling
+   * with exploration decay.
+   *
+   * Early on: pure Thompson Sampling (explore freely).
+   * After EXPLORATION_DECAY_START pulls: gradually shift toward
+   * exploitation (posterior mean) to stabilize routing.
    */
   async selectModel(
     stepType: string,
@@ -82,6 +91,14 @@ export class ModelRouter {
     const arms = await this.store.getArms(stepType, slug);
     const armMap = new Map(arms.map((a) => [a.model, a]));
 
+    // Total pulls across all arms for this step/profile — drives decay
+    const totalPulls = arms.reduce((sum, a) => sum + a.pulls, 0);
+
+    // Decay factor: 1.0 (pure sampling) → 0.0 (pure exploitation)
+    const explorationFactor = totalPulls <= EXPLORATION_DECAY_START
+      ? 1.0
+      : Math.max(0.05, 1.0 - (totalPulls - EXPLORATION_DECAY_START) * EXPLORATION_DECAY_RATE);
+
     let bestModel = availableModels[0];
     let bestReward = -Infinity;
     const samples: Record<string, number> = {};
@@ -89,10 +106,17 @@ export class ModelRouter {
     for (const model of availableModels) {
       const arm = armMap.get(model) || this.defaultArm(model, stepType, slug);
 
-      // Sample from this arm's reward distribution
-      const qualitySample = sampleBeta(arm.alpha, arm.beta);
+      // Posterior mean (exploitation value)
+      const posteriorMean = arm.alpha / (arm.alpha + arm.beta);
 
-      // Adjust for cost (cheaper models get a bonus)
+      // Thompson sample (exploration value)
+      const thompsonSample = sampleBeta(arm.alpha, arm.beta);
+
+      // Blend: early = mostly sample, late = mostly mean
+      const qualitySample = explorationFactor * thompsonSample
+        + (1 - explorationFactor) * posteriorMean;
+
+      // Adjust for cost
       const costPenalty = arm.avgCost > 0 ? costWeight * arm.avgCost : 0;
       const adjustedReward = qualitySample - costPenalty;
 
@@ -112,7 +136,7 @@ export class ModelRouter {
       sampledReward: bestReward,
       reasoning:
         pulls > 0
-          ? `Selected ${bestModel} (${pulls} prior uses, ${((arm!.alpha / (arm!.alpha + arm!.beta)) * 100).toFixed(0)}% success rate)`
+          ? `Selected ${bestModel} (${pulls} pulls, ${((arm!.alpha / (arm!.alpha + arm!.beta)) * 100).toFixed(0)}% success, exploration: ${(explorationFactor * 100).toFixed(0)}%)`
           : `Exploring ${bestModel} (no prior data for this step/profile)`,
     };
   }

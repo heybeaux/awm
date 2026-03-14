@@ -211,6 +211,7 @@ export class BenchmarkRunner {
           stepType: step.stepType,
           profileSlug: params.profileSlug,
           availableModels: params.models,
+          criticality: step.criticality,
         });
         predictions[step.stepType] = prediction;
         modelOverrides[step.stepType] = prediction.suggestedModel;

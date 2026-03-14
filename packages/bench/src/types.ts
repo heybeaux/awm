@@ -77,6 +77,8 @@ export interface StepConfig {
   baseCost: number;
   /** Base latency in ms */
   baseLatency: number;
+  /** Step criticality — drives routing aggressiveness */
+  criticality?: 'critical' | 'standard' | 'exploratory';
 }
 
 /**
