@@ -9,10 +9,10 @@
 import type { ConstraintPattern, StepTrace, AWMStore } from './types.js';
 
 /** Minimum occurrences before a pattern becomes actionable */
-const MIN_OCCURRENCES = 3;
+const MIN_OCCURRENCES = 2;
 
 /** Minimum frequency (0-1) relative to total runs for this step/profile */
-const MIN_FREQUENCY = 0.15;
+const MIN_FREQUENCY = 0.08;
 
 export class ConstraintExtractor {
   constructor(private store: AWMStore) {}
@@ -22,12 +22,28 @@ export class ConstraintExtractor {
    * Returns constraints sorted by frequency (most common first).
    */
   async getConstraints(stepType: string, profileSlug?: string): Promise<string[]> {
+    // Get patterns for specific profile AND global
     const patterns = await this.store.getPatterns(stepType, profileSlug);
 
     return patterns
       .filter((p) => p.occurrences >= MIN_OCCURRENCES && p.frequency >= MIN_FREQUENCY)
       .sort((a, b) => b.frequency - a.frequency)
       .map((p) => p.constraint);
+  }
+
+  /**
+   * Force a constraint analysis pass for all step/profile combinations
+   * in the store. Useful after warmup to ensure patterns are extracted.
+   */
+  async analyzeAll(stepTypes: string[], profileSlugs: string[]): Promise<ConstraintPattern[]> {
+    const allPatterns: ConstraintPattern[] = [];
+    for (const stepType of stepTypes) {
+      for (const slug of profileSlugs) {
+        const patterns = await this.analyzeRevisions(stepType, slug);
+        allPatterns.push(...patterns);
+      }
+    }
+    return allPatterns;
   }
 
   /**
@@ -62,7 +78,7 @@ export class ConstraintExtractor {
     const patterns: ConstraintPattern[] = [];
     for (const [reason, { count, traces: reasonTraces }] of reasonCounts) {
       const frequency = count / traces.length;
-      if (count >= MIN_OCCURRENCES || frequency >= MIN_FREQUENCY) {
+      if (count >= MIN_OCCURRENCES && frequency >= MIN_FREQUENCY) {
         const constraint = reasonToConstraint(reason);
         const pattern: ConstraintPattern = {
           patternId: generatePatternId(stepType, slug, reason),

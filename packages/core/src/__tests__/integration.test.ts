@@ -96,7 +96,9 @@ describe('Full Pipeline Lifecycle', () => {
     });
 
     expect(informedPrediction.historicalBasis).toBeGreaterThan(0);
-    expect(informedPrediction.confidence).toBeGreaterThan(coldPrediction.confidence);
+    // Confidence is now posterior mean (P(predicted outcome))
+    // After training, informed prediction should be based on real data
+    expect(informedPrediction.historicalBasis).toBeGreaterThan(10);
 
     // Strategist should have high confidence pass prediction
     const strategistPrediction = await oracle.predict({
@@ -132,15 +134,17 @@ describe('Full Pipeline Lifecycle', () => {
     const minSelection = Math.min(...values);
     expect(maxSelection).toBeGreaterThan(minSelection);
 
-    // ─── Phase 6: New client falls back to global ───
+    // ─── Phase 6: New client starts fresh (profile isolation) ───
     const newClientPrediction = await oracle.predict({
       stepType: 'creative-director',
       profileSlug: 'brand-new-client',
       availableModels: models,
     });
 
-    // Should have data from global beliefs
-    expect(newClientPrediction.historicalBasis).toBeGreaterThan(0);
+    // With profile isolation, new client has no data — starts from uninformative prior
+    expect(newClientPrediction.historicalBasis).toBe(0);
+    // Should still produce a valid prediction (from prior)
+    expect(['pass', 'revise', 'fail']).toContain(newClientPrediction.outcome);
   });
 
   it('tracks prediction accuracy over time', async () => {

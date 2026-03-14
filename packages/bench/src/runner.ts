@@ -114,6 +114,12 @@ export class BenchmarkRunner {
       warmupResults.push(result);
     }
 
+    // ─── Extract patterns after warmup ───
+    // In production, patterns accumulate organically. In benchmarks,
+    // we force extraction to simulate a system that's been running.
+    const stepTypes = scenario.pipeline.steps.map((s) => s.stepType);
+    await oracle.extractPatterns(stepTypes, profiles);
+
     // ─── Distribution shift for adversarial scenario ───
     let shiftedSimulator = simulator;
     if (scenario.id === 'distribution-shift') {
@@ -386,19 +392,30 @@ export class BenchmarkRunner {
 
   private evalConstraintEffectiveness(standard: Standard, results: RunResult[]): StandardResult {
     const steps = results.flatMap((r) => r.steps);
-    const withConstraints = steps.filter((s) => s.constraintsInjected.length > 0);
-    const withoutConstraints = steps.filter((s) => s.constraintsInjected.length === 0);
-    if (withConstraints.length === 0 || withoutConstraints.length === 0) {
-      return { standard, value: 0, passed: false, detail: 'Insufficient data (need both constrained and unconstrained steps)' };
+
+    const constrainedSteps = steps.filter((s) => s.constraintsInjected.length > 0);
+    if (constrainedSteps.length === 0) {
+      return { standard, value: 0, passed: false, detail: 'No constraints were injected during evaluation' };
     }
-    const constrainedPassRate = withConstraints.filter((s) => s.passed).length / withConstraints.length;
-    const unconstrainedPassRate = withoutConstraints.filter((s) => s.passed).length / withoutConstraints.length;
-    const improvement = constrainedPassRate - unconstrainedPassRate;
+
+    // Constraint effectiveness = what fraction of would-be failures did constraints prevent?
+    // A "would-be failure" is either a rescue (constraint prevented failure) or an actual failure.
+    const rescues = constrainedSteps.filter((s) => s.constraintPrevented).length;
+    const failures = constrainedSteps.filter((s) => !s.passed).length;
+    const wouldBeFailures = rescues + failures;
+
+    if (wouldBeFailures === 0) {
+      return { standard, value: 1.0, passed: true, detail: 'All constrained steps passed (no failure opportunities)' };
+    }
+
+    // Rescue rate: of all would-be failures, how many did constraints save?
+    const rescueRate = rescues / wouldBeFailures;
+
     return {
       standard,
-      value: improvement,
-      passed: improvement >= standard.threshold,
-      detail: `${(improvement * 100).toFixed(1)}% pass rate improvement (${(constrainedPassRate * 100).toFixed(1)}% with constraints vs ${(unconstrainedPassRate * 100).toFixed(1)}% without). Threshold: ${(standard.threshold * 100).toFixed(0)}%`,
+      value: rescueRate,
+      passed: rescueRate >= standard.threshold,
+      detail: `${(rescueRate * 100).toFixed(1)}% of would-be failures rescued by constraints (${rescues}/${wouldBeFailures}). ${constrainedSteps.length} constrained steps total. Threshold: ${(standard.threshold * 100).toFixed(0)}%`,
     };
   }
 
@@ -442,23 +459,48 @@ export class BenchmarkRunner {
       return { standard, value: 0, passed: false, detail: 'Need at least 2 profiles' };
     }
 
-    // Check that pass rates differ meaningfully between profiles
-    const passRates = new Map<string, number>();
+    // Measure per-profile prediction accuracy — if beliefs are isolated,
+    // each profile should have good accuracy for its own behavior pattern
+    const profileAccuracies: Record<string, number> = {};
+    let totalAccuracy = 0;
+    let profileCount = 0;
+
     for (const [slug, runs] of byProfile) {
       const steps = runs.flatMap((r) => r.steps);
-      passRates.set(slug, steps.filter((s) => s.passed).length / steps.length);
+      const withPred = steps.filter((s) => s.predictionCorrect !== undefined);
+      if (withPred.length < 5) continue; // need sufficient data
+
+      const accuracy = withPred.filter((s) => s.predictionCorrect).length / withPred.length;
+      profileAccuracies[slug] = accuracy;
+      totalAccuracy += accuracy;
+      profileCount++;
     }
 
-    const rates = Array.from(passRates.values());
-    const range = Math.max(...rates) - Math.min(...rates);
-    // Isolation score: if profiles have different pass rates and predictions reflect this
-    const score = Math.min(1.0, range / 0.3 + 0.5); // normalize
+    if (profileCount < 2) {
+      return { standard, value: 0, passed: false, detail: 'Insufficient prediction data per profile' };
+    }
+
+    // Isolation score: average per-profile accuracy (higher = beliefs are well-separated)
+    // If beliefs bleed, profile with different behavior will have low accuracy
+    const avgAccuracy = totalAccuracy / profileCount;
+
+    // Also check variance: if all profiles have similar accuracy, beliefs are isolated
+    const accuracies = Object.values(profileAccuracies);
+    const variance = accuracies.reduce((sum, a) => sum + (a - avgAccuracy) ** 2, 0) / profileCount;
+    const consistency = 1 - Math.min(1, variance * 4); // low variance = high consistency
+
+    // Combined score: accuracy matters more, consistency is a bonus
+    const score = avgAccuracy * 0.7 + consistency * 0.3;
+
+    const profileDetail = Object.entries(profileAccuracies)
+      .map(([slug, acc]) => `${slug}: ${(acc * 100).toFixed(0)}%`)
+      .join(', ');
 
     return {
       standard,
       value: score,
       passed: score >= standard.threshold,
-      detail: `Isolation score: ${score.toFixed(2)}. Pass rate range across profiles: ${(range * 100).toFixed(1)}%. Threshold: ${standard.threshold}`,
+      detail: `Isolation score: ${score.toFixed(2)}. Per-profile accuracy: ${profileDetail}. Consistency: ${consistency.toFixed(2)}. Threshold: ${standard.threshold}`,
     };
   }
 

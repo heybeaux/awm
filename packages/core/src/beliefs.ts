@@ -8,25 +8,27 @@
 
 import type { StepBelief, AWMStore } from './types.js';
 
-/** Default prior: Beta(2, 2) — weakly informative, centered at 50% */
-const DEFAULT_ALPHA = 2;
-const DEFAULT_BETA = 2;
+/** Default prior: Beta(1.5, 1.5) — weak prior, slightly informative.
+ * Balances fast adaptation with stable cold-start predictions. */
+const DEFAULT_ALPHA = 1.5;
+const DEFAULT_BETA = 1.5;
 
 export class BeliefEngine {
   constructor(private store: AWMStore) {}
 
   /**
    * Get the current belief for a step type + profile.
-   * Returns the global belief if no profile-specific belief exists.
+   * If profile-specific data exists, returns it without global contamination.
+   * Falls back to global only when profile has zero observations.
    */
   async getBelief(stepType: string, profileSlug?: string): Promise<StepBelief> {
     // Try profile-specific first
     if (profileSlug) {
       const specific = await this.store.getBelief(stepType, profileSlug);
-      if (specific) return specific;
+      if (specific && specific.observations > 0) return specific;
     }
 
-    // Fall back to global
+    // Fall back to global only if no profile data
     const global = await this.store.getBelief(stepType, '__global__');
     if (global) return global;
 
@@ -43,10 +45,27 @@ export class BeliefEngine {
 
   /**
    * Update belief after observing a step outcome.
+   * Profile-specific beliefs are updated independently — no global contamination.
+   * Global is only updated when no profile is specified (truly global data).
    */
   async update(stepType: string, profileSlug: string | undefined, passed: boolean): Promise<StepBelief> {
     const slug = profileSlug || '__global__';
-    const belief = await this.getBelief(stepType, slug);
+
+    // Get existing belief or create new one — don't fall back to global for profiles
+    let belief: StepBelief;
+    if (slug !== '__global__') {
+      const specific = await this.store.getBelief(stepType, slug);
+      belief = specific || {
+        stepType,
+        profileSlug: slug,
+        alpha: DEFAULT_ALPHA,
+        beta: DEFAULT_BETA,
+        observations: 0,
+        updatedAt: new Date().toISOString(),
+      };
+    } else {
+      belief = await this.getBelief(stepType, undefined);
+    }
 
     // Bayesian update: success → alpha++, failure → beta++
     if (passed) {
@@ -59,12 +78,6 @@ export class BeliefEngine {
     belief.updatedAt = new Date().toISOString();
 
     await this.store.setBelief(belief);
-
-    // Also update global belief
-    if (slug !== '__global__') {
-      await this.update(stepType, undefined, passed);
-    }
-
     return belief;
   }
 

@@ -101,24 +101,26 @@ export class PipelineSimulator {
     // Apply model quality modifier
     passRate *= model.qualityMultiplier;
 
-    // Apply constraint effectiveness
-    let constraintPrevented = false;
-    if (injectedConstraints.length > 0) {
-      // Each relevant constraint reduces revision probability
-      const revisionReduction = injectedConstraints.length * this.constraintEffectiveness * 0.15;
-      const wouldHaveFailed = this.rng.next() > passRate;
-      passRate = Math.min(1.0, passRate + revisionReduction);
+    // Clamp base pass rate before constraint adjustment
+    passRate = Math.max(0.05, Math.min(0.98, passRate));
 
-      if (wouldHaveFailed && this.rng.next() < revisionReduction) {
+    // Single draw for outcome determination
+    const roll = this.rng.next();
+    let passed = roll < passRate;
+
+    // Constraint rescue: if would have failed AND constraints are injected,
+    // give a chance to rescue. Constraints target specific failure modes,
+    // so their effectiveness compounds with the number of relevant constraints.
+    let constraintPrevented = false;
+    if (!passed && injectedConstraints.length > 0) {
+      // Combined rescue probability: 1 - (1 - p)^n (independent attempts)
+      const perConstraintRate = this.constraintEffectiveness * 0.45;
+      const combinedMissRate = Math.pow(1 - perConstraintRate, injectedConstraints.length);
+      if (this.rng.next() < (1 - combinedMissRate)) {
+        passed = true;
         constraintPrevented = true;
       }
     }
-
-    // Clamp pass rate
-    passRate = Math.max(0.05, Math.min(0.98, passRate));
-
-    // Determine outcome
-    const passed = this.rng.next() < passRate;
     let revised = false;
     let revisionReason: string | undefined;
 

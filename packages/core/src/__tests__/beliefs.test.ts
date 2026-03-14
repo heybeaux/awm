@@ -13,26 +13,26 @@ describe('BeliefEngine', () => {
 
   it('returns uninformative prior for unknown step/profile', async () => {
     const belief = await engine.getBelief('creative-director', 'acme');
-    expect(belief.alpha).toBe(2);
-    expect(belief.beta).toBe(2);
+    expect(belief.alpha).toBe(1.5);
+    expect(belief.beta).toBe(1.5);
     expect(belief.observations).toBe(0);
     expect(engine.successProbability(belief)).toBe(0.5);
   });
 
   it('updates belief on success', async () => {
     const belief = await engine.update('creative-director', 'acme', true);
-    expect(belief.alpha).toBe(3);
-    expect(belief.beta).toBe(2);
+    expect(belief.alpha).toBe(2.5);
+    expect(belief.beta).toBe(1.5);
     expect(belief.observations).toBe(1);
-    expect(engine.successProbability(belief)).toBe(0.6);
+    expect(engine.successProbability(belief)).toBeCloseTo(0.625, 2);
   });
 
   it('updates belief on failure', async () => {
     const belief = await engine.update('creative-director', 'acme', false);
-    expect(belief.alpha).toBe(2);
-    expect(belief.beta).toBe(3);
+    expect(belief.alpha).toBe(1.5);
+    expect(belief.beta).toBe(2.5);
     expect(belief.observations).toBe(1);
-    expect(engine.successProbability(belief)).toBe(0.4);
+    expect(engine.successProbability(belief)).toBeCloseTo(0.375, 2);
   });
 
   it('increases confidence with more observations', async () => {
@@ -74,14 +74,16 @@ describe('BeliefEngine', () => {
     expect(engine.predictOutcome(belief)).toBe('revise');
   });
 
-  it('also updates global belief alongside profile-specific', async () => {
+  it('isolates profile-specific beliefs from global', async () => {
     await engine.update('creative-director', 'acme', true);
 
     const profileBelief = await engine.getBelief('creative-director', 'acme');
     const globalBelief = await engine.getBelief('creative-director');
 
-    expect(profileBelief.alpha).toBe(3);
-    expect(globalBelief.alpha).toBe(3);
+    // Profile should be updated (Beta(1,1) + 1 success = alpha 2)
+    expect(profileBelief.alpha).toBe(2.5);
+    // Global should NOT be updated (isolation)
+    expect(globalBelief.alpha).toBe(1.5);
   });
 
   it('falls back to global when profile has no data', async () => {

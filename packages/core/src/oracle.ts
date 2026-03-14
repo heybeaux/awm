@@ -52,34 +52,54 @@ export class Oracle {
     // 1. Get belief about this step type + profile
     const belief = await this.beliefs.getBelief(context.stepType, context.profileSlug);
     const successProb = this.beliefs.successProbability(belief);
-    const confidence = this.beliefs.confidence(belief);
+    const dataConfidence = this.beliefs.confidence(belief);
     const outcome = this.beliefs.predictOutcome(belief);
 
-    // 2. Get model recommendation
-    const modelRec = await this.router.selectModel(
-      context.stepType,
-      context.profileSlug,
-      context.availableModels,
-      this.config.costWeight,
-    );
-
-    // 3. Get constraint recommendations
+    // 2. Get constraint recommendations
     const constraintList = await this.constraints.getConstraints(
       context.stepType,
       context.profileSlug,
     );
 
+    // 3. Get model recommendation — factor in revision risk
+    // Revision cost accounting: a revision means re-running the step,
+    // so the effective cost of a cheap-but-risky model is higher than it looks.
+    // When constraints exist, this step has a KNOWN revision problem — favor quality.
+    const hasRevisionRisk = constraintList.length > 0 || successProb < 0.65;
+    const revisionPenalty = hasRevisionRisk
+      ? (1 - successProb) // estimated re-run cost fraction
+      : 0;
+
+    // Negative cost weight = prioritize quality over cheapness
+    const effectiveCostWeight = hasRevisionRisk
+      ? -revisionPenalty  // negative flips preference to quality
+      : this.config.costWeight;
+
+    const modelRec = await this.router.selectModel(
+      context.stepType,
+      context.profileSlug,
+      context.availableModels,
+      effectiveCostWeight,
+    );
+
     // 4. Determine skip recommendation
-    const skipRecommendation = confidence >= this.config.skipConfidenceThreshold
+    const skipRecommendation = dataConfidence >= this.config.skipConfidenceThreshold
       && successProb > 0.95
       && constraintList.length === 0;
 
-    // 5. Build reasoning
-    const reasoning = this.buildReasoning(belief, successProb, confidence, modelRec, constraintList, context);
+    // 5. Use posterior mean as confidence for calibration
+    // When we predict 'pass', confidence = P(success)
+    // When we predict 'revise' or 'fail', confidence = P(failure)
+    const predictionConfidence = outcome === 'pass'
+      ? successProb
+      : (1 - successProb);
+
+    // 6. Build reasoning
+    const reasoning = this.buildReasoning(belief, successProb, dataConfidence, modelRec, constraintList, context);
 
     return {
       outcome,
-      confidence,
+      confidence: predictionConfidence,
       suggestedModel: modelRec.model,
       skipRecommendation,
       constraints: constraintList,
@@ -113,6 +133,14 @@ export class Oracle {
     if (trace.revised && trace.revisionReason) {
       await this.constraints.analyzeRevisions(trace.stepType, trace.profileSlug);
     }
+  }
+
+  /**
+   * Force constraint pattern extraction across all known step/profile combinations.
+   * Call after a warmup phase to ensure patterns are materialized.
+   */
+  async extractPatterns(stepTypes: string[], profileSlugs: string[]): Promise<void> {
+    await this.constraints.analyzeAll(stepTypes, profileSlugs);
   }
 
   private buildReasoning(
