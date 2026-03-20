@@ -1,18 +1,6 @@
 experiment	grade	passed	total	score	status	description
-0	C	5	8	5.00	baseline	original config
-1	C	5	8	5.00	discard	Belief prior alpha: 1.5 → 2 (stronger prior)
-2	C	5	8	5.00	discard	Belief prior alpha: 1.5 → 1 (weaker prior)
-3	C	5	8	5.00	discard	Belief prior beta: 1.5 → 2
-4	B	7	8	7.05	keep	Belief prior beta: 1.5 → 1
-5	B	6	8	6.05	discard	Bandit prior alpha: 1 → 1.5
-6	B	6	8	6.05	discard	Bandit prior beta: 1 → 1.5
-7	B	7	8	7.05	discard	Exploration decay start: 15 → 20 (explore longer)
-8	C	5	8	5.00	discard	Exploration decay start: 15 → 10 (exploit sooner)
-9	B	7	8	7.05	discard	Exploration decay rate: 0.05 → 0.07 (faster decay)
-10	B	7	8	7.05	discard	Exploration decay rate: 0.05 → 0.030000000000000002 (slower decay)
-11	C	5	8	5.00	discard	Cost weight: 0.3 → 0.4 (more cost-sensitive)
-12	B	7	8	7.05	discard	Cost weight: 0.3 → 0.19999999999999998 (more quality-focused)
-13	B	7	8	7.05	discard	Skip confidence: 0.85 → 0.9 (more conservative skipping)
-14	C	5	8	5.00	discard	Skip confidence: 0.85 → 0.7999999999999999 (more aggressive skipping)
-15	C	5	8	5.00	discard	Routing confidence: 0.7 → 0.75
-16	B	7	8	7.05	discard	Routing confidence: 0.7 → 0.6499999999999999
+0	A	8	8	8.10	baseline	original config
+1	A	8	8	8.10	discard	Belief prior alpha: 1.5 → 2 (stronger prior)
+2	B	6	8	6.05	discard	Belief prior alpha: 1.5 → 1 (weaker prior)
+3	B	7	8	7.05	discard	Belief prior beta: 1.5 → 2
+4	B	6	8	6.05	discard	Belief prior beta: 1.5 → 1

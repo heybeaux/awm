@@ -11,8 +11,9 @@ import type { ConstraintPattern, StepTrace, AWMStore } from './types.js';
 /** Minimum occurrences before a pattern becomes actionable */
 const MIN_OCCURRENCES = 2;
 
-/** Minimum frequency (0-1) relative to total runs for this step/profile */
-const MIN_FREQUENCY = 0.08;
+/** Minimum frequency (0-1) relative to REVISED traces for this step/profile
+ * (not total traces — revision reasons only exist on revised traces) */
+const MIN_FREQUENCY = 0.15;
 
 export class ConstraintExtractor {
   constructor(private store: AWMStore) {}
@@ -76,8 +77,11 @@ export class ConstraintExtractor {
 
     // Convert to constraint patterns
     const patterns: ConstraintPattern[] = [];
+    const revisedCount = revisedTraces.length;
     for (const [reason, { count, traces: reasonTraces }] of reasonCounts) {
-      const frequency = count / traces.length;
+      // Frequency relative to revised traces (not total) — a reason appearing
+      // in 3 of 10 revisions is significant even if total runs is 40
+      const frequency = revisedCount > 0 ? count / revisedCount : 0;
       if (count >= MIN_OCCURRENCES && frequency >= MIN_FREQUENCY) {
         const constraint = reasonToConstraint(reason);
         const pattern: ConstraintPattern = {
@@ -106,7 +110,8 @@ function normalizeReason(reason: string): string {
   return reason
     .toLowerCase()
     .trim()
-    .replace(/^(please |need to |should |must |missing |lacks? |no )/i, '')
+    // Only strip filler prefixes, NOT semantically meaningful ones like "missing"
+    .replace(/^(please |need to |should |must )/i, '')
     .replace(/[.!?]+$/, '')
     .trim();
 }
@@ -118,13 +123,19 @@ function normalizeReason(reason: string): string {
 function reasonToConstraint(reason: string): string {
   // Common patterns → constraint templates
   const patterns: [RegExp, string][] = [
-    [/missing (.+)/, 'Include $1 in the output'],
-    [/lack(?:s|ing)? (.+)/, 'Ensure $1 is present'],
-    [/too (.+)/, 'Avoid being too $1'],
-    [/not enough (.+)/, 'Provide sufficient $1'],
+    [/^missing (.+)/, 'Include $1 in the output'],
+    [/^lack(?:s|ing)? (.+)/, 'Ensure $1 is present'],
+    [/^too (.+)/, 'Avoid being too $1'],
+    [/^not enough (.+)/, 'Provide sufficient $1'],
     [/(.+) not (?:included|present|mentioned)/, 'Include $1'],
-    [/wrong (.+)/, 'Verify $1 is correct'],
-    [/inappropriate (.+)/, 'Ensure $1 is appropriate for the audience'],
+    [/^wrong (.+)/, 'Verify $1 is correct'],
+    [/^inappropriate (.+)/, 'Ensure $1 is appropriate for the audience'],
+    [/(.+) lacks (.+)/, 'Ensure $1 includes $2'],
+    [/(.+) mismatch/, 'Verify $1 alignment'],
+    [/(.+) unclear/, 'Make $1 clear and explicit'],
+    [/(.+) concern/, 'Address $1 thoroughly'],
+    [/(.+) violation/, 'Ensure compliance with $1 requirements'],
+    [/(.+) issue/, 'Resolve $1 before proceeding'],
   ];
 
   for (const [regex, template] of patterns) {
@@ -134,11 +145,7 @@ function reasonToConstraint(reason: string): string {
     }
   }
 
-  // Fallback: prefix with "Ensure" or "Include"
-  if (reason.startsWith('include') || reason.startsWith('add')) {
-    return reason.charAt(0).toUpperCase() + reason.slice(1);
-  }
-
+  // Fallback: preserve the original reason as a constraint
   return `Ensure: ${reason}`;
 }
 
