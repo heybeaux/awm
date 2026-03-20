@@ -11,7 +11,7 @@ import type { StepBelief, AWMStore } from './types.js';
 /** Default prior: Beta(1.5, 1.5) — weak prior, slightly informative.
  * Balances fast adaptation with stable cold-start predictions. */
 const DEFAULT_ALPHA = 1.5;
-const DEFAULT_BETA = 1.5;
+const DEFAULT_BETA = 1;
 
 export class BeliefEngine {
   constructor(private store: AWMStore) {}

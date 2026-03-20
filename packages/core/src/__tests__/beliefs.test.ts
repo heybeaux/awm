@@ -14,25 +14,25 @@ describe('BeliefEngine', () => {
   it('returns uninformative prior for unknown step/profile', async () => {
     const belief = await engine.getBelief('creative-director', 'acme');
     expect(belief.alpha).toBe(1.5);
-    expect(belief.beta).toBe(1.5);
+    expect(belief.beta).toBe(1);
     expect(belief.observations).toBe(0);
-    expect(engine.successProbability(belief)).toBe(0.5);
+    expect(engine.successProbability(belief)).toBe(0.6);
   });
 
   it('updates belief on success', async () => {
     const belief = await engine.update('creative-director', 'acme', true);
     expect(belief.alpha).toBe(2.5);
-    expect(belief.beta).toBe(1.5);
+    expect(belief.beta).toBe(1);
     expect(belief.observations).toBe(1);
-    expect(engine.successProbability(belief)).toBeCloseTo(0.625, 2);
+    expect(engine.successProbability(belief)).toBeCloseTo(0.714, 2);
   });
 
   it('updates belief on failure', async () => {
     const belief = await engine.update('creative-director', 'acme', false);
     expect(belief.alpha).toBe(1.5);
-    expect(belief.beta).toBe(2.5);
+    expect(belief.beta).toBe(2);
     expect(belief.observations).toBe(1);
-    expect(engine.successProbability(belief)).toBeCloseTo(0.375, 2);
+    expect(engine.successProbability(belief)).toBeCloseTo(0.429, 2);
   });
 
   it('increases confidence with more observations', async () => {
