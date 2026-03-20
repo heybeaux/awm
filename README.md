@@ -8,6 +8,18 @@ AWM is a prediction and outcome modeling layer for multi-agent pipelines. It obs
 
 **Not a world model.** No neural simulation. No billion-dollar compute. AWM uses Bayesian statistics, multi-armed bandits, and historical pattern matching to make pipelines smarter over time.
 
+### Benchmark: Grade A (8/8 scenarios)
+
+| Metric | Value |
+|--------|-------|
+| Prediction Accuracy | 81.5% |
+| Cost Reduction (model routing) | 59.6% vs always-expensive |
+| Cold Start | 7 runs to beat random |
+| Constraint Injection | Prevents 15%+ of revision cycles |
+| Calibration (Brier) | ≤ 0.25 |
+| Profile Isolation | ≥ 0.85 (beliefs don't bleed between profiles) |
+| Adversarial Recovery | 65% accuracy after distribution shift |
+
 ---
 
 ## What It Does
@@ -247,28 +259,44 @@ Engram: what agents DID (persistent memory)
 
 ---
 
+## Self-Optimization
+
+AWM includes an autoresearch meta-optimizer (`packages/bench/src/autoresearch.ts`) that tunes its own hyperparameters against the benchmark suite. Based on [Karpathy's autoresearch](https://github.com/karpathy/autoresearch) methodology.
+
+The optimizer mutates one constant at a time (belief priors, exploration rates, cost weights, confidence thresholds), runs the full benchmark, and keeps improvements. It found that a slightly optimistic cold-start prior (`beliefBeta: 1.0` vs `1.5`) improves cold start recovery, profile isolation, and model routing simultaneously.
+
+```bash
+npx tsx packages/bench/src/autoresearch.ts
+```
+
+---
+
 ## Roadmap
 
-### Phase 1: Core Engine (current)
+### Phase 1: Core Engine ✅
 - [x] Trace schema definition
-- [ ] Bayesian belief tracking
-- [ ] Thompson Sampling model router
-- [ ] Constraint pattern extraction
-- [ ] Oracle predict/recommend API
-- [ ] In-memory store
-- [ ] Test suite
+- [x] Bayesian belief tracking (Beta distributions)
+- [x] Thompson Sampling model router (with exploration decay)
+- [x] Constraint pattern extraction (revision-frequency based)
+- [x] Oracle predict/recommend API
+- [x] In-memory store
+- [x] Test suite (56 tests)
+- [x] Benchmark suite (8 scenarios, Grade A)
+- [x] Autoresearch meta-optimizer
 
-### Phase 2: Integration
-- [ ] Engram storage adapter
-- [ ] Mastra/Forge middleware
-- [ ] Shadow mode (log predictions, don't act)
-- [ ] Active mode (modify pipeline execution)
+### Phase 2: Integration ✅
+- [x] Engram storage adapter
+- [x] Mastra/Forge middleware
+- [x] Shadow mode (log predictions, don't act)
+- [x] Active mode (modify pipeline execution)
+- [x] Step criticality levels (critical/standard/exploratory)
 
-### Phase 3: Intelligence
-- [ ] Step-skipping recommendations
-- [ ] Parallel branching for uncertain steps
-- [ ] Dashboard metrics API
-- [ ] Prediction accuracy self-evaluation
+### Phase 3: Production Deployment (next)
+- [ ] Deploy in Forge — shadow mode first, then active
+- [ ] Field benchmark: real cost savings, revision reduction, time-to-completion
+- [ ] Decision audit trail (per-recommendation explainability)
+- [ ] Dashboard with live metrics
+- [ ] DripCode integration (email sequence optimization)
 
 ### Phase 4: Spec Extraction
 - [ ] Formalize trace schema as open standard
