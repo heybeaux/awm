@@ -5,19 +5,27 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "vitest run"
   },
   "dependencies": {
-    "@heybeaux/awm-core": "0.1.0"
+    "@heybeaux/awm-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.4.0",
     "vitest": "^2.0.0"
   },
-  "keywords": ["awm", "mastra", "forge", "pipeline", "middleware"],
+  "keywords": [
+    "awm",
+    "mastra",
+    "forge",
+    "pipeline",
+    "middleware"
+  ],
   "author": "heybeaux",
   "license": "MIT"
 }
