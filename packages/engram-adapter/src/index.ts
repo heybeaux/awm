@@ -19,7 +19,7 @@ import type {
   ModelArm,
   ConstraintPattern,
   TraceQuery,
-} from '../../core/src/types.js';
+} from '@heybeaux/awm-core';
 
 export interface EngramStoreConfig {
   /** Engram API base URL */
