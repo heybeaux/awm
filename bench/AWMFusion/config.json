@@ -1,0 +1,9 @@
+{
+    "algorithm-language": "Python",
+    "parameters": {
+        "entry_threshold": "0.55",
+        "max_position_pct": "0.20",
+        "hold_days": "5",
+        "max_positions": "8"
+    }
+}

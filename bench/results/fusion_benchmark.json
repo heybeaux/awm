@@ -1,0 +1,1964 @@
+[
+  {
+    "threshold": 100,
+    "n_tickers": 40,
+    "n_train": 4000,
+    "n_test": 10515,
+    "awm_errors": 0,
+    "lewm": {
+      "classification": {
+        "auc": 0.5086,
+        "brier": 0.2479,
+        "accuracy": 0.5662
+      },
+      "backtest": {
+        "trade_count": 457,
+        "total_return": 0.17958963662884986,
+        "annualized_return": 0.15784010368508117,
+        "sharpe_ratio": 1.436333093126613,
+        "max_drawdown": -0.21859777059678961,
+        "win_rate": 0.48358862144420134,
+        "profit_factor": 1.1395623257547576,
+        "avg_trade_return": 0.00037526676030808724,
+        "avg_position_size": 0.18786470556154813,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "awm_only": {
+      "classification": {
+        "auc": 0.6192,
+        "brier": 0.2347,
+        "accuracy": 0.6018
+      },
+      "backtest": {
+        "trade_count": 802,
+        "total_return": 9.357012440005807,
+        "annualized_return": 6.900981223560075,
+        "sharpe_ratio": 4.965139166297463,
+        "max_drawdown": -0.45609997300143007,
+        "win_rate": 0.5885286783042394,
+        "profit_factor": 1.8012375918449524,
+        "avg_trade_return": 0.00305905333160208,
+        "avg_position_size": 0.2890643643708848,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "fusion": {
+      "classification": {
+        "auc": 0.615,
+        "brier": 0.2308,
+        "accuracy": 0.6072
+      },
+      "backtest": {
+        "trade_count": 510,
+        "total_return": 2.75838937420489,
+        "annualized_return": 2.237522829775172,
+        "sharpe_ratio": 7.7577998721695005,
+        "max_drawdown": -0.13371598936238488,
+        "win_rate": 0.6137254901960785,
+        "profit_factor": 2.200331847054804,
+        "avg_trade_return": 0.0026277678993005143,
+        "avg_position_size": 0.19766670084664098,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "per_ticker": {
+      "AAPL": {
+        "n_test": 270,
+        "lewm_auc": 0.5384,
+        "awm_auc": 0.5635,
+        "fusion_auc": 0.5777
+      },
+      "AMZN": {
+        "n_test": 270,
+        "lewm_auc": 0.5381,
+        "awm_auc": 0.5005,
+        "fusion_auc": 0.5314
+      },
+      "BRK-B": {
+        "n_test": 270,
+        "lewm_auc": 0.5255,
+        "awm_auc": 0.5737,
+        "fusion_auc": 0.5769
+      },
+      "COIN": {
+        "n_test": 184,
+        "lewm_auc": 0.534,
+        "awm_auc": 0.5601,
+        "fusion_auc": 0.5507
+      },
+      "CRWD": {
+        "n_test": 254,
+        "lewm_auc": 0.4609,
+        "awm_auc": 0.5747,
+        "fusion_auc": 0.5507
+      },
+      "DDOG": {
+        "n_test": 243,
+        "lewm_auc": 0.4752,
+        "awm_auc": 0.596,
+        "fusion_auc": 0.5618
+      },
+      "DIA": {
+        "n_test": 270,
+        "lewm_auc": 0.5412,
+        "awm_auc": 0.5189,
+        "fusion_auc": 0.5395
+      },
+      "GLD": {
+        "n_test": 270,
+        "lewm_auc": 0.5158,
+        "awm_auc": 0.6147,
+        "fusion_auc": 0.619
+      },
+      "GOOGL": {
+        "n_test": 270,
+        "lewm_auc": 0.4374,
+        "awm_auc": 0.536,
+        "fusion_auc": 0.5048
+      },
+      "HYG": {
+        "n_test": 270,
+        "lewm_auc": 0.7528,
+        "awm_auc": 0.8375,
+        "fusion_auc": 0.8557
+      },
+      "IWM": {
+        "n_test": 270,
+        "lewm_auc": 0.5417,
+        "awm_auc": 0.5347,
+        "fusion_auc": 0.5494
+      },
+      "JPM": {
+        "n_test": 270,
+        "lewm_auc": 0.5036,
+        "awm_auc": 0.5333,
+        "fusion_auc": 0.5247
+      },
+      "MDB": {
+        "n_test": 270,
+        "lewm_auc": 0.4319,
+        "awm_auc": 0.5295,
+        "fusion_auc": 0.491
+      },
+      "META": {
+        "n_test": 270,
+        "lewm_auc": 0.5371,
+        "awm_auc": 0.5491,
+        "fusion_auc": 0.5544
+      },
+      "MSFT": {
+        "n_test": 270,
+        "lewm_auc": 0.4434,
+        "awm_auc": 0.6309,
+        "fusion_auc": 0.6021
+      },
+      "NET": {
+        "n_test": 244,
+        "lewm_auc": 0.4291,
+        "awm_auc": 0.5971,
+        "fusion_auc": 0.5431
+      },
+      "NVDA": {
+        "n_test": 270,
+        "lewm_auc": 0.5031,
+        "awm_auc": 0.551,
+        "fusion_auc": 0.5473
+      },
+      "PLTR": {
+        "n_test": 204,
+        "lewm_auc": 0.5188,
+        "awm_auc": 0.5815,
+        "fusion_auc": 0.5517
+      },
+      "QQQ": {
+        "n_test": 270,
+        "lewm_auc": 0.5416,
+        "awm_auc": 0.5268,
+        "fusion_auc": 0.544
+      },
+      "SHOP": {
+        "n_test": 270,
+        "lewm_auc": 0.4974,
+        "awm_auc": 0.5679,
+        "fusion_auc": 0.5622
+      },
+      "SNOW": {
+        "n_test": 206,
+        "lewm_auc": 0.4479,
+        "awm_auc": 0.5058,
+        "fusion_auc": 0.4902
+      },
+      "SPY": {
+        "n_test": 270,
+        "lewm_auc": 0.5534,
+        "awm_auc": 0.5811,
+        "fusion_auc": 0.6033
+      },
+      "TLT": {
+        "n_test": 270,
+        "lewm_auc": 0.6205,
+        "awm_auc": 0.4974,
+        "fusion_auc": 0.592
+      },
+      "TSLA": {
+        "n_test": 270,
+        "lewm_auc": 0.4407,
+        "awm_auc": 0.5362,
+        "fusion_auc": 0.5018
+      },
+      "USO": {
+        "n_test": 270,
+        "lewm_auc": 0.4688,
+        "awm_auc": 0.5455,
+        "fusion_auc": 0.5174
+      },
+      "UUP": {
+        "n_test": 270,
+        "lewm_auc": 0.5927,
+        "awm_auc": 0.5279,
+        "fusion_auc": 0.6025
+      },
+      "V": {
+        "n_test": 270,
+        "lewm_auc": 0.5416,
+        "awm_auc": 0.6411,
+        "fusion_auc": 0.6372
+      },
+      "VTI": {
+        "n_test": 270,
+        "lewm_auc": 0.5242,
+        "awm_auc": 0.5564,
+        "fusion_auc": 0.5775
+      },
+      "XLB": {
+        "n_test": 270,
+        "lewm_auc": 0.5433,
+        "awm_auc": 0.581,
+        "fusion_auc": 0.5903
+      },
+      "XLC": {
+        "n_test": 270,
+        "lewm_auc": 0.5609,
+        "awm_auc": 0.6292,
+        "fusion_auc": 0.6252
+      },
+      "XLE": {
+        "n_test": 270,
+        "lewm_auc": 0.5312,
+        "awm_auc": 0.5241,
+        "fusion_auc": 0.5358
+      },
+      "XLF": {
+        "n_test": 270,
+        "lewm_auc": 0.5425,
+        "awm_auc": 0.5377,
+        "fusion_auc": 0.5319
+      },
+      "XLI": {
+        "n_test": 270,
+        "lewm_auc": 0.5701,
+        "awm_auc": 0.5159,
+        "fusion_auc": 0.5371
+      },
+      "XLK": {
+        "n_test": 270,
+        "lewm_auc": 0.5057,
+        "awm_auc": 0.5413,
+        "fusion_auc": 0.537
+      },
+      "XLP": {
+        "n_test": 270,
+        "lewm_auc": 0.517,
+        "awm_auc": 0.5827,
+        "fusion_auc": 0.6002
+      },
+      "XLRE": {
+        "n_test": 270,
+        "lewm_auc": 0.5733,
+        "awm_auc": 0.571,
+        "fusion_auc": 0.6103
+      },
+      "XLU": {
+        "n_test": 270,
+        "lewm_auc": 0.5476,
+        "awm_auc": 0.4825,
+        "fusion_auc": 0.53
+      },
+      "XLV": {
+        "n_test": 270,
+        "lewm_auc": 0.5245,
+        "awm_auc": 0.5718,
+        "fusion_auc": 0.562
+      },
+      "XLY": {
+        "n_test": 270,
+        "lewm_auc": 0.5265,
+        "awm_auc": 0.5683,
+        "fusion_auc": 0.5616
+      },
+      "ZS": {
+        "n_test": 270,
+        "lewm_auc": 0.3732,
+        "awm_auc": 0.6431,
+        "fusion_auc": 0.6197
+      }
+    }
+  },
+  {
+    "threshold": 250,
+    "n_tickers": 40,
+    "n_train": 10000,
+    "n_test": 10515,
+    "awm_errors": 0,
+    "lewm": {
+      "classification": {
+        "auc": 0.5393,
+        "brier": 0.2409,
+        "accuracy": 0.582
+      },
+      "backtest": {
+        "trade_count": 240,
+        "total_return": 0.3788372947003744,
+        "annualized_return": 0.3652755517593922,
+        "sharpe_ratio": 2.698163648900655,
+        "max_drawdown": -0.123428116769882,
+        "win_rate": 0.5666666666666667,
+        "profit_factor": 1.5573346141698514,
+        "avg_trade_return": 0.0013686809234612117,
+        "avg_position_size": 0.1445406123995781,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "awm_only": {
+      "classification": {
+        "auc": 0.6192,
+        "brier": 0.2347,
+        "accuracy": 0.6018
+      },
+      "backtest": {
+        "trade_count": 802,
+        "total_return": 9.357012440005807,
+        "annualized_return": 6.900981223560075,
+        "sharpe_ratio": 4.965139166297463,
+        "max_drawdown": -0.45609997300143007,
+        "win_rate": 0.5885286783042394,
+        "profit_factor": 1.8012375918449524,
+        "avg_trade_return": 0.00305905333160208,
+        "avg_position_size": 0.2890643643708848,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "fusion": {
+      "classification": {
+        "auc": 0.6245,
+        "brier": 0.2296,
+        "accuracy": 0.6116
+      },
+      "backtest": {
+        "trade_count": 473,
+        "total_return": 2.6101256572977034,
+        "annualized_return": 2.1239415712061405,
+        "sharpe_ratio": 6.9045674273397415,
+        "max_drawdown": -0.20862616841808504,
+        "win_rate": 0.627906976744186,
+        "profit_factor": 2.149673267406808,
+        "avg_trade_return": 0.0027530719649563836,
+        "avg_position_size": 0.20474220032599766,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "per_ticker": {
+      "AAPL": {
+        "n_test": 270,
+        "lewm_auc": 0.5637,
+        "awm_auc": 0.5635,
+        "fusion_auc": 0.5825
+      },
+      "AMZN": {
+        "n_test": 270,
+        "lewm_auc": 0.5683,
+        "awm_auc": 0.5005,
+        "fusion_auc": 0.5426
+      },
+      "BRK-B": {
+        "n_test": 270,
+        "lewm_auc": 0.5773,
+        "awm_auc": 0.5737,
+        "fusion_auc": 0.5955
+      },
+      "COIN": {
+        "n_test": 184,
+        "lewm_auc": 0.5594,
+        "awm_auc": 0.5601,
+        "fusion_auc": 0.57
+      },
+      "CRWD": {
+        "n_test": 254,
+        "lewm_auc": 0.5066,
+        "awm_auc": 0.5747,
+        "fusion_auc": 0.5847
+      },
+      "DDOG": {
+        "n_test": 243,
+        "lewm_auc": 0.398,
+        "awm_auc": 0.596,
+        "fusion_auc": 0.5669
+      },
+      "DIA": {
+        "n_test": 270,
+        "lewm_auc": 0.6014,
+        "awm_auc": 0.5189,
+        "fusion_auc": 0.5485
+      },
+      "GLD": {
+        "n_test": 270,
+        "lewm_auc": 0.4542,
+        "awm_auc": 0.6147,
+        "fusion_auc": 0.6094
+      },
+      "GOOGL": {
+        "n_test": 270,
+        "lewm_auc": 0.511,
+        "awm_auc": 0.536,
+        "fusion_auc": 0.5355
+      },
+      "HYG": {
+        "n_test": 270,
+        "lewm_auc": 0.8484,
+        "awm_auc": 0.8375,
+        "fusion_auc": 0.8622
+      },
+      "IWM": {
+        "n_test": 270,
+        "lewm_auc": 0.5817,
+        "awm_auc": 0.5347,
+        "fusion_auc": 0.5564
+      },
+      "JPM": {
+        "n_test": 270,
+        "lewm_auc": 0.5548,
+        "awm_auc": 0.5333,
+        "fusion_auc": 0.5393
+      },
+      "MDB": {
+        "n_test": 270,
+        "lewm_auc": 0.5326,
+        "awm_auc": 0.5295,
+        "fusion_auc": 0.5374
+      },
+      "META": {
+        "n_test": 270,
+        "lewm_auc": 0.4759,
+        "awm_auc": 0.5491,
+        "fusion_auc": 0.5453
+      },
+      "MSFT": {
+        "n_test": 270,
+        "lewm_auc": 0.4474,
+        "awm_auc": 0.6309,
+        "fusion_auc": 0.617
+      },
+      "NET": {
+        "n_test": 244,
+        "lewm_auc": 0.523,
+        "awm_auc": 0.5971,
+        "fusion_auc": 0.5773
+      },
+      "NVDA": {
+        "n_test": 270,
+        "lewm_auc": 0.4952,
+        "awm_auc": 0.551,
+        "fusion_auc": 0.5614
+      },
+      "PLTR": {
+        "n_test": 204,
+        "lewm_auc": 0.4703,
+        "awm_auc": 0.5815,
+        "fusion_auc": 0.5439
+      },
+      "QQQ": {
+        "n_test": 270,
+        "lewm_auc": 0.6099,
+        "awm_auc": 0.5268,
+        "fusion_auc": 0.5702
+      },
+      "SHOP": {
+        "n_test": 270,
+        "lewm_auc": 0.5951,
+        "awm_auc": 0.5679,
+        "fusion_auc": 0.5896
+      },
+      "SNOW": {
+        "n_test": 206,
+        "lewm_auc": 0.5869,
+        "awm_auc": 0.5058,
+        "fusion_auc": 0.5354
+      },
+      "SPY": {
+        "n_test": 270,
+        "lewm_auc": 0.6314,
+        "awm_auc": 0.5811,
+        "fusion_auc": 0.6381
+      },
+      "TLT": {
+        "n_test": 270,
+        "lewm_auc": 0.5519,
+        "awm_auc": 0.4974,
+        "fusion_auc": 0.5271
+      },
+      "TSLA": {
+        "n_test": 270,
+        "lewm_auc": 0.4294,
+        "awm_auc": 0.5362,
+        "fusion_auc": 0.5179
+      },
+      "USO": {
+        "n_test": 270,
+        "lewm_auc": 0.5105,
+        "awm_auc": 0.5455,
+        "fusion_auc": 0.5425
+      },
+      "UUP": {
+        "n_test": 270,
+        "lewm_auc": 0.511,
+        "awm_auc": 0.5279,
+        "fusion_auc": 0.5411
+      },
+      "V": {
+        "n_test": 270,
+        "lewm_auc": 0.5654,
+        "awm_auc": 0.6411,
+        "fusion_auc": 0.6512
+      },
+      "VTI": {
+        "n_test": 270,
+        "lewm_auc": 0.5846,
+        "awm_auc": 0.5564,
+        "fusion_auc": 0.6016
+      },
+      "XLB": {
+        "n_test": 270,
+        "lewm_auc": 0.5543,
+        "awm_auc": 0.581,
+        "fusion_auc": 0.5745
+      },
+      "XLC": {
+        "n_test": 270,
+        "lewm_auc": 0.6053,
+        "awm_auc": 0.6292,
+        "fusion_auc": 0.6437
+      },
+      "XLE": {
+        "n_test": 270,
+        "lewm_auc": 0.6802,
+        "awm_auc": 0.5241,
+        "fusion_auc": 0.5738
+      },
+      "XLF": {
+        "n_test": 270,
+        "lewm_auc": 0.6297,
+        "awm_auc": 0.5377,
+        "fusion_auc": 0.5606
+      },
+      "XLI": {
+        "n_test": 270,
+        "lewm_auc": 0.6115,
+        "awm_auc": 0.5159,
+        "fusion_auc": 0.5423
+      },
+      "XLK": {
+        "n_test": 270,
+        "lewm_auc": 0.5625,
+        "awm_auc": 0.5413,
+        "fusion_auc": 0.5572
+      },
+      "XLP": {
+        "n_test": 270,
+        "lewm_auc": 0.5066,
+        "awm_auc": 0.5827,
+        "fusion_auc": 0.6044
+      },
+      "XLRE": {
+        "n_test": 270,
+        "lewm_auc": 0.6257,
+        "awm_auc": 0.571,
+        "fusion_auc": 0.6143
+      },
+      "XLU": {
+        "n_test": 270,
+        "lewm_auc": 0.5136,
+        "awm_auc": 0.4825,
+        "fusion_auc": 0.4859
+      },
+      "XLV": {
+        "n_test": 270,
+        "lewm_auc": 0.5698,
+        "awm_auc": 0.5718,
+        "fusion_auc": 0.5713
+      },
+      "XLY": {
+        "n_test": 270,
+        "lewm_auc": 0.6033,
+        "awm_auc": 0.5683,
+        "fusion_auc": 0.5784
+      },
+      "ZS": {
+        "n_test": 270,
+        "lewm_auc": 0.3803,
+        "awm_auc": 0.6431,
+        "fusion_auc": 0.6352
+      }
+    }
+  },
+  {
+    "threshold": 500,
+    "n_tickers": 40,
+    "n_train": 20000,
+    "n_test": 10515,
+    "awm_errors": 0,
+    "lewm": {
+      "classification": {
+        "auc": 0.5481,
+        "brier": 0.2392,
+        "accuracy": 0.5886
+      },
+      "backtest": {
+        "trade_count": 86,
+        "total_return": 0.019429180438460314,
+        "annualized_return": 0.02730614310337609,
+        "sharpe_ratio": 0.39284967083205424,
+        "max_drawdown": -0.09729139927829585,
+        "win_rate": 0.47674418604651164,
+        "profit_factor": 1.0707441270186098,
+        "avg_trade_return": 0.00024771319084909997,
+        "avg_position_size": 0.12417465448379517,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "awm_only": {
+      "classification": {
+        "auc": 0.6192,
+        "brier": 0.2347,
+        "accuracy": 0.6018
+      },
+      "backtest": {
+        "trade_count": 802,
+        "total_return": 9.357012440005807,
+        "annualized_return": 6.900981223560075,
+        "sharpe_ratio": 4.965139166297463,
+        "max_drawdown": -0.45609997300143007,
+        "win_rate": 0.5885286783042394,
+        "profit_factor": 1.8012375918449524,
+        "avg_trade_return": 0.00305905333160208,
+        "avg_position_size": 0.2890643643708848,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "fusion": {
+      "classification": {
+        "auc": 0.6241,
+        "brier": 0.2298,
+        "accuracy": 0.6117
+      },
+      "backtest": {
+        "trade_count": 472,
+        "total_return": 2.804121770043118,
+        "annualized_return": 2.2861922954395077,
+        "sharpe_ratio": 6.610258210937309,
+        "max_drawdown": -0.19262549196262613,
+        "win_rate": 0.6398305084745762,
+        "profit_factor": 2.1807282264043018,
+        "avg_trade_return": 0.0028764491865058807,
+        "avg_position_size": 0.20334233405331675,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "per_ticker": {
+      "AAPL": {
+        "n_test": 270,
+        "lewm_auc": 0.5693,
+        "awm_auc": 0.5635,
+        "fusion_auc": 0.5735
+      },
+      "AMZN": {
+        "n_test": 270,
+        "lewm_auc": 0.5714,
+        "awm_auc": 0.5005,
+        "fusion_auc": 0.5304
+      },
+      "BRK-B": {
+        "n_test": 270,
+        "lewm_auc": 0.6261,
+        "awm_auc": 0.5737,
+        "fusion_auc": 0.5972
+      },
+      "COIN": {
+        "n_test": 184,
+        "lewm_auc": 0.5545,
+        "awm_auc": 0.5601,
+        "fusion_auc": 0.5765
+      },
+      "CRWD": {
+        "n_test": 254,
+        "lewm_auc": 0.5186,
+        "awm_auc": 0.5747,
+        "fusion_auc": 0.5688
+      },
+      "DDOG": {
+        "n_test": 243,
+        "lewm_auc": 0.4653,
+        "awm_auc": 0.596,
+        "fusion_auc": 0.5889
+      },
+      "DIA": {
+        "n_test": 270,
+        "lewm_auc": 0.6154,
+        "awm_auc": 0.5189,
+        "fusion_auc": 0.5332
+      },
+      "GLD": {
+        "n_test": 270,
+        "lewm_auc": 0.5589,
+        "awm_auc": 0.6147,
+        "fusion_auc": 0.6186
+      },
+      "GOOGL": {
+        "n_test": 270,
+        "lewm_auc": 0.5074,
+        "awm_auc": 0.536,
+        "fusion_auc": 0.5405
+      },
+      "HYG": {
+        "n_test": 270,
+        "lewm_auc": 0.8681,
+        "awm_auc": 0.8375,
+        "fusion_auc": 0.8662
+      },
+      "IWM": {
+        "n_test": 270,
+        "lewm_auc": 0.6326,
+        "awm_auc": 0.5347,
+        "fusion_auc": 0.5614
+      },
+      "JPM": {
+        "n_test": 270,
+        "lewm_auc": 0.5755,
+        "awm_auc": 0.5333,
+        "fusion_auc": 0.5394
+      },
+      "MDB": {
+        "n_test": 270,
+        "lewm_auc": 0.5227,
+        "awm_auc": 0.5295,
+        "fusion_auc": 0.5197
+      },
+      "META": {
+        "n_test": 270,
+        "lewm_auc": 0.5404,
+        "awm_auc": 0.5491,
+        "fusion_auc": 0.5634
+      },
+      "MSFT": {
+        "n_test": 270,
+        "lewm_auc": 0.4377,
+        "awm_auc": 0.6309,
+        "fusion_auc": 0.6232
+      },
+      "NET": {
+        "n_test": 244,
+        "lewm_auc": 0.5913,
+        "awm_auc": 0.5971,
+        "fusion_auc": 0.5971
+      },
+      "NVDA": {
+        "n_test": 270,
+        "lewm_auc": 0.506,
+        "awm_auc": 0.551,
+        "fusion_auc": 0.558
+      },
+      "PLTR": {
+        "n_test": 204,
+        "lewm_auc": 0.4184,
+        "awm_auc": 0.5815,
+        "fusion_auc": 0.5535
+      },
+      "QQQ": {
+        "n_test": 270,
+        "lewm_auc": 0.5663,
+        "awm_auc": 0.5268,
+        "fusion_auc": 0.5521
+      },
+      "SHOP": {
+        "n_test": 270,
+        "lewm_auc": 0.5324,
+        "awm_auc": 0.5679,
+        "fusion_auc": 0.5643
+      },
+      "SNOW": {
+        "n_test": 206,
+        "lewm_auc": 0.4507,
+        "awm_auc": 0.5058,
+        "fusion_auc": 0.4925
+      },
+      "SPY": {
+        "n_test": 270,
+        "lewm_auc": 0.6729,
+        "awm_auc": 0.5811,
+        "fusion_auc": 0.6242
+      },
+      "TLT": {
+        "n_test": 270,
+        "lewm_auc": 0.6179,
+        "awm_auc": 0.4974,
+        "fusion_auc": 0.5539
+      },
+      "TSLA": {
+        "n_test": 270,
+        "lewm_auc": 0.426,
+        "awm_auc": 0.5362,
+        "fusion_auc": 0.5008
+      },
+      "USO": {
+        "n_test": 270,
+        "lewm_auc": 0.5388,
+        "awm_auc": 0.5455,
+        "fusion_auc": 0.5555
+      },
+      "UUP": {
+        "n_test": 270,
+        "lewm_auc": 0.5137,
+        "awm_auc": 0.5279,
+        "fusion_auc": 0.5005
+      },
+      "V": {
+        "n_test": 270,
+        "lewm_auc": 0.4532,
+        "awm_auc": 0.6411,
+        "fusion_auc": 0.6299
+      },
+      "VTI": {
+        "n_test": 270,
+        "lewm_auc": 0.6327,
+        "awm_auc": 0.5564,
+        "fusion_auc": 0.5848
+      },
+      "XLB": {
+        "n_test": 270,
+        "lewm_auc": 0.5902,
+        "awm_auc": 0.581,
+        "fusion_auc": 0.5912
+      },
+      "XLC": {
+        "n_test": 270,
+        "lewm_auc": 0.5731,
+        "awm_auc": 0.6292,
+        "fusion_auc": 0.6297
+      },
+      "XLE": {
+        "n_test": 270,
+        "lewm_auc": 0.6671,
+        "awm_auc": 0.5241,
+        "fusion_auc": 0.5547
+      },
+      "XLF": {
+        "n_test": 270,
+        "lewm_auc": 0.5949,
+        "awm_auc": 0.5377,
+        "fusion_auc": 0.5481
+      },
+      "XLI": {
+        "n_test": 270,
+        "lewm_auc": 0.6,
+        "awm_auc": 0.5159,
+        "fusion_auc": 0.5237
+      },
+      "XLK": {
+        "n_test": 270,
+        "lewm_auc": 0.5567,
+        "awm_auc": 0.5413,
+        "fusion_auc": 0.5585
+      },
+      "XLP": {
+        "n_test": 270,
+        "lewm_auc": 0.6073,
+        "awm_auc": 0.5827,
+        "fusion_auc": 0.63
+      },
+      "XLRE": {
+        "n_test": 270,
+        "lewm_auc": 0.5669,
+        "awm_auc": 0.571,
+        "fusion_auc": 0.5876
+      },
+      "XLU": {
+        "n_test": 270,
+        "lewm_auc": 0.5277,
+        "awm_auc": 0.4825,
+        "fusion_auc": 0.5085
+      },
+      "XLV": {
+        "n_test": 270,
+        "lewm_auc": 0.6159,
+        "awm_auc": 0.5718,
+        "fusion_auc": 0.5828
+      },
+      "XLY": {
+        "n_test": 270,
+        "lewm_auc": 0.5535,
+        "awm_auc": 0.5683,
+        "fusion_auc": 0.5647
+      },
+      "ZS": {
+        "n_test": 270,
+        "lewm_auc": 0.4004,
+        "awm_auc": 0.6431,
+        "fusion_auc": 0.6388
+      }
+    }
+  },
+  {
+    "threshold": 1000,
+    "n_tickers": 40,
+    "n_train": 39838,
+    "n_test": 10515,
+    "awm_errors": 0,
+    "lewm": {
+      "classification": {
+        "auc": 0.5434,
+        "brier": 0.2388,
+        "accuracy": 0.5949
+      },
+      "backtest": {
+        "trade_count": 3,
+        "total_return": -0.0060985728176797815,
+        "annualized_return": -0.14286048217410685,
+        "sharpe_ratio": -9.158857598166064,
+        "max_drawdown": -0.008052690851825677,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 0.3906299464107249,
+        "avg_trade_return": -0.0020367746765951526,
+        "avg_position_size": 0.10994319121042888,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "awm_only": {
+      "classification": {
+        "auc": 0.6192,
+        "brier": 0.2347,
+        "accuracy": 0.6018
+      },
+      "backtest": {
+        "trade_count": 802,
+        "total_return": 9.357012440005807,
+        "annualized_return": 6.900981223560075,
+        "sharpe_ratio": 4.965139166297463,
+        "max_drawdown": -0.45609997300143007,
+        "win_rate": 0.5885286783042394,
+        "profit_factor": 1.8012375918449524,
+        "avg_trade_return": 0.00305905333160208,
+        "avg_position_size": 0.2890643643708848,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "fusion": {
+      "classification": {
+        "auc": 0.622,
+        "brier": 0.2297,
+        "accuracy": 0.6108
+      },
+      "backtest": {
+        "trade_count": 428,
+        "total_return": 2.2799471590361726,
+        "annualized_return": 1.8797743861232772,
+        "sharpe_ratio": 6.688858422652801,
+        "max_drawdown": -0.189746181028563,
+        "win_rate": 0.6448598130841121,
+        "profit_factor": 2.170086253130257,
+        "avg_trade_return": 0.002814377841258026,
+        "avg_position_size": 0.2006530543703562,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "per_ticker": {
+      "AAPL": {
+        "n_test": 270,
+        "lewm_auc": 0.5713,
+        "awm_auc": 0.5635,
+        "fusion_auc": 0.5722
+      },
+      "AMZN": {
+        "n_test": 270,
+        "lewm_auc": 0.6199,
+        "awm_auc": 0.5005,
+        "fusion_auc": 0.5364
+      },
+      "BRK-B": {
+        "n_test": 270,
+        "lewm_auc": 0.5108,
+        "awm_auc": 0.5737,
+        "fusion_auc": 0.5725
+      },
+      "COIN": {
+        "n_test": 184,
+        "lewm_auc": 0.5886,
+        "awm_auc": 0.5601,
+        "fusion_auc": 0.5621
+      },
+      "CRWD": {
+        "n_test": 254,
+        "lewm_auc": 0.5254,
+        "awm_auc": 0.5747,
+        "fusion_auc": 0.5748
+      },
+      "DDOG": {
+        "n_test": 243,
+        "lewm_auc": 0.4264,
+        "awm_auc": 0.596,
+        "fusion_auc": 0.5745
+      },
+      "DIA": {
+        "n_test": 270,
+        "lewm_auc": 0.6056,
+        "awm_auc": 0.5189,
+        "fusion_auc": 0.5314
+      },
+      "GLD": {
+        "n_test": 270,
+        "lewm_auc": 0.5605,
+        "awm_auc": 0.6147,
+        "fusion_auc": 0.6194
+      },
+      "GOOGL": {
+        "n_test": 270,
+        "lewm_auc": 0.4541,
+        "awm_auc": 0.536,
+        "fusion_auc": 0.5307
+      },
+      "HYG": {
+        "n_test": 270,
+        "lewm_auc": 0.9021,
+        "awm_auc": 0.8375,
+        "fusion_auc": 0.8778
+      },
+      "IWM": {
+        "n_test": 270,
+        "lewm_auc": 0.5873,
+        "awm_auc": 0.5347,
+        "fusion_auc": 0.5543
+      },
+      "JPM": {
+        "n_test": 270,
+        "lewm_auc": 0.5438,
+        "awm_auc": 0.5333,
+        "fusion_auc": 0.5289
+      },
+      "MDB": {
+        "n_test": 270,
+        "lewm_auc": 0.5039,
+        "awm_auc": 0.5295,
+        "fusion_auc": 0.5185
+      },
+      "META": {
+        "n_test": 270,
+        "lewm_auc": 0.5052,
+        "awm_auc": 0.5491,
+        "fusion_auc": 0.5553
+      },
+      "MSFT": {
+        "n_test": 270,
+        "lewm_auc": 0.4377,
+        "awm_auc": 0.6309,
+        "fusion_auc": 0.6203
+      },
+      "NET": {
+        "n_test": 244,
+        "lewm_auc": 0.513,
+        "awm_auc": 0.5971,
+        "fusion_auc": 0.5735
+      },
+      "NVDA": {
+        "n_test": 270,
+        "lewm_auc": 0.493,
+        "awm_auc": 0.551,
+        "fusion_auc": 0.5564
+      },
+      "PLTR": {
+        "n_test": 204,
+        "lewm_auc": 0.4239,
+        "awm_auc": 0.5815,
+        "fusion_auc": 0.5499
+      },
+      "QQQ": {
+        "n_test": 270,
+        "lewm_auc": 0.5921,
+        "awm_auc": 0.5268,
+        "fusion_auc": 0.5555
+      },
+      "SHOP": {
+        "n_test": 270,
+        "lewm_auc": 0.5237,
+        "awm_auc": 0.5679,
+        "fusion_auc": 0.5695
+      },
+      "SNOW": {
+        "n_test": 206,
+        "lewm_auc": 0.5227,
+        "awm_auc": 0.5058,
+        "fusion_auc": 0.5159
+      },
+      "SPY": {
+        "n_test": 270,
+        "lewm_auc": 0.6668,
+        "awm_auc": 0.5811,
+        "fusion_auc": 0.6265
+      },
+      "TLT": {
+        "n_test": 270,
+        "lewm_auc": 0.6296,
+        "awm_auc": 0.4974,
+        "fusion_auc": 0.5519
+      },
+      "TSLA": {
+        "n_test": 270,
+        "lewm_auc": 0.4014,
+        "awm_auc": 0.5362,
+        "fusion_auc": 0.505
+      },
+      "USO": {
+        "n_test": 270,
+        "lewm_auc": 0.5084,
+        "awm_auc": 0.5455,
+        "fusion_auc": 0.5401
+      },
+      "UUP": {
+        "n_test": 270,
+        "lewm_auc": 0.5251,
+        "awm_auc": 0.5279,
+        "fusion_auc": 0.5176
+      },
+      "V": {
+        "n_test": 270,
+        "lewm_auc": 0.5128,
+        "awm_auc": 0.6411,
+        "fusion_auc": 0.6332
+      },
+      "VTI": {
+        "n_test": 270,
+        "lewm_auc": 0.613,
+        "awm_auc": 0.5564,
+        "fusion_auc": 0.5845
+      },
+      "XLB": {
+        "n_test": 270,
+        "lewm_auc": 0.6129,
+        "awm_auc": 0.581,
+        "fusion_auc": 0.5879
+      },
+      "XLC": {
+        "n_test": 270,
+        "lewm_auc": 0.598,
+        "awm_auc": 0.6292,
+        "fusion_auc": 0.6307
+      },
+      "XLE": {
+        "n_test": 270,
+        "lewm_auc": 0.6515,
+        "awm_auc": 0.5241,
+        "fusion_auc": 0.5582
+      },
+      "XLF": {
+        "n_test": 270,
+        "lewm_auc": 0.6136,
+        "awm_auc": 0.5377,
+        "fusion_auc": 0.5533
+      },
+      "XLI": {
+        "n_test": 270,
+        "lewm_auc": 0.5665,
+        "awm_auc": 0.5159,
+        "fusion_auc": 0.5165
+      },
+      "XLK": {
+        "n_test": 270,
+        "lewm_auc": 0.5742,
+        "awm_auc": 0.5413,
+        "fusion_auc": 0.5574
+      },
+      "XLP": {
+        "n_test": 270,
+        "lewm_auc": 0.5558,
+        "awm_auc": 0.5827,
+        "fusion_auc": 0.6034
+      },
+      "XLRE": {
+        "n_test": 270,
+        "lewm_auc": 0.5727,
+        "awm_auc": 0.571,
+        "fusion_auc": 0.6003
+      },
+      "XLU": {
+        "n_test": 270,
+        "lewm_auc": 0.459,
+        "awm_auc": 0.4825,
+        "fusion_auc": 0.4821
+      },
+      "XLV": {
+        "n_test": 270,
+        "lewm_auc": 0.5849,
+        "awm_auc": 0.5718,
+        "fusion_auc": 0.5875
+      },
+      "XLY": {
+        "n_test": 270,
+        "lewm_auc": 0.6081,
+        "awm_auc": 0.5683,
+        "fusion_auc": 0.5757
+      },
+      "ZS": {
+        "n_test": 270,
+        "lewm_auc": 0.4144,
+        "awm_auc": 0.6431,
+        "fusion_auc": 0.6355
+      }
+    }
+  },
+  {
+    "threshold": 2500,
+    "n_tickers": 40,
+    "n_train": 49981,
+    "n_test": 10515,
+    "awm_errors": 0,
+    "lewm": {
+      "classification": {
+        "auc": 0.5495,
+        "brier": 0.2383,
+        "accuracy": 0.5973
+      },
+      "backtest": {
+        "trade_count": 1,
+        "total_return": -0.013221191213593997,
+        "annualized_return": -0.4886966420991504,
+        "sharpe_ratio": null,
+        "max_drawdown": -0.010591011459016303,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "avg_trade_return": -0.01329167101289571,
+        "avg_position_size": 0.13377225399017334,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "awm_only": {
+      "classification": {
+        "auc": 0.6192,
+        "brier": 0.2347,
+        "accuracy": 0.6018
+      },
+      "backtest": {
+        "trade_count": 802,
+        "total_return": 9.357012440005807,
+        "annualized_return": 6.900981223560075,
+        "sharpe_ratio": 4.965139166297463,
+        "max_drawdown": -0.45609997300143007,
+        "win_rate": 0.5885286783042394,
+        "profit_factor": 1.8012375918449524,
+        "avg_trade_return": 0.00305905333160208,
+        "avg_position_size": 0.2890643643708848,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "fusion": {
+      "classification": {
+        "auc": 0.6223,
+        "brier": 0.2296,
+        "accuracy": 0.6114
+      },
+      "backtest": {
+        "trade_count": 419,
+        "total_return": 2.127194148454206,
+        "annualized_return": 1.7600393136486936,
+        "sharpe_ratio": 6.944573025546464,
+        "max_drawdown": -0.16392421580434904,
+        "win_rate": 0.6420047732696897,
+        "profit_factor": 2.136684716205254,
+        "avg_trade_return": 0.002755591302950315,
+        "avg_position_size": 0.20140651082455174,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "per_ticker": {
+      "AAPL": {
+        "n_test": 270,
+        "lewm_auc": 0.6177,
+        "awm_auc": 0.5635,
+        "fusion_auc": 0.578
+      },
+      "AMZN": {
+        "n_test": 270,
+        "lewm_auc": 0.5797,
+        "awm_auc": 0.5005,
+        "fusion_auc": 0.5251
+      },
+      "BRK-B": {
+        "n_test": 270,
+        "lewm_auc": 0.5334,
+        "awm_auc": 0.5737,
+        "fusion_auc": 0.5791
+      },
+      "COIN": {
+        "n_test": 184,
+        "lewm_auc": 0.6256,
+        "awm_auc": 0.5601,
+        "fusion_auc": 0.5735
+      },
+      "CRWD": {
+        "n_test": 254,
+        "lewm_auc": 0.5412,
+        "awm_auc": 0.5747,
+        "fusion_auc": 0.5748
+      },
+      "DDOG": {
+        "n_test": 243,
+        "lewm_auc": 0.4167,
+        "awm_auc": 0.596,
+        "fusion_auc": 0.5657
+      },
+      "DIA": {
+        "n_test": 270,
+        "lewm_auc": 0.6137,
+        "awm_auc": 0.5189,
+        "fusion_auc": 0.5367
+      },
+      "GLD": {
+        "n_test": 270,
+        "lewm_auc": 0.5239,
+        "awm_auc": 0.6147,
+        "fusion_auc": 0.6184
+      },
+      "GOOGL": {
+        "n_test": 270,
+        "lewm_auc": 0.446,
+        "awm_auc": 0.536,
+        "fusion_auc": 0.5304
+      },
+      "HYG": {
+        "n_test": 270,
+        "lewm_auc": 0.8813,
+        "awm_auc": 0.8375,
+        "fusion_auc": 0.8742
+      },
+      "IWM": {
+        "n_test": 270,
+        "lewm_auc": 0.6413,
+        "awm_auc": 0.5347,
+        "fusion_auc": 0.5676
+      },
+      "JPM": {
+        "n_test": 270,
+        "lewm_auc": 0.5499,
+        "awm_auc": 0.5333,
+        "fusion_auc": 0.5327
+      },
+      "MDB": {
+        "n_test": 270,
+        "lewm_auc": 0.4989,
+        "awm_auc": 0.5295,
+        "fusion_auc": 0.5256
+      },
+      "META": {
+        "n_test": 270,
+        "lewm_auc": 0.4658,
+        "awm_auc": 0.5491,
+        "fusion_auc": 0.5483
+      },
+      "MSFT": {
+        "n_test": 270,
+        "lewm_auc": 0.442,
+        "awm_auc": 0.6309,
+        "fusion_auc": 0.6164
+      },
+      "NET": {
+        "n_test": 244,
+        "lewm_auc": 0.4729,
+        "awm_auc": 0.5971,
+        "fusion_auc": 0.5581
+      },
+      "NVDA": {
+        "n_test": 270,
+        "lewm_auc": 0.4922,
+        "awm_auc": 0.551,
+        "fusion_auc": 0.5531
+      },
+      "PLTR": {
+        "n_test": 204,
+        "lewm_auc": 0.4407,
+        "awm_auc": 0.5815,
+        "fusion_auc": 0.5551
+      },
+      "QQQ": {
+        "n_test": 270,
+        "lewm_auc": 0.5644,
+        "awm_auc": 0.5268,
+        "fusion_auc": 0.5494
+      },
+      "SHOP": {
+        "n_test": 270,
+        "lewm_auc": 0.547,
+        "awm_auc": 0.5679,
+        "fusion_auc": 0.5733
+      },
+      "SNOW": {
+        "n_test": 206,
+        "lewm_auc": 0.4945,
+        "awm_auc": 0.5058,
+        "fusion_auc": 0.5001
+      },
+      "SPY": {
+        "n_test": 270,
+        "lewm_auc": 0.6492,
+        "awm_auc": 0.5811,
+        "fusion_auc": 0.6234
+      },
+      "TLT": {
+        "n_test": 270,
+        "lewm_auc": 0.5994,
+        "awm_auc": 0.4974,
+        "fusion_auc": 0.5314
+      },
+      "TSLA": {
+        "n_test": 270,
+        "lewm_auc": 0.4833,
+        "awm_auc": 0.5362,
+        "fusion_auc": 0.5264
+      },
+      "USO": {
+        "n_test": 270,
+        "lewm_auc": 0.5161,
+        "awm_auc": 0.5455,
+        "fusion_auc": 0.5413
+      },
+      "UUP": {
+        "n_test": 270,
+        "lewm_auc": 0.5961,
+        "awm_auc": 0.5279,
+        "fusion_auc": 0.5257
+      },
+      "V": {
+        "n_test": 270,
+        "lewm_auc": 0.4819,
+        "awm_auc": 0.6411,
+        "fusion_auc": 0.6276
+      },
+      "VTI": {
+        "n_test": 270,
+        "lewm_auc": 0.6268,
+        "awm_auc": 0.5564,
+        "fusion_auc": 0.5868
+      },
+      "XLB": {
+        "n_test": 270,
+        "lewm_auc": 0.6327,
+        "awm_auc": 0.581,
+        "fusion_auc": 0.596
+      },
+      "XLC": {
+        "n_test": 270,
+        "lewm_auc": 0.5341,
+        "awm_auc": 0.6292,
+        "fusion_auc": 0.6256
+      },
+      "XLE": {
+        "n_test": 270,
+        "lewm_auc": 0.6478,
+        "awm_auc": 0.5241,
+        "fusion_auc": 0.5624
+      },
+      "XLF": {
+        "n_test": 270,
+        "lewm_auc": 0.614,
+        "awm_auc": 0.5377,
+        "fusion_auc": 0.5542
+      },
+      "XLI": {
+        "n_test": 270,
+        "lewm_auc": 0.6224,
+        "awm_auc": 0.5159,
+        "fusion_auc": 0.5263
+      },
+      "XLK": {
+        "n_test": 270,
+        "lewm_auc": 0.5414,
+        "awm_auc": 0.5413,
+        "fusion_auc": 0.5516
+      },
+      "XLP": {
+        "n_test": 270,
+        "lewm_auc": 0.5891,
+        "awm_auc": 0.5827,
+        "fusion_auc": 0.6078
+      },
+      "XLRE": {
+        "n_test": 270,
+        "lewm_auc": 0.5881,
+        "awm_auc": 0.571,
+        "fusion_auc": 0.6081
+      },
+      "XLU": {
+        "n_test": 270,
+        "lewm_auc": 0.456,
+        "awm_auc": 0.4825,
+        "fusion_auc": 0.4834
+      },
+      "XLV": {
+        "n_test": 270,
+        "lewm_auc": 0.6061,
+        "awm_auc": 0.5718,
+        "fusion_auc": 0.5921
+      },
+      "XLY": {
+        "n_test": 270,
+        "lewm_auc": 0.5761,
+        "awm_auc": 0.5683,
+        "fusion_auc": 0.5712
+      },
+      "ZS": {
+        "n_test": 270,
+        "lewm_auc": 0.3442,
+        "awm_auc": 0.6431,
+        "fusion_auc": 0.6341
+      }
+    }
+  },
+  {
+    "threshold": 5000,
+    "n_tickers": 40,
+    "n_train": 49981,
+    "n_test": 10515,
+    "awm_errors": 0,
+    "lewm": {
+      "classification": {
+        "auc": 0.5483,
+        "brier": 0.2384,
+        "accuracy": 0.5952
+      },
+      "backtest": {
+        "trade_count": 10,
+        "total_return": -0.03920518464239464,
+        "annualized_return": -0.21334572857639755,
+        "sharpe_ratio": -4.705632996239638,
+        "max_drawdown": -0.04300256492568119,
+        "win_rate": 0.6,
+        "profit_factor": 0.3996330142907205,
+        "avg_trade_return": -0.0039765488257398575,
+        "avg_position_size": 0.11465556621551513,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "awm_only": {
+      "classification": {
+        "auc": 0.6192,
+        "brier": 0.2347,
+        "accuracy": 0.6018
+      },
+      "backtest": {
+        "trade_count": 802,
+        "total_return": 9.357012440005807,
+        "annualized_return": 6.900981223560075,
+        "sharpe_ratio": 4.965139166297463,
+        "max_drawdown": -0.45609997300143007,
+        "win_rate": 0.5885286783042394,
+        "profit_factor": 1.8012375918449524,
+        "avg_trade_return": 0.00305905333160208,
+        "avg_position_size": 0.2890643643708848,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "fusion": {
+      "classification": {
+        "auc": 0.6226,
+        "brier": 0.2295,
+        "accuracy": 0.6114
+      },
+      "backtest": {
+        "trade_count": 424,
+        "total_return": 2.0061282561622984,
+        "annualized_return": 1.6739645385565187,
+        "sharpe_ratio": 6.506153094912911,
+        "max_drawdown": -0.19658770651358728,
+        "win_rate": 0.6367924528301887,
+        "profit_factor": 2.0592511719558573,
+        "avg_trade_return": 0.0026315607054288397,
+        "avg_position_size": 0.19945093703679953,
+        "entry_threshold": 0.55,
+        "cost_bps": 10.0,
+        "hold_days": 5,
+        "buy_and_hold": {
+          "total_return": 0.24390442656817912,
+          "annualized_return": 0.22593622768568689,
+          "sharpe_ratio": 2.731093061035879
+        }
+      }
+    },
+    "per_ticker": {
+      "AAPL": {
+        "n_test": 270,
+        "lewm_auc": 0.5807,
+        "awm_auc": 0.5635,
+        "fusion_auc": 0.574
+      },
+      "AMZN": {
+        "n_test": 270,
+        "lewm_auc": 0.5715,
+        "awm_auc": 0.5005,
+        "fusion_auc": 0.5293
+      },
+      "BRK-B": {
+        "n_test": 270,
+        "lewm_auc": 0.5384,
+        "awm_auc": 0.5737,
+        "fusion_auc": 0.577
+      },
+      "COIN": {
+        "n_test": 184,
+        "lewm_auc": 0.6331,
+        "awm_auc": 0.5601,
+        "fusion_auc": 0.5653
+      },
+      "CRWD": {
+        "n_test": 254,
+        "lewm_auc": 0.5341,
+        "awm_auc": 0.5747,
+        "fusion_auc": 0.5764
+      },
+      "DDOG": {
+        "n_test": 243,
+        "lewm_auc": 0.4169,
+        "awm_auc": 0.596,
+        "fusion_auc": 0.5693
+      },
+      "DIA": {
+        "n_test": 270,
+        "lewm_auc": 0.6006,
+        "awm_auc": 0.5189,
+        "fusion_auc": 0.5319
+      },
+      "GLD": {
+        "n_test": 270,
+        "lewm_auc": 0.5325,
+        "awm_auc": 0.6147,
+        "fusion_auc": 0.6174
+      },
+      "GOOGL": {
+        "n_test": 270,
+        "lewm_auc": 0.4458,
+        "awm_auc": 0.536,
+        "fusion_auc": 0.5336
+      },
+      "HYG": {
+        "n_test": 270,
+        "lewm_auc": 0.8945,
+        "awm_auc": 0.8375,
+        "fusion_auc": 0.8769
+      },
+      "IWM": {
+        "n_test": 270,
+        "lewm_auc": 0.6447,
+        "awm_auc": 0.5347,
+        "fusion_auc": 0.5623
+      },
+      "JPM": {
+        "n_test": 270,
+        "lewm_auc": 0.5572,
+        "awm_auc": 0.5333,
+        "fusion_auc": 0.5376
+      },
+      "MDB": {
+        "n_test": 270,
+        "lewm_auc": 0.5247,
+        "awm_auc": 0.5295,
+        "fusion_auc": 0.5291
+      },
+      "META": {
+        "n_test": 270,
+        "lewm_auc": 0.4651,
+        "awm_auc": 0.5491,
+        "fusion_auc": 0.548
+      },
+      "MSFT": {
+        "n_test": 270,
+        "lewm_auc": 0.4544,
+        "awm_auc": 0.6309,
+        "fusion_auc": 0.6194
+      },
+      "NET": {
+        "n_test": 244,
+        "lewm_auc": 0.4616,
+        "awm_auc": 0.5971,
+        "fusion_auc": 0.5577
+      },
+      "NVDA": {
+        "n_test": 270,
+        "lewm_auc": 0.5057,
+        "awm_auc": 0.551,
+        "fusion_auc": 0.5573
+      },
+      "PLTR": {
+        "n_test": 204,
+        "lewm_auc": 0.4495,
+        "awm_auc": 0.5815,
+        "fusion_auc": 0.554
+      },
+      "QQQ": {
+        "n_test": 270,
+        "lewm_auc": 0.5716,
+        "awm_auc": 0.5268,
+        "fusion_auc": 0.5507
+      },
+      "SHOP": {
+        "n_test": 270,
+        "lewm_auc": 0.5389,
+        "awm_auc": 0.5679,
+        "fusion_auc": 0.5719
+      },
+      "SNOW": {
+        "n_test": 206,
+        "lewm_auc": 0.5337,
+        "awm_auc": 0.5058,
+        "fusion_auc": 0.5146
+      },
+      "SPY": {
+        "n_test": 270,
+        "lewm_auc": 0.6398,
+        "awm_auc": 0.5811,
+        "fusion_auc": 0.6183
+      },
+      "TLT": {
+        "n_test": 270,
+        "lewm_auc": 0.6013,
+        "awm_auc": 0.4974,
+        "fusion_auc": 0.5375
+      },
+      "TSLA": {
+        "n_test": 270,
+        "lewm_auc": 0.457,
+        "awm_auc": 0.5362,
+        "fusion_auc": 0.5184
+      },
+      "USO": {
+        "n_test": 270,
+        "lewm_auc": 0.511,
+        "awm_auc": 0.5455,
+        "fusion_auc": 0.5436
+      },
+      "UUP": {
+        "n_test": 270,
+        "lewm_auc": 0.6004,
+        "awm_auc": 0.5279,
+        "fusion_auc": 0.5455
+      },
+      "V": {
+        "n_test": 270,
+        "lewm_auc": 0.5275,
+        "awm_auc": 0.6411,
+        "fusion_auc": 0.6364
+      },
+      "VTI": {
+        "n_test": 270,
+        "lewm_auc": 0.6254,
+        "awm_auc": 0.5564,
+        "fusion_auc": 0.5881
+      },
+      "XLB": {
+        "n_test": 270,
+        "lewm_auc": 0.6265,
+        "awm_auc": 0.581,
+        "fusion_auc": 0.5964
+      },
+      "XLC": {
+        "n_test": 270,
+        "lewm_auc": 0.5477,
+        "awm_auc": 0.6292,
+        "fusion_auc": 0.6264
+      },
+      "XLE": {
+        "n_test": 270,
+        "lewm_auc": 0.6572,
+        "awm_auc": 0.5241,
+        "fusion_auc": 0.5657
+      },
+      "XLF": {
+        "n_test": 270,
+        "lewm_auc": 0.6362,
+        "awm_auc": 0.5377,
+        "fusion_auc": 0.5619
+      },
+      "XLI": {
+        "n_test": 270,
+        "lewm_auc": 0.6198,
+        "awm_auc": 0.5159,
+        "fusion_auc": 0.5217
+      },
+      "XLK": {
+        "n_test": 270,
+        "lewm_auc": 0.5541,
+        "awm_auc": 0.5413,
+        "fusion_auc": 0.554
+      },
+      "XLP": {
+        "n_test": 270,
+        "lewm_auc": 0.5394,
+        "awm_auc": 0.5827,
+        "fusion_auc": 0.61
+      },
+      "XLRE": {
+        "n_test": 270,
+        "lewm_auc": 0.6074,
+        "awm_auc": 0.571,
+        "fusion_auc": 0.6134
+      },
+      "XLU": {
+        "n_test": 270,
+        "lewm_auc": 0.4808,
+        "awm_auc": 0.4825,
+        "fusion_auc": 0.4854
+      },
+      "XLV": {
+        "n_test": 270,
+        "lewm_auc": 0.597,
+        "awm_auc": 0.5718,
+        "fusion_auc": 0.5921
+      },
+      "XLY": {
+        "n_test": 270,
+        "lewm_auc": 0.5535,
+        "awm_auc": 0.5683,
+        "fusion_auc": 0.5681
+      },
+      "ZS": {
+        "n_test": 270,
+        "lewm_auc": 0.3656,
+        "awm_auc": 0.6431,
+        "fusion_auc": 0.6323
+      }
+    }
+  }
+]

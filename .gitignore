@@ -2,3 +2,25 @@ node_modules/
 dist/
 .env
 *.tsbuildinfo
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Data artifacts (large, downloaded/generated)
+*.parquet
+*.pt
+*.joblib
+*.npy
+bench/equity/data/
+bench/AWMFusion/signals.csv
+bench/quantconnect/signals.csv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

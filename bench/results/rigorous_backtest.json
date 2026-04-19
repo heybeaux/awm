@@ -1,0 +1,714 @@
+{
+  "meta": {
+    "type": "walk_forward_rigorous",
+    "retrain_window": 60,
+    "retrain_count": 152,
+    "n_tickers": 35,
+    "excluded": [
+      "GLD",
+      "HYG",
+      "USO",
+      "UUP",
+      "TLT"
+    ],
+    "n_test_obs": 9165,
+    "test_date_range": [
+      "2025-03-14 00:00:00",
+      "2026-04-10 00:00:00"
+    ]
+  },
+  "classification": {
+    "fusion": {
+      "auc": 0.5972,
+      "brier": 0.2376,
+      "accuracy": 0.5924
+    },
+    "lewm": {
+      "auc": 0.5344,
+      "brier": 0.2439,
+      "accuracy": 0.5638
+    }
+  },
+  "sweep": [
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 5,
+      "model": "Fusion",
+      "sharpe": 6.458750206504681,
+      "total_return": 2.628747486689769,
+      "max_drawdown": -0.19354470372722832,
+      "trade_count": 663,
+      "win_rate": 0.6319758672699849,
+      "profit_factor": 2.0408167272548754,
+      "avg_trade_return": 0.0019755316627846076,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 5,
+      "model": "Le-WM",
+      "sharpe": 0.7308942363729226,
+      "total_return": 0.07155852608173707,
+      "max_drawdown": -0.16742855976985688,
+      "trade_count": 371,
+      "win_rate": 0.5175202156334232,
+      "profit_factor": 1.0977439173377463,
+      "avg_trade_return": 0.00019843598388938433,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 10,
+      "model": "Fusion",
+      "sharpe": 5.991151156216481,
+      "total_return": 2.275325123627657,
+      "max_drawdown": -0.20573629484799716,
+      "trade_count": 663,
+      "win_rate": 0.6184012066365008,
+      "profit_factor": 1.929619112500337,
+      "avg_trade_return": 0.001819944044302051,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 10,
+      "model": "Le-WM",
+      "sharpe": 0.3876469951351379,
+      "total_return": 0.0351249250789476,
+      "max_drawdown": -0.17687267809587034,
+      "trade_count": 371,
+      "win_rate": 0.5040431266846361,
+      "profit_factor": 1.0506819497991389,
+      "avg_trade_return": 0.00010516357871741158,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 15,
+      "model": "Fusion",
+      "sharpe": 5.51602502637832,
+      "total_return": 1.9561914665847646,
+      "max_drawdown": -0.21774744589178519,
+      "trade_count": 663,
+      "win_rate": 0.6063348416289592,
+      "profit_factor": 1.8244130629437993,
+      "avg_trade_return": 0.0016643564258194945,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 15,
+      "model": "Le-WM",
+      "sharpe": 0.04385967611441478,
+      "total_return": -7.552104182262376e-05,
+      "max_drawdown": -0.18621129868965416,
+      "trade_count": 371,
+      "win_rate": 0.49595687331536387,
+      "profit_factor": 1.0056070060792894,
+      "avg_trade_return": 1.1891173545438748e-05,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 20,
+      "model": "Fusion",
+      "sharpe": 5.03346572090663,
+      "total_return": 1.668032744457502,
+      "max_drawdown": -0.22965852872517334,
+      "trade_count": 663,
+      "win_rate": 0.5867269984917044,
+      "profit_factor": 1.7244961867734958,
+      "avg_trade_return": 0.0015087688073369381,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.52,
+      "cost_bps": 20,
+      "model": "Le-WM",
+      "sharpe": -0.3003080873161231,
+      "total_return": -0.034084360969904415,
+      "max_drawdown": -0.1955335942481921,
+      "trade_count": 371,
+      "win_rate": 0.48247978436657685,
+      "profit_factor": 0.9624485835951531,
+      "avg_trade_return": -8.138123162653396e-05,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 5,
+      "model": "Fusion",
+      "sharpe": 6.166061800859925,
+      "total_return": 2.718060902095537,
+      "max_drawdown": -0.20072601811804608,
+      "trade_count": 480,
+      "win_rate": 0.63125,
+      "profit_factor": 2.1289499868793893,
+      "avg_trade_return": 0.0027848041881952438,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 5,
+      "model": "Le-WM",
+      "sharpe": 2.6968170630669905,
+      "total_return": 0.2551994840200069,
+      "max_drawdown": -0.14732342022536893,
+      "trade_count": 195,
+      "win_rate": 0.5128205128205128,
+      "profit_factor": 1.4029949547973037,
+      "avg_trade_return": 0.0011839319796295962,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 10,
+      "model": "Fusion",
+      "sharpe": 5.751379364889088,
+      "total_return": 2.371338024702079,
+      "max_drawdown": -0.21192366893057082,
+      "trade_count": 480,
+      "win_rate": 0.6166666666666667,
+      "profit_factor": 2.0122857103527987,
+      "avg_trade_return": 0.002579379307435921,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 10,
+      "model": "Le-WM",
+      "sharpe": 2.3542788547239386,
+      "total_return": 0.21885895316639936,
+      "max_drawdown": -0.1561871315179036,
+      "trade_count": 195,
+      "win_rate": 0.5025641025641026,
+      "profit_factor": 1.342908074031498,
+      "avg_trade_return": 0.001033137801840642,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 15,
+      "model": "Fusion",
+      "sharpe": 5.329978505204314,
+      "total_return": 2.0568204833411774,
+      "max_drawdown": -0.2229678078349647,
+      "trade_count": 480,
+      "win_rate": 0.60625,
+      "profit_factor": 1.902072148033438,
+      "avg_trade_return": 0.0023739544266765983,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 15,
+      "model": "Le-WM",
+      "sharpe": 2.011086506734848,
+      "total_return": 0.18356515314771893,
+      "max_drawdown": -0.16496013550128627,
+      "trade_count": 195,
+      "win_rate": 0.5025641025641026,
+      "profit_factor": 1.2856566176226945,
+      "avg_trade_return": 0.0008823436240516871,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 20,
+      "model": "Fusion",
+      "sharpe": 4.901904001844799,
+      "total_return": 1.771528753595451,
+      "max_drawdown": -0.23772664549429015,
+      "trade_count": 480,
+      "win_rate": 0.5895833333333333,
+      "profit_factor": 1.7978857520132274,
+      "avg_trade_return": 0.002168529545917275,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.55,
+      "cost_bps": 20,
+      "model": "Le-WM",
+      "sharpe": 1.6674329097646157,
+      "total_return": 0.14928808977526864,
+      "max_drawdown": -0.1736433458523454,
+      "trade_count": 195,
+      "win_rate": 0.48205128205128206,
+      "profit_factor": 1.2310568102048978,
+      "avg_trade_return": 0.0007315494462627325,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 5,
+      "model": "Fusion",
+      "sharpe": 7.465300073584823,
+      "total_return": 3.2331431277897362,
+      "max_drawdown": -0.1311286539970179,
+      "trade_count": 328,
+      "win_rate": 0.6585365853658537,
+      "profit_factor": 2.6651768752225697,
+      "avg_trade_return": 0.0044616864360519926,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 5,
+      "model": "Le-WM",
+      "sharpe": 2.3303143767809855,
+      "total_return": 0.14593026008771326,
+      "max_drawdown": -0.142007500779825,
+      "trade_count": 98,
+      "win_rate": 0.5408163265306123,
+      "profit_factor": 1.3896664411486426,
+      "avg_trade_return": 0.0014112546521090907,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 10,
+      "model": "Fusion",
+      "sharpe": 7.096182345536797,
+      "total_return": 2.8937144630546467,
+      "max_drawdown": -0.13960437484675028,
+      "trade_count": 328,
+      "win_rate": 0.649390243902439,
+      "profit_factor": 2.515982472667993,
+      "avg_trade_return": 0.004204751238218305,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 10,
+      "model": "Le-WM",
+      "sharpe": 1.9900370226574555,
+      "total_return": 0.12307414434934216,
+      "max_drawdown": -0.15161177359629835,
+      "trade_count": 98,
+      "win_rate": 0.5306122448979592,
+      "profit_factor": 1.3240951438067696,
+      "avg_trade_return": 0.0012055701739234765,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 15,
+      "model": "Fusion",
+      "sharpe": 6.719391597603424,
+      "total_return": 2.5813846032486913,
+      "max_drawdown": -0.14799950784842944,
+      "trade_count": 328,
+      "win_rate": 0.6432926829268293,
+      "profit_factor": 2.3757123995939313,
+      "avg_trade_return": 0.003947816040384617,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 15,
+      "model": "Le-WM",
+      "sharpe": 1.6496381017466182,
+      "total_return": 0.10067090265661993,
+      "max_drawdown": -0.1626206815574468,
+      "trade_count": 98,
+      "win_rate": 0.5306122448979592,
+      "profit_factor": 1.2618696245849654,
+      "avg_trade_return": 0.000999885695737862,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 20,
+      "model": "Fusion",
+      "sharpe": 6.3349095935353725,
+      "total_return": 2.293999464917422,
+      "max_drawdown": -0.1563147995854619,
+      "trade_count": 328,
+      "win_rate": 0.625,
+      "profit_factor": 2.2432628281387776,
+      "avg_trade_return": 0.0036908808425509306,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.58,
+      "cost_bps": 20,
+      "model": "Le-WM",
+      "sharpe": 1.3093294887546225,
+      "total_return": 0.07871162097168138,
+      "max_drawdown": -0.17351671184222522,
+      "trade_count": 98,
+      "win_rate": 0.5102040816326531,
+      "profit_factor": 1.2027310713018395,
+      "avg_trade_return": 0.0007942012175522466,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 5,
+      "model": "Fusion",
+      "sharpe": 7.629549145387511,
+      "total_return": 3.0381574093374457,
+      "max_drawdown": -0.10510512308390496,
+      "trade_count": 258,
+      "win_rate": 0.6550387596899225,
+      "profit_factor": 2.9206310849497172,
+      "avg_trade_return": 0.005482710767071102,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 5,
+      "model": "Le-WM",
+      "sharpe": 2.703886563598772,
+      "total_return": 0.12882428115969136,
+      "max_drawdown": -0.11814035010047438,
+      "trade_count": 61,
+      "win_rate": 0.5245901639344263,
+      "profit_factor": 1.5369183418575951,
+      "avg_trade_return": 0.0020126050871827885,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 10,
+      "model": "Fusion",
+      "sharpe": 7.299311623820986,
+      "total_return": 2.754961375851202,
+      "max_drawdown": -0.11206079966624397,
+      "trade_count": 258,
+      "win_rate": 0.6511627906976745,
+      "profit_factor": 2.7582425507669184,
+      "avg_trade_return": 0.005198483866850847,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 10,
+      "model": "Le-WM",
+      "sharpe": 2.3791208399730115,
+      "total_return": 0.11225315267457137,
+      "max_drawdown": -0.12206891647710084,
+      "trade_count": 61,
+      "win_rate": 0.5081967213114754,
+      "profit_factor": 1.4578758136780632,
+      "avg_trade_return": 0.0017699801144953958,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 15,
+      "model": "Fusion",
+      "sharpe": 6.961680131702028,
+      "total_return": 2.4915316490623423,
+      "max_drawdown": -0.11898507359145755,
+      "trade_count": 258,
+      "win_rate": 0.6472868217054264,
+      "profit_factor": 2.606140652095947,
+      "avg_trade_return": 0.004914256966630591,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 15,
+      "model": "Le-WM",
+      "sharpe": 2.053684937497554,
+      "total_return": 0.0959232883487866,
+      "max_drawdown": -0.12598037433845286,
+      "trade_count": 61,
+      "win_rate": 0.5081967213114754,
+      "profit_factor": 1.383430785905334,
+      "avg_trade_return": 0.0015273551418080033,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 20,
+      "model": "Fusion",
+      "sharpe": 6.616622132670406,
+      "total_return": 2.2464951544625986,
+      "max_drawdown": -0.12645888716388454,
+      "trade_count": 258,
+      "win_rate": 0.6356589147286822,
+      "profit_factor": 2.462734373403491,
+      "avg_trade_return": 0.004630030066410336,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.6,
+      "cost_bps": 20,
+      "model": "Le-WM",
+      "sharpe": 1.7277412233575802,
+      "total_return": 0.07983120450303094,
+      "max_drawdown": -0.12987479650149963,
+      "trade_count": 61,
+      "win_rate": 0.4918032786885246,
+      "profit_factor": 1.3132085425918811,
+      "avg_trade_return": 0.0012847301691206103,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 5,
+      "model": "Fusion",
+      "sharpe": 10.029554539507869,
+      "total_return": 1.5253044522890233,
+      "max_drawdown": -0.05763762854401366,
+      "trade_count": 109,
+      "win_rate": 0.6788990825688074,
+      "profit_factor": 4.006050348634279,
+      "avg_trade_return": 0.008556263243677517,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 5,
+      "model": "Le-WM",
+      "sharpe": -4.753545356374463,
+      "total_return": -0.02808217752648834,
+      "max_drawdown": -0.0399767785746024,
+      "trade_count": 8,
+      "win_rate": 0.5,
+      "profit_factor": 0.3895978968165705,
+      "avg_trade_return": -0.003545524413791175,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 10,
+      "model": "Fusion",
+      "sharpe": 9.67894833326384,
+      "total_return": 1.4267640093927025,
+      "max_drawdown": -0.06152380021148719,
+      "trade_count": 109,
+      "win_rate": 0.6697247706422018,
+      "profit_factor": 3.753033445030907,
+      "avg_trade_return": 0.008189053974944134,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 10,
+      "model": "Le-WM",
+      "sharpe": -5.19372694449159,
+      "total_return": -0.030644194165052152,
+      "max_drawdown": -0.0418308476361157,
+      "trade_count": 8,
+      "win_rate": 0.5,
+      "profit_factor": 0.35120936628534255,
+      "avg_trade_return": -0.0038752084477810815,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 15,
+      "model": "Fusion",
+      "sharpe": 9.320694442980347,
+      "total_return": 1.3320481789615104,
+      "max_drawdown": -0.06539466629806162,
+      "trade_count": 109,
+      "win_rate": 0.6697247706422018,
+      "profit_factor": 3.5193737486630345,
+      "avg_trade_return": 0.00782184470621075,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 15,
+      "model": "Le-WM",
+      "sharpe": -5.633560064200071,
+      "total_return": -0.03319962709799018,
+      "max_drawdown": -0.04368145536640209,
+      "trade_count": 8,
+      "win_rate": 0.5,
+      "profit_factor": 0.3148782442970798,
+      "avg_trade_return": -0.004204892481770988,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 20,
+      "model": "Fusion",
+      "sharpe": 8.954766283114425,
+      "total_return": 1.2410093138485343,
+      "max_drawdown": -0.06925028430556243,
+      "trade_count": 109,
+      "win_rate": 0.6513761467889908,
+      "profit_factor": 3.301844121517701,
+      "avg_trade_return": 0.007454635437477365,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    },
+    {
+      "entry_threshold": 0.65,
+      "cost_bps": 20,
+      "model": "Le-WM",
+      "sharpe": -6.073036180186383,
+      "total_return": -0.03574849280730219,
+      "max_drawdown": -0.04552860800448872,
+      "trade_count": 8,
+      "win_rate": 0.5,
+      "profit_factor": 0.2804434491599593,
+      "avg_trade_return": -0.004534576515760894,
+      "buy_and_hold": {
+        "total_return": 0.2402007646048394,
+        "annualized_return": 0.22252907080950401,
+        "sharpe_ratio": 2.390662456015695
+      }
+    }
+  ]
+}

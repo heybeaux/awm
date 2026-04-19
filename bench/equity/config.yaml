@@ -1,0 +1,49 @@
+awm:
+  cost_weight: 0.3
+  routing_confidence: 0.7
+  skip_confidence: 0.85
+backtest:
+  cost_bps: 10
+  entry_threshold: 0.55
+  hold_days: 5
+  max_positions: 5
+benchmark:
+  device: mps
+  seeds:
+    data: 42
+    model: 123
+  thresholds:
+  - 100
+  - 250
+  - 500
+  - 1000
+  - 2500
+  - 5000
+data:
+  data_dir: data
+  direction_threshold: 0.01
+  end_date: '2026-04-18'
+  fetch_delay_sec: 0.5
+  lookback_days: 60
+  start_date: '2005-01-01'
+  stride_days: 1
+  test_ratio: 0.15
+  train_ratio: 0.7
+  val_ratio: 0.15
+lewm:
+  batch_size: 256
+  d_model: 64
+  epochs: 100
+  input_channels: 5
+  lr: 0.001
+  n_conv_layers: 3
+  patience: 10
+  reg_lambda: 0.01
+universe:
+  tickers: null
+xgboost:
+  colsample_bytree: 0.8
+  learning_rate: 0.1
+  max_depth: 6
+  n_estimators: 300
+  subsample: 0.8

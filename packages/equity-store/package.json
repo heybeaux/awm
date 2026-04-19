@@ -1,0 +1,27 @@
+{
+  "name": "@heybeaux/awm-equity-store",
+  "version": "0.1.0",
+  "description": "SQLite-backed AWMStore implementation for equity market predictions",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": ["awm", "equity", "sqlite", "bayesian", "trading"],
+  "author": "heybeaux",
+  "license": "MIT",
+  "dependencies": {
+    "@heybeaux/awm-core": "*",
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}
