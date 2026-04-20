@@ -2,7 +2,7 @@
 
 Responsibilities:
   1. Download daily OHLCV per ticker via yfinance → Parquet cache.
-  2. Engineer 15 per-bar features (plus 60-day price_history for Le-WM).
+  2. Engineer 10 per-bar features (plus 60-day price_history for Le-WM).
   3. Attach targets (direction_5d, regime).
   4. Produce strict temporal train/val/test splits.
   5. Validate gaps, date coverage, class balance.
@@ -189,20 +189,15 @@ FEATURE_COLUMNS: list[str] = [
     "roll_vol_5d",
     "roll_vol_10d",
     "roll_vol_20d",
-    "rsi_14",
-    "macd_hist",
-    "bb_pctb",
-    "high_52w_pct",
-    "day_of_week",
 ]
 
 
 def engineer_features(ticker: str, raw_df: pd.DataFrame, lookback: int = LOOKBACK) -> pd.DataFrame:
-    """Compute 15 scalar features + 60-day price_history array per bar.
+    """Compute 10 scalar features + 60-day price_history array per bar.
 
     Input: raw OHLCV (index=date, cols=open/high/low/close/adj_close/volume).
     Output: DataFrame indexed by date with:
-        - FEATURE_COLUMNS (15 scalars)
+        - FEATURE_COLUMNS (10 scalars)
         - price_history (list-of-5-element arrays, length=lookback per row, or None)
         - open, high, low, close, adj_close, volume (carried through for targets)
         - ticker
@@ -226,7 +221,7 @@ def engineer_features(ticker: str, raw_df: pd.DataFrame, lookback: int = LOOKBAC
     # history" interpretation without leakage from future bars — though the
     # current-bar volume IS known intraday, so including it is also defensible.
     # We follow the common "volume today vs. past 20-day average" convention.)
-    vol_sma20 = vol.rolling(window=20).mean()
+    vol_sma20 = vol.rolling(window=20).mean().shift(1)
     df["volume_ratio"] = vol / vol_sma20.replace(0, np.nan)
 
     # Rolling cumulative returns
@@ -238,19 +233,6 @@ def engineer_features(ticker: str, raw_df: pd.DataFrame, lookback: int = LOOKBAC
     df["roll_vol_5d"] = df["daily_return"].rolling(window=5).std()
     df["roll_vol_10d"] = df["daily_return"].rolling(window=10).std()
     df["roll_vol_20d"] = df["daily_return"].rolling(window=20).std()
-
-    # Indicators
-    df["rsi_14"] = _rsi(adj, 14)
-    df["macd_hist"] = _macd_hist(adj, 12, 26, 9)
-    df["bb_pctb"] = _bb_pctb(adj, 20, 2.0)
-
-    # 52-week high proximity — past 252 trading days (inclusive of today is OK:
-    # current close vs. max over trailing window is standard).
-    high_252 = adj.rolling(window=252, min_periods=60).max()
-    df["high_52w_pct"] = adj / high_252  # 0-1, 1.0 = at high
-
-    # Day of week (Mon=0 .. Fri=4)
-    df["day_of_week"] = df.index.dayofweek.astype("int64")
 
     # Price history: array of last `lookback` (O,H,L,C,V) rows.
     # We use adjusted close for C, raw O/H/L/V. Store as list-of-lists so

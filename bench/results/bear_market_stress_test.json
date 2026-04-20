@@ -1,0 +1,6398 @@
+{
+  "meta": {
+    "type": "bear_market_stress_test",
+    "data_range": "2005-01-03 to 2026-04-17",
+    "n_tickers": 40,
+    "walk_forward_windows": 77,
+    "min_train_days": 500,
+    "test_window_days": 63,
+    "cost_bps": 10
+  },
+  "overall": {
+    "avg_fusion_auc": 0.5582901996689668,
+    "avg_lewm_auc": 0.5343413860295025,
+    "avg_xgb_auc": 0.5724739718735938
+  },
+  "regime_summary": {
+    "2020 Recovery": {
+      "n_windows": 3,
+      "avg_fusion_auc": 0.5499949995165934,
+      "avg_lewm_auc": 0.5095746182856288,
+      "avg_xgb_auc": 0.5756606453803231,
+      "backtests": {
+        "Fusion_0.55": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.55": {
+          "compound_return": -0.0004334596347792541,
+          "avg_sharpe": null,
+          "worst_drawdown": -0.00017768477152886925,
+          "total_trades": 2
+        },
+        "XGBoost_0.55": {
+          "compound_return": -0.15092119175199725,
+          "avg_sharpe": -31.126112443649987,
+          "worst_drawdown": -0.061076064967427006,
+          "total_trades": 353
+        },
+        "Fusion_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.58": {
+          "compound_return": -0.13987548772393987,
+          "avg_sharpe": -31.777014236273484,
+          "worst_drawdown": -0.05588625654971879,
+          "total_trades": 257
+        },
+        "Fusion_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.6": {
+          "compound_return": -0.12967371888244628,
+          "avg_sharpe": -25.229442267856836,
+          "worst_drawdown": -0.049594861321265386,
+          "total_trades": 204
+        }
+      }
+    },
+    "2022 Bear": {
+      "n_windows": 3,
+      "avg_fusion_auc": 0.5977925129984742,
+      "avg_lewm_auc": 0.5800285355796619,
+      "avg_xgb_auc": 0.5167811690428006,
+      "backtests": {
+        "Fusion_0.55": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.55": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.55": {
+          "compound_return": -0.23467849747559621,
+          "avg_sharpe": -31.721165242793024,
+          "worst_drawdown": -0.11466869552650481,
+          "total_trades": 538
+        },
+        "Fusion_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.58": {
+          "compound_return": -0.21873248194468042,
+          "avg_sharpe": -31.125891524645912,
+          "worst_drawdown": -0.10894485176293199,
+          "total_trades": 398
+        },
+        "Fusion_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.6": {
+          "compound_return": -0.20391468265552515,
+          "avg_sharpe": -29.117463256701594,
+          "worst_drawdown": -0.10197399093881865,
+          "total_trades": 323
+        }
+      }
+    },
+    "2022 Recovery": {
+      "n_windows": 5,
+      "avg_fusion_auc": 0.5681222080793317,
+      "avg_lewm_auc": 0.5506352592036469,
+      "avg_xgb_auc": 0.5786587153587052,
+      "backtests": {
+        "Fusion_0.55": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.55": {
+          "compound_return": -0.0008045201649751199,
+          "avg_sharpe": -171.10119366337085,
+          "worst_drawdown": -0.0004676195477290363,
+          "total_trades": 3
+        },
+        "XGBoost_0.55": {
+          "compound_return": -0.1752188696740108,
+          "avg_sharpe": -36.19660467834855,
+          "worst_drawdown": -0.0684333776680447,
+          "total_trades": 479
+        },
+        "Fusion_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.58": {
+          "compound_return": -0.15331295210803464,
+          "avg_sharpe": -33.2371215757006,
+          "worst_drawdown": -0.061841190712719436,
+          "total_trades": 321
+        },
+        "Fusion_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "XGBoost_0.6": {
+          "compound_return": -0.1293616157204046,
+          "avg_sharpe": -27.599970903681584,
+          "worst_drawdown": -0.05058669913693812,
+          "total_trades": 227
+        }
+      }
+    },
+    "GFC Crash": {
+      "n_windows": 6,
+      "avg_fusion_auc": 0.5271871158295348,
+      "avg_lewm_auc": 0.5086106122781673,
+      "avg_xgb_auc": 0.533120058966062,
+      "backtests": {
+        "Fusion_0.55": {
+          "compound_return": -0.0002353148939007177,
+          "avg_sharpe": null,
+          "worst_drawdown": -0.00018825634538552783,
+          "total_trades": 1
+        },
+        "Le-WM_0.55": {
+          "compound_return": -0.01214064393222547,
+          "avg_sharpe": -47.38886834732337,
+          "worst_drawdown": -0.006323334032950421,
+          "total_trades": 44
+        },
+        "XGBoost_0.55": {
+          "compound_return": -0.46528383543389185,
+          "avg_sharpe": -39.3535137114433,
+          "worst_drawdown": -0.13276121439593486,
+          "total_trades": 972
+        },
+        "Fusion_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.58": {
+          "compound_return": -0.005456256795892234,
+          "avg_sharpe": -50.06702616905884,
+          "worst_drawdown": -0.002522934500827824,
+          "total_trades": 14
+        },
+        "XGBoost_0.58": {
+          "compound_return": -0.46189214643362553,
+          "avg_sharpe": -35.77370153081212,
+          "worst_drawdown": -0.1308481689890329,
+          "total_trades": 853
+        },
+        "Fusion_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.6": {
+          "compound_return": -0.0027055626144147915,
+          "avg_sharpe": -49.874598970129284,
+          "worst_drawdown": -0.0012502028687672929,
+          "total_trades": 6
+        },
+        "XGBoost_0.6": {
+          "compound_return": -0.46315135911573113,
+          "avg_sharpe": -34.95652370596315,
+          "worst_drawdown": -0.13053355052060592,
+          "total_trades": 799
+        }
+      }
+    },
+    "GFC Recovery": {
+      "n_windows": 7,
+      "avg_fusion_auc": 0.5332172334713682,
+      "avg_lewm_auc": 0.5176397245710277,
+      "avg_xgb_auc": 0.5188083780637774,
+      "backtests": {
+        "Fusion_0.55": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.55": {
+          "compound_return": -0.017742536767722195,
+          "avg_sharpe": -72.67292887592977,
+          "worst_drawdown": -0.014020110532233529,
+          "total_trades": 62
+        },
+        "XGBoost_0.55": {
+          "compound_return": -0.23163139579954928,
+          "avg_sharpe": -27.422257942749546,
+          "worst_drawdown": -0.047949084326252694,
+          "total_trades": 583
+        },
+        "Fusion_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.58": {
+          "compound_return": -0.008644574836140562,
+          "avg_sharpe": -24.557791206756935,
+          "worst_drawdown": -0.008091324629740536,
+          "total_trades": 23
+        },
+        "XGBoost_0.58": {
+          "compound_return": -0.21843874463515112,
+          "avg_sharpe": -25.794447918956045,
+          "worst_drawdown": -0.04903925818464505,
+          "total_trades": 437
+        },
+        "Fusion_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.6": {
+          "compound_return": -0.003105257920455462,
+          "avg_sharpe": -28.872915578719343,
+          "worst_drawdown": -0.0030246048622992417,
+          "total_trades": 7
+        },
+        "XGBoost_0.6": {
+          "compound_return": -0.2033626678580206,
+          "avg_sharpe": -25.195372381870406,
+          "worst_drawdown": -0.046436670102328076,
+          "total_trades": 358
+        }
+      }
+    },
+    "Normal/Bull": {
+      "n_windows": 53,
+      "avg_fusion_auc": 0.5624288390055056,
+      "avg_lewm_auc": 0.5367388532262528,
+      "avg_xgb_auc": 0.5864056191313402,
+      "backtests": {
+        "Fusion_0.55": {
+          "compound_return": -0.00025381332670459944,
+          "avg_sharpe": null,
+          "worst_drawdown": -0.0002030558155833861,
+          "total_trades": 1
+        },
+        "Le-WM_0.55": {
+          "compound_return": -0.022683810370948576,
+          "avg_sharpe": -47.63799258218384,
+          "worst_drawdown": -0.011699024767869907,
+          "total_trades": 77
+        },
+        "XGBoost_0.55": {
+          "compound_return": -0.8151384384738347,
+          "avg_sharpe": -27.560733612280064,
+          "worst_drawdown": -0.08222350557225304,
+          "total_trades": 3795
+        },
+        "Fusion_0.58": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.58": {
+          "compound_return": -0.012666812706369157,
+          "avg_sharpe": -32.704419226381894,
+          "worst_drawdown": -0.00814119840451223,
+          "total_trades": 29
+        },
+        "XGBoost_0.58": {
+          "compound_return": -0.7783794850275436,
+          "avg_sharpe": -26.427755894970364,
+          "worst_drawdown": -0.08111533898446402,
+          "total_trades": 2680
+        },
+        "Fusion_0.6": {
+          "compound_return": 0.0,
+          "avg_sharpe": null,
+          "worst_drawdown": 0.0,
+          "total_trades": 0
+        },
+        "Le-WM_0.6": {
+          "compound_return": -0.007833689929223286,
+          "avg_sharpe": -31.68811156186723,
+          "worst_drawdown": -0.005046921255749871,
+          "total_trades": 15
+        },
+        "XGBoost_0.6": {
+          "compound_return": -0.7386901015208135,
+          "avg_sharpe": -26.16414317447265,
+          "worst_drawdown": -0.08089472812316095,
+          "total_trades": 2101
+        }
+      }
+    }
+  },
+  "per_window": [
+    {
+      "window": 1,
+      "test_start": "2006-12-27",
+      "test_end": "2007-03-29",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1512,
+      "classification": {
+        "fusion_auc": 0.5537993386599636,
+        "lewm_auc": 0.5516166921028219,
+        "xgb_auc": 0.6087077685010623,
+        "awm_auc": 0.5377324789777658
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -27.031682506939433,
+          "total_return": -0.0030619289230329194,
+          "max_drawdown": -0.0030173889338538165,
+          "trade_count": 11,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -42.12389105979159,
+          "total_return": -0.05860678413226539,
+          "max_drawdown": -0.0583075443127341,
+          "trade_count": 100,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": -34.90222192135494,
+          "total_return": -0.002128549990228601,
+          "max_drawdown": -0.002049404906109475,
+          "trade_count": 5,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -43.05462359994767,
+          "total_return": -0.058027846823650586,
+          "max_drawdown": -0.057728422977834815,
+          "trade_count": 87,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": -38.917389720556926,
+          "total_return": -0.0013467204716139936,
+          "max_drawdown": -0.0012650269966550803,
+          "trade_count": 3,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -38.948778401945916,
+          "total_return": -0.056735475664784984,
+          "max_drawdown": -0.05649661191366715,
+          "trade_count": 75,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 2,
+      "test_start": "2007-03-30",
+      "test_end": "2007-06-28",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1512,
+      "classification": {
+        "fusion_auc": 0.5427179631121937,
+        "lewm_auc": 0.4970618328006302,
+        "xgb_auc": 0.5976567097960034,
+        "awm_auc": 0.5709596805592025
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -30.512718786301004,
+          "total_return": -0.0014865349156318874,
+          "max_drawdown": -0.0014359159803918207,
+          "trade_count": 6,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -24.290586503006175,
+          "total_return": -0.050475608019807994,
+          "max_drawdown": -0.04888599537285247,
+          "trade_count": 90,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.0003268230929921456,
+          "max_drawdown": -0.00026146702057774825,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -24.57516309674562,
+          "total_return": -0.04757592809268152,
+          "max_drawdown": -0.04602921419831374,
+          "trade_count": 76,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -24.581609705930823,
+          "total_return": -0.04657124327506246,
+          "max_drawdown": -0.04502289779660025,
+          "trade_count": 70,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 3,
+      "test_start": "2007-06-29",
+      "test_end": "2007-09-27",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1512,
+      "classification": {
+        "fusion_auc": 0.5563813946892615,
+        "lewm_auc": 0.5492785478781863,
+        "xgb_auc": 0.5628319211543235,
+        "awm_auc": 0.5432029283511185
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": -0.00025381332670459944,
+          "max_drawdown": -0.0002030558155833861,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "Le-WM_0.55": {
+          "sharpe": -20.921562548032117,
+          "total_return": -0.011749552404867858,
+          "max_drawdown": -0.011699024767869907,
+          "trade_count": 35,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -34.14426861888822,
+          "total_return": -0.07513749019017457,
+          "max_drawdown": -0.07416091018679312,
+          "trade_count": 121,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": -30.50661653140884,
+          "total_return": -0.008276146509395677,
+          "max_drawdown": -0.00814119840451223,
+          "trade_count": 18,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -31.63531648014443,
+          "total_return": -0.07366927479855667,
+          "max_drawdown": -0.07273080684478872,
+          "trade_count": 101,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": -24.458833403177536,
+          "total_return": -0.005551533516543361,
+          "max_drawdown": -0.005046921255749871,
+          "trade_count": 10,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.674907685711815,
+          "total_return": -0.07155650202643438,
+          "max_drawdown": -0.07061589361733413,
+          "trade_count": 90,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 4,
+      "test_start": "2007-09-28",
+      "test_end": "2007-12-27",
+      "regime": "GFC Crash",
+      "n_test_obs": 1638,
+      "classification": {
+        "fusion_auc": 0.5385080874703865,
+        "lewm_auc": 0.5119226048345464,
+        "xgb_auc": 0.5291066273431517,
+        "awm_auc": 0.55969100575972
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -29.871641247545448,
+          "total_return": -0.0034665807060616505,
+          "max_drawdown": -0.0034113494710377,
+          "trade_count": 12,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -43.692331694829804,
+          "total_return": -0.08331367975293691,
+          "max_drawdown": -0.08271875422572082,
+          "trade_count": 142,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": -45.050178968931945,
+          "total_return": -0.0015239448719869264,
+          "max_drawdown": -0.0014371361089350438,
+          "trade_count": 4,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -35.69855679648589,
+          "total_return": -0.08420600725611593,
+          "max_drawdown": -0.08361166084565828,
+          "trade_count": 122,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": -0.0004345929249361946,
+          "max_drawdown": -0.00034768945225700944,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -33.32817762887286,
+          "total_return": -0.08319075115452146,
+          "max_drawdown": -0.08259574584716728,
+          "trade_count": 114,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 5,
+      "test_start": "2007-12-28",
+      "test_end": "2008-03-31",
+      "regime": "GFC Crash",
+      "n_test_obs": 1638,
+      "classification": {
+        "fusion_auc": 0.5060158067249042,
+        "lewm_auc": 0.48292578598417335,
+        "xgb_auc": 0.5369395567684251,
+        "awm_auc": 0.5311500577789346
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": -0.0002353148939007177,
+          "max_drawdown": -0.00018825634538552783,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "Le-WM_0.55": {
+          "sharpe": -24.636420254598214,
+          "total_return": -0.0063810030966545694,
+          "max_drawdown": -0.006323334032950421,
+          "trade_count": 22,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -39.509168130404014,
+          "total_return": -0.1111287329584979,
+          "max_drawdown": -0.1109768762196819,
+          "trade_count": 177,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": -53.94850703410654,
+          "total_return": -0.0026661377215754234,
+          "max_drawdown": -0.002522934500827824,
+          "trade_count": 7,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -37.27497899950152,
+          "total_return": -0.11404676627755572,
+          "max_drawdown": -0.11389540806202426,
+          "trade_count": 165,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": -48.546805436120515,
+          "total_return": -0.0013396316577249934,
+          "max_drawdown": -0.0012502028687672929,
+          "trade_count": 3,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -39.08138128883804,
+          "total_return": -0.11419469484463673,
+          "max_drawdown": -0.11404336190154979,
+          "trade_count": 156,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 6,
+      "test_start": "2008-04-01",
+      "test_end": "2008-06-27",
+      "regime": "GFC Crash",
+      "n_test_obs": 1638,
+      "classification": {
+        "fusion_auc": 0.5039739986441444,
+        "lewm_auc": 0.4917660019207954,
+        "xgb_auc": 0.5506998192192532,
+        "awm_auc": 0.5230530760973957
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -69.63202238083565,
+          "total_return": -0.0009120428800302172,
+          "max_drawdown": -0.0008695822725092513,
+          "trade_count": 4,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -32.23193569446648,
+          "total_return": -0.09104615216246148,
+          "max_drawdown": -0.09034353520279033,
+          "trade_count": 151,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": -51.202392504138054,
+          "total_return": -0.0009335760562600992,
+          "max_drawdown": -0.000842970716480511,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -33.22730765184294,
+          "total_return": -0.08863913489032149,
+          "max_drawdown": -0.08799055678498184,
+          "trade_count": 134,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": -51.202392504138054,
+          "total_return": -0.0009335760562600992,
+          "max_drawdown": -0.000842970716480511,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -31.079315999073685,
+          "total_return": -0.09066011680765207,
+          "max_drawdown": -0.09001297695215729,
+          "trade_count": 126,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 7,
+      "test_start": "2008-06-30",
+      "test_end": "2008-09-26",
+      "regime": "GFC Crash",
+      "n_test_obs": 1638,
+      "classification": {
+        "fusion_auc": 0.48926555640721897,
+        "lewm_auc": 0.46894293080621563,
+        "xgb_auc": 0.5063218591038953,
+        "awm_auc": 0.508109190997143
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.0002210074276530749,
+          "max_drawdown": -0.00017680985001057337,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -33.54580413290266,
+          "total_return": -0.07147944204956036,
+          "max_drawdown": -0.07138320420477146,
+          "trade_count": 138,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -28.51677946197724,
+          "total_return": -0.06671331849217266,
+          "max_drawdown": -0.06661658665567272,
+          "trade_count": 107,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.299248453327078,
+          "total_return": -0.0662315934241462,
+          "max_drawdown": -0.06613481165856075,
+          "trade_count": 97,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 8,
+      "test_start": "2008-09-29",
+      "test_end": "2008-12-26",
+      "regime": "GFC Crash",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.5457398543063285,
+        "lewm_auc": 0.5326677975160042,
+        "xgb_auc": 0.5154799525972743,
+        "awm_auc": 0.5004988614051191
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -65.41538950631414,
+          "total_return": -0.0012066720745130821,
+          "max_drawdown": -0.0011644445346101408,
+          "trade_count": 5,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -50.75390208801508,
+          "total_return": -0.13410926964775616,
+          "max_drawdown": -0.13276121439593486,
+          "trade_count": 202,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.000342320364655202,
+          "max_drawdown": -0.0002738656676666218,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -45.18501852892364,
+          "total_return": -0.13219919792117218,
+          "max_drawdown": -0.1308481689890329,
+          "trade_count": 183,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -44.12974144558754,
+          "total_return": -0.13188506850268822,
+          "max_drawdown": -0.13053355052060592,
+          "trade_count": 170,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 9,
+      "test_start": "2008-12-29",
+      "test_end": "2009-03-30",
+      "regime": "GFC Crash",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.5796193914242266,
+        "lewm_auc": 0.5634385526072683,
+        "xgb_auc": 0.5601725387643723,
+        "awm_auc": 0.5287659356745925
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -36.38794052804177,
+          "total_return": -0.10201879186887874,
+          "max_drawdown": -0.09939103561744914,
+          "trade_count": 162,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -34.739567746141454,
+          "total_return": -0.10146447668208025,
+          "max_drawdown": -0.09883509834192074,
+          "trade_count": 142,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -34.82127742007971,
+          "total_return": -0.10320752835823488,
+          "max_drawdown": -0.1005832506982423,
+          "trade_count": 136,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 10,
+      "test_start": "2009-03-31",
+      "test_end": "2009-06-29",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.5435411226338911,
+        "lewm_auc": 0.5531193370871016,
+        "xgb_auc": 0.5244485207396162,
+        "awm_auc": 0.5099528512636361
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00020337394472502712,
+          "max_drawdown": -0.0001627024649261554,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -27.236898373950325,
+          "total_return": -0.03986498185593679,
+          "max_drawdown": -0.03892621780510967,
+          "trade_count": 80,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.42943745769144,
+          "total_return": -0.039513334682428125,
+          "max_drawdown": -0.038574226811493605,
+          "trade_count": 66,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.146497026444855,
+          "total_return": -0.037514870607839645,
+          "max_drawdown": -0.03657380875523105,
+          "trade_count": 55,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 11,
+      "test_start": "2009-06-30",
+      "test_end": "2009-09-28",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.4896412238645852,
+        "lewm_auc": 0.47613873267085827,
+        "xgb_auc": 0.421810801992955,
+        "awm_auc": 0.5338142913231252
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -23.57090573453915,
+          "total_return": -0.03623444652572627,
+          "max_drawdown": -0.03598010493333984,
+          "trade_count": 83,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -21.920755785227765,
+          "total_return": -0.032653571805223325,
+          "max_drawdown": -0.03243898167985477,
+          "trade_count": 57,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -23.160812739201287,
+          "total_return": -0.031452650552327155,
+          "max_drawdown": -0.031237794022044386,
+          "trade_count": 49,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 12,
+      "test_start": "2009-09-29",
+      "test_end": "2009-12-28",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.48552289429055967,
+        "lewm_auc": 0.5122583380440927,
+        "xgb_auc": 0.49043103448275865,
+        "awm_auc": 0.4714676370830978
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -133.4642890875297,
+          "total_return": -0.0004860859473515555,
+          "max_drawdown": -0.00044297194709907696,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -31.021857683051092,
+          "total_return": -0.038264787082524676,
+          "max_drawdown": -0.03802743335872404,
+          "trade_count": 94,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -22.644124148450768,
+          "total_return": -0.03438066881032864,
+          "max_drawdown": -0.03429334311413568,
+          "trade_count": 68,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -22.041047295807665,
+          "total_return": -0.03117875706451212,
+          "max_drawdown": -0.0310911418037223,
+          "trade_count": 54,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 13,
+      "test_start": "2009-12-29",
+      "test_end": "2010-03-30",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.604121533950282,
+        "lewm_auc": 0.5691766649328082,
+        "xgb_auc": 0.5664058257643743,
+        "awm_auc": 0.5881052547342909
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -57.02923609464106,
+          "total_return": -0.0009986752586177428,
+          "max_drawdown": -0.0009524040042115483,
+          "trade_count": 4,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -29.868282303835116,
+          "total_return": -0.036646366779854,
+          "max_drawdown": -0.03636353994383912,
+          "trade_count": 79,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -30.38270249394139,
+          "total_return": -0.03214354777659756,
+          "max_drawdown": -0.03185939897738253,
+          "trade_count": 58,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -31.948591662205462,
+          "total_return": -0.030085346936359558,
+          "max_drawdown": -0.029800593878841607,
+          "trade_count": 49,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 14,
+      "test_start": "2010-03-31",
+      "test_end": "2010-06-29",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.5778112130764147,
+        "lewm_auc": 0.5351886216889522,
+        "xgb_auc": 0.537547981595404,
+        "awm_auc": 0.5837318559662412
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -74.44647808207206,
+          "total_return": -0.0013186525820616524,
+          "max_drawdown": -0.001249307423446158,
+          "trade_count": 5,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -20.341543454466365,
+          "total_return": -0.04813526583932948,
+          "max_drawdown": -0.047949084326252694,
+          "trade_count": 96,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.00034711129747955205,
+          "max_drawdown": -0.00027769867822242743,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -20.355020530477006,
+          "total_return": -0.04917823562623658,
+          "max_drawdown": -0.04903925818464505,
+          "trade_count": 82,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -19.853020473091266,
+          "total_return": -0.04657602789719528,
+          "max_drawdown": -0.046436670102328076,
+          "trade_count": 73,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 15,
+      "test_start": "2010-06-30",
+      "test_end": "2010-09-28",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.5131556642443273,
+        "lewm_auc": 0.48936625491531077,
+        "xgb_auc": 0.5150245244480263,
+        "awm_auc": 0.559470744348261
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -25.751712239476273,
+          "total_return": -0.014551630998983822,
+          "max_drawdown": -0.014020110532233529,
+          "trade_count": 49,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -32.85821901012554,
+          "total_return": -0.03693488529281186,
+          "max_drawdown": -0.03681658582386236,
+          "trade_count": 96,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": -24.557791206756935,
+          "total_return": -0.00830034468207308,
+          "max_drawdown": -0.008091324629740536,
+          "trade_count": 22,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -33.808625107905854,
+          "total_return": -0.033771073297109155,
+          "max_drawdown": -0.033447574272142344,
+          "trade_count": 67,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": -28.872915578719343,
+          "total_return": -0.003105257920455462,
+          "max_drawdown": -0.0030246048622992417,
+          "trade_count": 7,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.553192432657355,
+          "total_return": -0.02922154243706554,
+          "max_drawdown": -0.028896520202891674,
+          "trade_count": 49,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 16,
+      "test_start": "2010-09-29",
+      "test_end": "2010-12-28",
+      "regime": "GFC Recovery",
+      "n_test_obs": 1701,
+      "classification": {
+        "fusion_auc": 0.5187269822395172,
+        "lewm_auc": 0.48823012265807064,
+        "xgb_auc": 0.575989957423307,
+        "awm_auc": 0.5401266311438224
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.0002349546524391677,
+          "max_drawdown": -0.00018796813866154687,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -27.058099039279234,
+          "total_return": -0.02232669748964533,
+          "max_drawdown": -0.02226940732894168,
+          "trade_count": 55,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -25.02046990899807,
+          "total_return": -0.020298892333913465,
+          "max_drawdown": -0.02012743355799196,
+          "trade_count": 39,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.664445043684964,
+          "total_return": -0.017432492708576386,
+          "max_drawdown": -0.017260532280296607,
+          "trade_count": 29,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 17,
+      "test_start": "2010-12-29",
+      "test_end": "2011-03-29",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5294910978769637,
+        "lewm_auc": 0.512923911421153,
+        "xgb_auc": 0.5483091949834544,
+        "awm_auc": 0.535412176162668
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -60.65945614690865,
+          "total_return": -0.0010787841498676176,
+          "max_drawdown": -0.0010265264540707264,
+          "trade_count": 4,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -48.135025555258196,
+          "total_return": -0.03266540767304982,
+          "max_drawdown": -0.03253410138802977,
+          "trade_count": 70,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.0003232580978738131,
+          "max_drawdown": -0.00025861483904399607,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -42.09922245768203,
+          "total_return": -0.02930895602565342,
+          "max_drawdown": -0.029177194134889336,
+          "trade_count": 51,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -38.302206722688595,
+          "total_return": -0.026201871964081636,
+          "max_drawdown": -0.02606968831680372,
+          "trade_count": 40,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 18,
+      "test_start": "2011-03-30",
+      "test_end": "2011-06-28",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5296345978896377,
+        "lewm_auc": 0.4839839607827231,
+        "xgb_auc": 0.5226174403309827,
+        "awm_auc": 0.5560677262902936
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00021326322070824855,
+          "max_drawdown": -0.0001706142153731171,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -34.08694265938711,
+          "total_return": -0.03009025144795696,
+          "max_drawdown": -0.0299940455799505,
+          "trade_count": 86,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -32.331702256900385,
+          "total_return": -0.027373620013966593,
+          "max_drawdown": -0.02727714468183159,
+          "trade_count": 57,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -32.65471434301089,
+          "total_return": -0.024280178363375926,
+          "max_drawdown": -0.024183396191104954,
+          "trade_count": 43,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 19,
+      "test_start": "2011-06-29",
+      "test_end": "2011-09-27",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5607675815661551,
+        "lewm_auc": 0.5208615480410679,
+        "xgb_auc": 0.6058587531045023,
+        "awm_auc": 0.5776702257884198
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -17.454120622241756,
+          "total_return": -0.04251185735665064,
+          "max_drawdown": -0.04214353708540937,
+          "trade_count": 89,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -15.696726804242935,
+          "total_return": -0.03853673669235613,
+          "max_drawdown": -0.03821375407677544,
+          "trade_count": 66,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -16.3002188940171,
+          "total_return": -0.03577484289300625,
+          "max_drawdown": -0.03545093247943545,
+          "trade_count": 56,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 20,
+      "test_start": "2011-09-28",
+      "test_end": "2011-12-27",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.6398471490127176,
+        "lewm_auc": 0.6273557772757697,
+        "xgb_auc": 0.4577646523594378,
+        "awm_auc": 0.5396527516315262
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -29.07005845227336,
+          "total_return": -0.036029662204607016,
+          "max_drawdown": -0.03590425655267556,
+          "trade_count": 86,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -25.1962125122417,
+          "total_return": -0.03202071570328624,
+          "max_drawdown": -0.031894788516064906,
+          "trade_count": 60,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -28.31527279196842,
+          "total_return": -0.025931825528348607,
+          "max_drawdown": -0.025805106220029777,
+          "trade_count": 43,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 21,
+      "test_start": "2011-12-28",
+      "test_end": "2012-03-28",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5597716495557294,
+        "lewm_auc": 0.49399330470183567,
+        "xgb_auc": 0.6002591304004682,
+        "awm_auc": 0.579885167086493
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -26.670957471202318,
+          "total_return": -0.021228972744455787,
+          "max_drawdown": -0.020933459030704104,
+          "trade_count": 51,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -24.48998581728161,
+          "total_return": -0.019642178149397727,
+          "max_drawdown": -0.019346185345490444,
+          "trade_count": 38,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.405855268839158,
+          "total_return": -0.015306845482217835,
+          "max_drawdown": -0.015210664693507923,
+          "trade_count": 25,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 22,
+      "test_start": "2012-03-29",
+      "test_end": "2012-06-27",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5779611616494629,
+        "lewm_auc": 0.556193363170087,
+        "xgb_auc": 0.5440038628287344,
+        "awm_auc": 0.5588862566155318
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -25.52877819238954,
+          "total_return": -0.02964073085022756,
+          "max_drawdown": -0.02957859858199919,
+          "trade_count": 72,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -22.92916861906319,
+          "total_return": -0.024430956549806093,
+          "max_drawdown": -0.02436849069884756,
+          "trade_count": 47,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -21.194240243466226,
+          "total_return": -0.021783194840557463,
+          "max_drawdown": -0.021624337369909978,
+          "trade_count": 34,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 23,
+      "test_start": "2012-06-28",
+      "test_end": "2012-09-26",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5102577001873374,
+        "lewm_auc": 0.5267094031503433,
+        "xgb_auc": 0.612726804353133,
+        "awm_auc": 0.47577224412395824
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.0002240047049497651,
+          "max_drawdown": -0.00017920777856817073,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -29.841818119716446,
+          "total_return": -0.01690567823025424,
+          "max_drawdown": -0.016847308742932342,
+          "trade_count": 42,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.899863312253785,
+          "total_return": -0.01603616855182377,
+          "max_drawdown": -0.01587476038783334,
+          "trade_count": 32,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.170918186867443,
+          "total_return": -0.013976688266137627,
+          "max_drawdown": -0.013892433950546556,
+          "trade_count": 24,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 24,
+      "test_start": "2012-09-27",
+      "test_end": "2012-12-28",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1764,
+      "classification": {
+        "fusion_auc": 0.5419261974809231,
+        "lewm_auc": 0.4891988255033557,
+        "xgb_auc": 0.6202839133033005,
+        "awm_auc": 0.5609636446170819
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00020735097209156894,
+          "max_drawdown": -0.0001658842175126347,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -30.83286051713346,
+          "total_return": -0.029960275703246997,
+          "max_drawdown": -0.029874517969175316,
+          "trade_count": 65,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -27.198726440394168,
+          "total_return": -0.028406537363147466,
+          "max_drawdown": -0.028320642268639867,
+          "trade_count": 51,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.376282308352017,
+          "total_return": -0.024267061311886162,
+          "max_drawdown": -0.024180800261142433,
+          "trade_count": 42,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 25,
+      "test_start": "2012-12-31",
+      "test_end": "2013-04-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5345203365217913,
+        "lewm_auc": 0.5280143702208978,
+        "xgb_auc": 0.5779894726139359,
+        "awm_auc": 0.5189573768611287
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00021689599891117073,
+          "max_drawdown": -0.00017352056296543442,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -24.10116570719289,
+          "total_return": -0.02006699438248838,
+          "max_drawdown": -0.020003267622393867,
+          "trade_count": 43,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.83596575271414,
+          "total_return": -0.017193952137764312,
+          "max_drawdown": -0.01713003853869936,
+          "trade_count": 30,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -28.156782900020833,
+          "total_return": -0.01598309235372697,
+          "max_drawdown": -0.015778146598655996,
+          "trade_count": 26,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 26,
+      "test_start": "2013-04-03",
+      "test_end": "2013-07-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5120877641674518,
+        "lewm_auc": 0.4982011527306991,
+        "xgb_auc": 0.5119421431980323,
+        "awm_auc": 0.5261646618289504
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -28.201343947564208,
+          "total_return": -0.02383780717904771,
+          "max_drawdown": -0.0236943218283725,
+          "trade_count": 51,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -25.39571892989566,
+          "total_return": -0.021675010918495885,
+          "max_drawdown": -0.021531207660015837,
+          "trade_count": 37,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.707572074811306,
+          "total_return": -0.020059440969842135,
+          "max_drawdown": -0.01991540023994358,
+          "trade_count": 30,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 27,
+      "test_start": "2013-07-02",
+      "test_end": "2013-09-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5192447432340417,
+        "lewm_auc": 0.4891155218146895,
+        "xgb_auc": 0.582656229356586,
+        "awm_auc": 0.5318969328333181
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -32.448908617390046,
+          "total_return": -0.025120483467533705,
+          "max_drawdown": -0.0250807572488938,
+          "trade_count": 58,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -28.8782337895012,
+          "total_return": -0.022474021239067943,
+          "max_drawdown": -0.021893007677077914,
+          "trade_count": 43,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.347111851764097,
+          "total_return": -0.019959416364787153,
+          "max_drawdown": -0.019376908193378294,
+          "trade_count": 33,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 28,
+      "test_start": "2013-10-01",
+      "test_end": "2013-12-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5117800021732922,
+        "lewm_auc": 0.5423185490494373,
+        "xgb_auc": 0.5849125502573834,
+        "awm_auc": 0.4699637110734295
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -29.99617405417952,
+          "total_return": -0.01980378085417267,
+          "max_drawdown": -0.019561502654413636,
+          "trade_count": 48,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.75652695196479,
+          "total_return": -0.017636216362233004,
+          "max_drawdown": -0.017446926075503556,
+          "trade_count": 34,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.298074461578988,
+          "total_return": -0.014327255329962929,
+          "max_drawdown": -0.014137327444216693,
+          "trade_count": 24,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 29,
+      "test_start": "2013-12-31",
+      "test_end": "2014-04-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.604101346212859,
+        "lewm_auc": 0.56138277007645,
+        "xgb_auc": 0.6315552827847527,
+        "awm_auc": 0.5826039679257113
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -30.858831820951472,
+          "total_return": -0.02370098903593365,
+          "max_drawdown": -0.023652705015196233,
+          "trade_count": 60,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -41.14280415771805,
+          "total_return": -0.019771141787873425,
+          "max_drawdown": -0.019550260414806637,
+          "trade_count": 37,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -32.400208916957794,
+          "total_return": -0.016678825794533503,
+          "max_drawdown": -0.016520735809738573,
+          "trade_count": 28,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 30,
+      "test_start": "2014-04-02",
+      "test_end": "2014-07-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5431667915401501,
+        "lewm_auc": 0.5571263325315141,
+        "xgb_auc": 0.5971305387962196,
+        "awm_auc": 0.49331335357598216
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -23.78702435548973,
+          "total_return": -0.017521148290556288,
+          "max_drawdown": -0.01739398134619624,
+          "trade_count": 45,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -25.64479191836835,
+          "total_return": -0.0134290151074421,
+          "max_drawdown": -0.013301318498680723,
+          "trade_count": 27,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.30852336774643,
+          "total_return": -0.010614268435820917,
+          "max_drawdown": -0.010486207500913737,
+          "trade_count": 19,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 31,
+      "test_start": "2014-07-02",
+      "test_end": "2014-09-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5665995975855131,
+        "lewm_auc": 0.532462443835948,
+        "xgb_auc": 0.5965129120588191,
+        "awm_auc": 0.5505816856023359
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -26.05449405178602,
+          "total_return": -0.02376791889437313,
+          "max_drawdown": -0.023718311597840148,
+          "trade_count": 61,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -29.162540888863855,
+          "total_return": -0.019631915718134496,
+          "max_drawdown": -0.019468389300304874,
+          "trade_count": 39,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.711688295338238,
+          "total_return": -0.01543467278657662,
+          "max_drawdown": -0.015346110926844538,
+          "trade_count": 26,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 32,
+      "test_start": "2014-10-01",
+      "test_end": "2014-12-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5905636728792567,
+        "lewm_auc": 0.54147977083981,
+        "xgb_auc": 0.5486965403917041,
+        "awm_auc": 0.5834745846348192
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -29.427344557151375,
+          "total_return": -0.03173625003050029,
+          "max_drawdown": -0.031690160114415916,
+          "trade_count": 77,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.58346364610851,
+          "total_return": -0.02714016250031892,
+          "max_drawdown": -0.026995576264043405,
+          "trade_count": 51,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -24.185405465062228,
+          "total_return": -0.02396768075075484,
+          "max_drawdown": -0.023874013332915764,
+          "trade_count": 39,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 33,
+      "test_start": "2014-12-31",
+      "test_end": "2015-04-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5710346056886761,
+        "lewm_auc": 0.5400779200937078,
+        "xgb_auc": 0.5907024267271014,
+        "awm_auc": 0.5514368108782562
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -24.20992791242131,
+          "total_return": -0.02220232632330854,
+          "max_drawdown": -0.02211139612919146,
+          "trade_count": 61,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -23.286935894579837,
+          "total_return": -0.018249367468403,
+          "max_drawdown": -0.01815806966928369,
+          "trade_count": 35,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -24.928452861821118,
+          "total_return": -0.015120005439944406,
+          "max_drawdown": -0.01502841662612505,
+          "trade_count": 24,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 34,
+      "test_start": "2015-04-02",
+      "test_end": "2015-07-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5819169237619669,
+        "lewm_auc": 0.5475191628764988,
+        "xgb_auc": 0.5950192423905092,
+        "awm_auc": 0.5659751598231608
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -27.194589241969787,
+          "total_return": -0.013003027122116095,
+          "max_drawdown": -0.012927608961122704,
+          "trade_count": 30,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -25.450270524235837,
+          "total_return": -0.011557036822941735,
+          "max_drawdown": -0.01148150817130635,
+          "trade_count": 21,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.524601892631804,
+          "total_return": -0.009800662999613019,
+          "max_drawdown": -0.009711741937230282,
+          "trade_count": 16,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 35,
+      "test_start": "2015-07-02",
+      "test_end": "2015-09-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.5857190274666002,
+        "lewm_auc": 0.5559704588830803,
+        "xgb_auc": 0.6043602324529352,
+        "awm_auc": 0.5767323552321987
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -14.074005844490896,
+          "total_return": -0.03763129861092196,
+          "max_drawdown": -0.03756755490970818,
+          "trade_count": 76,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -14.809376224552024,
+          "total_return": -0.035972267697563454,
+          "max_drawdown": -0.035908414108350724,
+          "trade_count": 60,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -14.465418036381235,
+          "total_return": -0.03379067312820638,
+          "max_drawdown": -0.03370750630195325,
+          "trade_count": 51,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 36,
+      "test_start": "2015-10-01",
+      "test_end": "2015-12-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1827,
+      "classification": {
+        "fusion_auc": 0.6007155942588249,
+        "lewm_auc": 0.5937007692189272,
+        "xgb_auc": 0.5579813519574287,
+        "awm_auc": 0.555389279171563
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -28.705735099082965,
+          "total_return": -0.01985035744738728,
+          "max_drawdown": -0.019542359770604964,
+          "trade_count": 46,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.097741433198625,
+          "total_return": -0.01788683900617616,
+          "max_drawdown": -0.017630926005150822,
+          "trade_count": 32,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -23.396211589372303,
+          "total_return": -0.015495223723787976,
+          "max_drawdown": -0.015238687530376546,
+          "trade_count": 25,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 37,
+      "test_start": "2015-12-31",
+      "test_end": "2016-04-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1890,
+      "classification": {
+        "fusion_auc": 0.5213268205877813,
+        "lewm_auc": 0.5380040038858576,
+        "xgb_auc": 0.5471614174300682,
+        "awm_auc": 0.5083255404337997
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -26.266835325491876,
+          "total_return": -0.04132465860115431,
+          "max_drawdown": -0.04125039074490327,
+          "trade_count": 93,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -24.625389681368407,
+          "total_return": -0.03772625750707648,
+          "max_drawdown": -0.0376517108854044,
+          "trade_count": 71,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -23.28689012621682,
+          "total_return": -0.03478254901196742,
+          "max_drawdown": -0.03469710688770732,
+          "trade_count": 61,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 38,
+      "test_start": "2016-04-04",
+      "test_end": "2016-06-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.6107072034936833,
+        "lewm_auc": 0.5801129653973842,
+        "xgb_auc": 0.5972482787816671,
+        "awm_auc": 0.5805619304382701
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -21.468072765718425,
+          "total_return": -0.023839136505546588,
+          "max_drawdown": -0.02375415983616739,
+          "trade_count": 55,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -24.357104128091333,
+          "total_return": -0.02047273099248792,
+          "max_drawdown": -0.02039770884510901,
+          "trade_count": 37,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -24.342555171159105,
+          "total_return": -0.01825053835228707,
+          "max_drawdown": -0.017979267037441723,
+          "trade_count": 28,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 39,
+      "test_start": "2016-07-01",
+      "test_end": "2016-09-29",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.6128478968258698,
+        "lewm_auc": 0.5644838313646495,
+        "xgb_auc": 0.6828861580271046,
+        "awm_auc": 0.5935581725210676
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -22.406953758880565,
+          "total_return": -0.018514713490680346,
+          "max_drawdown": -0.01833154172229499,
+          "trade_count": 48,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -24.905106471550113,
+          "total_return": -0.014370075659665638,
+          "max_drawdown": -0.014278241628149519,
+          "trade_count": 29,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.17724688993173,
+          "total_return": -0.011295441725619249,
+          "max_drawdown": -0.011203321221439683,
+          "trade_count": 20,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 40,
+      "test_start": "2016-09-30",
+      "test_end": "2016-12-29",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.5770636211461067,
+        "lewm_auc": 0.5443602863485807,
+        "xgb_auc": 0.5986026854083316,
+        "awm_auc": 0.556822741680814
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -40.60818381799559,
+          "total_return": -0.000552354907040753,
+          "max_drawdown": -0.0005080729771821241,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -21.170915269990008,
+          "total_return": -0.01903645698804035,
+          "max_drawdown": -0.0189853864118753,
+          "trade_count": 48,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.0003309168412718444,
+          "max_drawdown": -0.00026474223465372694,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.209578767561496,
+          "total_return": -0.017765065842012095,
+          "max_drawdown": -0.017639800198597327,
+          "trade_count": 33,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.657980230366444,
+          "total_return": -0.013626427346215664,
+          "max_drawdown": -0.013500633897083537,
+          "trade_count": 21,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 41,
+      "test_start": "2016-12-30",
+      "test_end": "2017-03-31",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.5451041226506954,
+        "lewm_auc": 0.5186486101670005,
+        "xgb_auc": 0.6187489665815437,
+        "awm_auc": 0.5414647673200933
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -23.808890797352184,
+          "total_return": -0.012929029166135142,
+          "max_drawdown": -0.012818091047967113,
+          "trade_count": 30,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -22.703659716301477,
+          "total_return": -0.010753418138801263,
+          "max_drawdown": -0.010642235501039031,
+          "trade_count": 21,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -28.36111388526578,
+          "total_return": -0.008614226245222567,
+          "max_drawdown": -0.008502803181057285,
+          "trade_count": 15,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 42,
+      "test_start": "2017-04-03",
+      "test_end": "2017-06-30",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.5550243793217617,
+        "lewm_auc": 0.529524347165353,
+        "xgb_auc": 0.6402614911522237,
+        "awm_auc": 0.5470567358148553
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -30.303136891868533,
+          "total_return": -0.014968858142402897,
+          "max_drawdown": -0.014773118132265966,
+          "trade_count": 36,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -30.15251646165518,
+          "total_return": -0.01164066486726667,
+          "max_drawdown": -0.011444263496734388,
+          "trade_count": 22,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -30.947179801020425,
+          "total_return": -0.011219684694951382,
+          "max_drawdown": -0.011023199669537851,
+          "trade_count": 18,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 43,
+      "test_start": "2017-07-03",
+      "test_end": "2017-09-29",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.5595966498736551,
+        "lewm_auc": 0.5279355039379195,
+        "xgb_auc": 0.6184667882059932,
+        "awm_auc": 0.5592526920658129
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -24.34789739240568,
+          "total_return": -0.009883856353420262,
+          "max_drawdown": -0.009816533715560944,
+          "trade_count": 25,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -23.678220534802485,
+          "total_return": -0.007884676488833398,
+          "max_drawdown": -0.007817217917363763,
+          "trade_count": 15,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -23.26445852553293,
+          "total_return": -0.006503108333317131,
+          "max_drawdown": -0.0064122003123893295,
+          "trade_count": 11,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 44,
+      "test_start": "2017-10-02",
+      "test_end": "2017-12-29",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.5268823058802614,
+        "lewm_auc": 0.5280356904751322,
+        "xgb_auc": 0.6239566202942353,
+        "awm_auc": 0.5161596070936486
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.0002424633008308863,
+          "max_drawdown": -0.00019397534419709936,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -31.6681489804516,
+          "total_return": -0.016833579345340577,
+          "max_drawdown": -0.016731422988033942,
+          "trade_count": 38,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -27.25088555484277,
+          "total_return": -0.013064897035770073,
+          "max_drawdown": -0.012962349091801707,
+          "trade_count": 23,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.10312273472817,
+          "total_return": -0.012172550264190285,
+          "max_drawdown": -0.012069909600521851,
+          "trade_count": 20,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 45,
+      "test_start": "2018-01-02",
+      "test_end": "2018-04-03",
+      "regime": "Normal/Bull",
+      "n_test_obs": 1953,
+      "classification": {
+        "fusion_auc": 0.5351762723437998,
+        "lewm_auc": 0.4961507538795335,
+        "xgb_auc": 0.5104816238421974,
+        "awm_auc": 0.5718212055464387
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -105.50479572436602,
+          "total_return": -0.0004940921639479123,
+          "max_drawdown": -0.000437642403325299,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -12.899138909347663,
+          "total_return": -0.02817464305606243,
+          "max_drawdown": -0.028132683536259154,
+          "trade_count": 63,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -11.835054844634417,
+          "total_return": -0.02545276755513004,
+          "max_drawdown": -0.025299089044707537,
+          "trade_count": 42,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -10.611247071908629,
+          "total_return": -0.023159516273239866,
+          "max_drawdown": -0.02300547613494619,
+          "trade_count": 32,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 46,
+      "test_start": "2018-04-04",
+      "test_end": "2018-07-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2016,
+      "classification": {
+        "fusion_auc": 0.5678982843137255,
+        "lewm_auc": 0.5446762663398692,
+        "xgb_auc": 0.6332720588235294,
+        "awm_auc": 0.5664966299019608
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -26.186690221669085,
+          "total_return": -0.023432860321720317,
+          "max_drawdown": -0.023103662990282676,
+          "trade_count": 59,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -27.707853114337112,
+          "total_return": -0.018424813799760575,
+          "max_drawdown": -0.018093928273539638,
+          "trade_count": 35,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.22340281907877,
+          "total_return": -0.014880279945616581,
+          "max_drawdown": -0.014614273885911072,
+          "trade_count": 24,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 47,
+      "test_start": "2018-07-03",
+      "test_end": "2018-10-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2016,
+      "classification": {
+        "fusion_auc": 0.5604159334098224,
+        "lewm_auc": 0.552628081140829,
+        "xgb_auc": 0.6381817427818285,
+        "awm_auc": 0.5312635907273092
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -27.510469913904792,
+          "total_return": -0.01643523618678111,
+          "max_drawdown": -0.0160187807202967,
+          "trade_count": 39,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -30.617484658582175,
+          "total_return": -0.016367392791396762,
+          "max_drawdown": -0.016108630522854425,
+          "trade_count": 31,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -34.64182901423954,
+          "total_return": -0.015579868564458255,
+          "max_drawdown": -0.015320899123487918,
+          "trade_count": 27,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 48,
+      "test_start": "2018-10-02",
+      "test_end": "2019-01-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2079,
+      "classification": {
+        "fusion_auc": 0.6265779239575948,
+        "lewm_auc": 0.5438326194481619,
+        "xgb_auc": 0.5882840326051844,
+        "awm_auc": 0.6325387952191369
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -25.664969120793153,
+          "total_return": -0.05513154920625474,
+          "max_drawdown": -0.054922190662839994,
+          "trade_count": 121,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -20.84013594090981,
+          "total_return": -0.05394148281411204,
+          "max_drawdown": -0.05383516040787753,
+          "trade_count": 96,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -20.955198386877434,
+          "total_return": -0.04723673790901162,
+          "max_drawdown": -0.04712966199271557,
+          "trade_count": 75,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 49,
+      "test_start": "2019-01-03",
+      "test_end": "2019-04-03",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2142,
+      "classification": {
+        "fusion_auc": 0.5748240106253775,
+        "lewm_auc": 0.5490081552746099,
+        "xgb_auc": 0.6247541919615415,
+        "awm_auc": 0.5528829381022788
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.000202882038331631,
+          "max_drawdown": -0.00016230892382227815,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -26.10120980004006,
+          "total_return": -0.019550151864872634,
+          "max_drawdown": -0.018797490040486333,
+          "trade_count": 47,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.204869919633985,
+          "total_return": -0.017721710671373958,
+          "max_drawdown": -0.01707324805596829,
+          "trade_count": 35,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.9192187284072,
+          "total_return": -0.01570639658611528,
+          "max_drawdown": -0.01512921030293852,
+          "trade_count": 28,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 50,
+      "test_start": "2019-04-04",
+      "test_end": "2019-07-03",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2142,
+      "classification": {
+        "fusion_auc": 0.6131023667472377,
+        "lewm_auc": 0.5720576315001571,
+        "xgb_auc": 0.6023557934554802,
+        "awm_auc": 0.5924983021637371
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -25.122462571815618,
+          "total_return": -0.03740972612452809,
+          "max_drawdown": -0.036804044522622016,
+          "trade_count": 82,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -26.43941454754988,
+          "total_return": -0.03427013811755608,
+          "max_drawdown": -0.03366248102229111,
+          "trade_count": 61,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.21157405009046,
+          "total_return": -0.03259441296814802,
+          "max_drawdown": -0.03198570147214746,
+          "trade_count": 53,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 51,
+      "test_start": "2019-07-05",
+      "test_end": "2019-10-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2142,
+      "classification": {
+        "fusion_auc": 0.6202716643741404,
+        "lewm_auc": 0.5824609737372446,
+        "xgb_auc": 0.5736470762291673,
+        "awm_auc": 0.5807025926873741
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -24.83568498173345,
+          "total_return": -0.028707622295771174,
+          "max_drawdown": -0.0285817611859529,
+          "trade_count": 70,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -23.116307811947646,
+          "total_return": -0.023815502372449115,
+          "max_drawdown": -0.02368900733647529,
+          "trade_count": 45,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -23.179674987098416,
+          "total_return": -0.019399836419345284,
+          "max_drawdown": -0.019272769196633253,
+          "trade_count": 30,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 52,
+      "test_start": "2019-10-03",
+      "test_end": "2020-01-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2142,
+      "classification": {
+        "fusion_auc": 0.516277345589217,
+        "lewm_auc": 0.4807597031602471,
+        "xgb_auc": 0.6361666280156572,
+        "awm_auc": 0.5408189797538985
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -22.958244733829755,
+          "total_return": -0.013936473456199971,
+          "max_drawdown": -0.013869440059214427,
+          "trade_count": 28,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -25.338293767599154,
+          "total_return": -0.01345058695463841,
+          "max_drawdown": -0.01338352052669505,
+          "trade_count": 21,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.59796869426481,
+          "total_return": -0.011705055070777126,
+          "max_drawdown": -0.011606712212206261,
+          "trade_count": 16,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 53,
+      "test_start": "2020-01-03",
+      "test_end": "2020-04-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2205,
+      "classification": {
+        "fusion_auc": 0.5036366092744224,
+        "lewm_auc": 0.4896476772900463,
+        "xgb_auc": 0.5292040331903658,
+        "awm_auc": 0.5324024195037862
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -40.80411009323575,
+          "total_return": -0.000704464810742933,
+          "max_drawdown": -0.0006209122543718639,
+          "trade_count": 3,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -14.708167801290621,
+          "total_return": -0.08233999421481697,
+          "max_drawdown": -0.08222350557225304,
+          "trade_count": 147,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -15.068018598436355,
+          "total_return": -0.08123196828090429,
+          "max_drawdown": -0.08111533898446402,
+          "trade_count": 129,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -16.537409627600866,
+          "total_return": -0.08101138542060138,
+          "max_drawdown": -0.08089472812316095,
+          "trade_count": 116,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 54,
+      "test_start": "2020-04-03",
+      "test_end": "2020-07-02",
+      "regime": "2020 Recovery",
+      "n_test_obs": 2331,
+      "classification": {
+        "fusion_auc": 0.5208420783133427,
+        "lewm_auc": 0.49458481067676463,
+        "xgb_auc": 0.5808103135689342,
+        "awm_auc": 0.5299498819613763
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -14.367134075393194,
+          "total_return": -0.0653061186495626,
+          "max_drawdown": -0.061076064967427006,
+          "trade_count": 130,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -13.23264282024706,
+          "total_return": -0.0601396914317448,
+          "max_drawdown": -0.05588625654971879,
+          "trade_count": 99,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -11.972553081282573,
+          "total_return": -0.053741450990467676,
+          "max_drawdown": -0.049594861321265386,
+          "trade_count": 74,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 55,
+      "test_start": "2020-07-06",
+      "test_end": "2020-10-01",
+      "regime": "2020 Recovery",
+      "n_test_obs": 2331,
+      "classification": {
+        "fusion_auc": 0.5477444115569756,
+        "lewm_auc": 0.5128263595941169,
+        "xgb_auc": 0.5667066942862178,
+        "awm_auc": 0.5575809152653298
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00022210103108599721,
+          "max_drawdown": -0.00017768477152886925,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -36.437631546404795,
+          "total_return": -0.046648908376337506,
+          "max_drawdown": -0.04588133824052964,
+          "trade_count": 110,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -32.79620399900013,
+          "total_return": -0.041419820300037435,
+          "max_drawdown": -0.040689900758225,
+          "trade_count": 74,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.248190428603674,
+          "total_return": -0.04038770019159166,
+          "max_drawdown": -0.039656994732593986,
+          "trade_count": 65,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 56,
+      "test_start": "2020-10-02",
+      "test_end": "2020-12-31",
+      "regime": "2020 Recovery",
+      "n_test_obs": 2331,
+      "classification": {
+        "fusion_auc": 0.5813985086794616,
+        "lewm_auc": 0.5213126845860048,
+        "xgb_auc": 0.5794649282858175,
+        "awm_auc": 0.5757108707532155
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00021140555708543118,
+          "max_drawdown": -0.00016912802135549755,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -42.57357170915196,
+          "total_return": -0.04714737720176565,
+          "max_drawdown": -0.04687014277544659,
+          "trade_count": 113,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -49.30219588957326,
+          "total_return": -0.04529417925590751,
+          "max_drawdown": -0.04507389468138262,
+          "trade_count": 84,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -34.467583293684264,
+          "total_return": -0.041534520014241294,
+          "max_drawdown": -0.04145507670583169,
+          "trade_count": 65,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 57,
+      "test_start": "2021-01-04",
+      "test_end": "2021-04-05",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2331,
+      "classification": {
+        "fusion_auc": 0.5502627469172172,
+        "lewm_auc": 0.5258324296669088,
+        "xgb_auc": 0.5871345744514236,
+        "awm_auc": 0.5260315594622451
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -37.955070669892486,
+          "total_return": -0.05324211853651317,
+          "max_drawdown": -0.052936806951479225,
+          "trade_count": 117,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -33.66476964948904,
+          "total_return": -0.04829289039339291,
+          "max_drawdown": -0.0480789301607144,
+          "trade_count": 85,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -32.467932339337324,
+          "total_return": -0.04555060619170348,
+          "max_drawdown": -0.04533602944606637,
+          "trade_count": 76,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 58,
+      "test_start": "2021-04-06",
+      "test_end": "2021-07-02",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2457,
+      "classification": {
+        "fusion_auc": 0.562153017047416,
+        "lewm_auc": 0.529113322130477,
+        "xgb_auc": 0.5934652691304891,
+        "awm_auc": 0.5605138940940531
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00020751117042860923,
+          "max_drawdown": -0.00016601238149974474,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -43.44952929017083,
+          "total_return": -0.04325312989315955,
+          "max_drawdown": -0.04304696782281439,
+          "trade_count": 108,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.00037518353750864986,
+          "max_drawdown": -0.00030015809271221396,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -37.4729129788663,
+          "total_return": -0.0381944999576439,
+          "max_drawdown": -0.037987247841798515,
+          "trade_count": 70,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -34.93181919900316,
+          "total_return": -0.034560380958753245,
+          "max_drawdown": -0.03442244409018101,
+          "trade_count": 57,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 59,
+      "test_start": "2021-07-06",
+      "test_end": "2021-10-01",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2457,
+      "classification": {
+        "fusion_auc": 0.5660005241386704,
+        "lewm_auc": 0.5565258242527301,
+        "xgb_auc": 0.6133956145079202,
+        "awm_auc": 0.5482602169814974
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -23.82634236407255,
+          "total_return": -0.03894809683402378,
+          "max_drawdown": -0.038894899924843934,
+          "trade_count": 100,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -24.327514100080645,
+          "total_return": -0.03438297419243974,
+          "max_drawdown": -0.03417340676228436,
+          "trade_count": 67,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -21.923678953721566,
+          "total_return": -0.028875877551653995,
+          "max_drawdown": -0.028665114918783888,
+          "trade_count": 50,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 60,
+      "test_start": "2021-10-04",
+      "test_end": "2021-12-31",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.6004251270346195,
+        "lewm_auc": 0.557427652234983,
+        "xgb_auc": 0.5780869154341899,
+        "awm_auc": 0.5804743013095925
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -31.196804315487803,
+          "total_return": -0.0587171441188129,
+          "max_drawdown": -0.05781506545378149,
+          "trade_count": 135,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -28.29348618200177,
+          "total_return": -0.052802366684426616,
+          "max_drawdown": -0.05211002509902643,
+          "trade_count": 97,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.7783981341884,
+          "total_return": -0.048142408506912426,
+          "max_drawdown": -0.04758304888584692,
+          "trade_count": 75,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 61,
+      "test_start": "2022-01-03",
+      "test_end": "2022-04-01",
+      "regime": "2022 Bear",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.60855367040913,
+        "lewm_auc": 0.5504830990210063,
+        "xgb_auc": 0.523794226224831,
+        "awm_auc": 0.6132519411079289
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -35.92074500630546,
+          "total_return": -0.08228028475400628,
+          "max_drawdown": -0.08203378815746253,
+          "trade_count": 180,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -34.50559084420563,
+          "total_return": -0.07442577966078523,
+          "max_drawdown": -0.07422032682684666,
+          "trade_count": 135,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.895830214548013,
+          "total_return": -0.06814893313962156,
+          "max_drawdown": -0.06794208701287337,
+          "trade_count": 104,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 62,
+      "test_start": "2022-04-04",
+      "test_end": "2022-07-05",
+      "regime": "2022 Bear",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.621378789392468,
+        "lewm_auc": 0.5740039716793247,
+        "xgb_auc": 0.5302889062501123,
+        "awm_auc": 0.6058791059912272
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -32.36862556149668,
+          "total_return": -0.11518465479638285,
+          "max_drawdown": -0.11466869552650481,
+          "trade_count": 234,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -30.479318223581654,
+          "total_return": -0.10938451919395387,
+          "max_drawdown": -0.10894485176293199,
+          "trade_count": 172,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -27.733210529756796,
+          "total_return": -0.10228550814146187,
+          "max_drawdown": -0.10197399093881865,
+          "trade_count": 143,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 63,
+      "test_start": "2022-07-06",
+      "test_end": "2022-10-03",
+      "regime": "2022 Bear",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5634450791938248,
+        "lewm_auc": 0.6155985360386546,
+        "xgb_auc": 0.4962603746534585,
+        "awm_auc": 0.4618573494699485
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -26.874125160576945,
+          "total_return": -0.05750032775238145,
+          "max_drawdown": -0.05711523233663899,
+          "trade_count": 124,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -28.392765506150457,
+          "total_return": -0.05224021097934106,
+          "max_drawdown": -0.05189411950203006,
+          "trade_count": 91,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.72334902579997,
+          "total_return": -0.0483552167768444,
+          "max_drawdown": -0.04813838007892446,
+          "trade_count": 76,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 64,
+      "test_start": "2022-10-04",
+      "test_end": "2023-01-03",
+      "regime": "2022 Recovery",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5481965245282994,
+        "lewm_auc": 0.5275488568628438,
+        "xgb_auc": 0.5497571458739643,
+        "awm_auc": 0.5555099348226468
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -39.811285378999145,
+          "total_return": -0.06848856190482344,
+          "max_drawdown": -0.0684333776680447,
+          "trade_count": 163,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -38.89825621276366,
+          "total_return": -0.06197562091550968,
+          "max_drawdown": -0.061841190712719436,
+          "trade_count": 115,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -31.081737942299057,
+          "total_return": -0.05069958774081962,
+          "max_drawdown": -0.05058669913693812,
+          "trade_count": 78,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 65,
+      "test_start": "2023-01-04",
+      "test_end": "2023-04-04",
+      "regime": "2022 Recovery",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.6153095824826634,
+        "lewm_auc": 0.5943953204854419,
+        "xgb_auc": 0.6021797033608149,
+        "awm_auc": 0.5834444466303954
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -31.419026587204975,
+          "total_return": -0.033418124869454946,
+          "max_drawdown": -0.0333330505612868,
+          "trade_count": 87,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -31.424705798229674,
+          "total_return": -0.02895425499889548,
+          "max_drawdown": -0.0288687878004293,
+          "trade_count": 57,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -28.357973368385586,
+          "total_return": -0.025893309817895283,
+          "max_drawdown": -0.02580757320842491,
+          "trade_count": 44,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 66,
+      "test_start": "2023-04-05",
+      "test_end": "2023-07-06",
+      "regime": "2022 Recovery",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5481547470314079,
+        "lewm_auc": 0.5247536584570927,
+        "xgb_auc": 0.5953096851416699,
+        "awm_auc": 0.5457049116212369
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -171.10119366337085,
+          "total_return": -0.0005145329711070401,
+          "max_drawdown": -0.0004676195477290363,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -34.26605045624745,
+          "total_return": -0.029631766853442154,
+          "max_drawdown": -0.029497962324314966,
+          "trade_count": 79,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -34.51992157166318,
+          "total_return": -0.025267223186188348,
+          "max_drawdown": -0.025132816828095306,
+          "trade_count": 51,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.405214623351046,
+          "total_return": -0.021054965804827908,
+          "max_drawdown": -0.020919978616596138,
+          "trade_count": 36,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 67,
+      "test_start": "2023-07-07",
+      "test_end": "2023-10-04",
+      "regime": "2022 Recovery",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.586381421133993,
+        "lewm_auc": 0.5752859858917181,
+        "xgb_auc": 0.5831773841041952,
+        "awm_auc": 0.5658824783667087
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -31.187615544470365,
+          "total_return": -0.03180327029839236,
+          "max_drawdown": -0.031410884351983595,
+          "trade_count": 78,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -27.421069969989155,
+          "total_return": -0.02670409684302022,
+          "max_drawdown": -0.02640756003730392,
+          "trade_count": 52,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -22.882722255022255,
+          "total_return": -0.02273581121582202,
+          "max_drawdown": -0.022438065381340428,
+          "trade_count": 39,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 68,
+      "test_start": "2023-10-05",
+      "test_end": "2024-01-04",
+      "regime": "2022 Recovery",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5425687652202946,
+        "lewm_auc": 0.5311924743211377,
+        "xgb_auc": 0.5628696583128816,
+        "awm_auc": 0.5256342803879448
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.0002901364786525029,
+          "max_drawdown": -0.00023211591803777684,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -44.2990454248208,
+          "total_return": -0.02498410622182967,
+          "max_drawdown": -0.024733165512354417,
+          "trade_count": 72,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -33.92165432585731,
+          "total_return": -0.02019729187179109,
+          "max_drawdown": -0.020050943419802028,
+          "trade_count": 46,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -26.272206329349963,
+          "total_return": -0.01585900658566164,
+          "max_drawdown": -0.015589978236396835,
+          "trade_count": 30,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 69,
+      "test_start": "2024-01-05",
+      "test_end": "2024-04-05",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5441287681912682,
+        "lewm_auc": 0.5262084199584199,
+        "xgb_auc": 0.5637941787941787,
+        "awm_auc": 0.5381626819126819
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00020818621459928188,
+          "max_drawdown": -0.00016655243928818828,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -32.32389014121219,
+          "total_return": -0.03310344585487501,
+          "max_drawdown": -0.032830870953475456,
+          "trade_count": 86,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -31.75982358340957,
+          "total_return": -0.0277205756327783,
+          "max_drawdown": -0.027446483262613605,
+          "trade_count": 57,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -30.840368132961586,
+          "total_return": -0.02312100425126362,
+          "max_drawdown": -0.022845615229755596,
+          "trade_count": 40,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 70,
+      "test_start": "2024-04-08",
+      "test_end": "2024-07-08",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5758332557128664,
+        "lewm_auc": 0.5392500827951647,
+        "xgb_auc": 0.5663612948128829,
+        "awm_auc": 0.5669767604321907
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -52.63304834148796,
+          "total_return": -0.0007327612439967934,
+          "max_drawdown": -0.000638548031884946,
+          "trade_count": 2,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -33.85028933778606,
+          "total_return": -0.026964429282302804,
+          "max_drawdown": -0.026808936130505074,
+          "trade_count": 72,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.0004712781846814007,
+          "max_drawdown": -0.0003770403193456953,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -28.75266435015671,
+          "total_return": -0.024745751839292063,
+          "max_drawdown": -0.024589904138124487,
+          "trade_count": 52,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": -0.0004712781846814007,
+          "max_drawdown": -0.0003770403193456953,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -25.907612906267694,
+          "total_return": -0.019270976001214413,
+          "max_drawdown": -0.019190522762044648,
+          "trade_count": 35,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 71,
+      "test_start": "2024-07-09",
+      "test_end": "2024-10-04",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.6301072926169945,
+        "lewm_auc": 0.6133309471797674,
+        "xgb_auc": 0.5643152679462415,
+        "awm_auc": 0.5674133771140639
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": -0.00026472344142736137,
+          "max_drawdown": -0.0002117843600156416,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -27.6385158470512,
+          "total_return": -0.04129973309673607,
+          "max_drawdown": -0.04121566605762602,
+          "trade_count": 105,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -29.411877789595394,
+          "total_return": -0.03390933826867237,
+          "max_drawdown": -0.03382462317653418,
+          "trade_count": 71,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.8625428262674,
+          "total_return": -0.028779915364272823,
+          "max_drawdown": -0.02869475048046272,
+          "trade_count": 52,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 72,
+      "test_start": "2024-10-07",
+      "test_end": "2025-01-06",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5336042283867493,
+        "lewm_auc": 0.5095556154053327,
+        "xgb_auc": 0.5781261782924858,
+        "awm_auc": 0.534021007271748
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -19.5383130149399,
+          "total_return": -0.040650592194216184,
+          "max_drawdown": -0.04060919581171348,
+          "trade_count": 94,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -19.113184794045424,
+          "total_return": -0.03441381471499316,
+          "max_drawdown": -0.034314189409601424,
+          "trade_count": 63,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -19.611034508338694,
+          "total_return": -0.028410094571837408,
+          "max_drawdown": -0.02830984982670858,
+          "trade_count": 47,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 73,
+      "test_start": "2025-01-07",
+      "test_end": "2025-04-08",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5736911494292752,
+        "lewm_auc": 0.5416894627420943,
+        "xgb_auc": 0.5952170942543215,
+        "awm_auc": 0.5836594840125007
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -15.477945255909104,
+          "total_return": -0.046899090873587235,
+          "max_drawdown": -0.04681185675417179,
+          "trade_count": 116,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -12.62134025877028,
+          "total_return": -0.04120488478089446,
+          "max_drawdown": -0.04112317583330135,
+          "trade_count": 77,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -11.807370994957386,
+          "total_return": -0.03989798957226531,
+          "max_drawdown": -0.03981616925047931,
+          "trade_count": 64,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 74,
+      "test_start": "2025-04-09",
+      "test_end": "2025-07-10",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.52639814152246,
+        "lewm_auc": 0.4766121839126798,
+        "xgb_auc": 0.6043721213251226,
+        "awm_auc": 0.5769866006188207
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -23.285421238370642,
+          "total_return": -0.034664779012978375,
+          "max_drawdown": -0.03428657207570797,
+          "trade_count": 89,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -19.94971840206628,
+          "total_return": -0.028413760273180877,
+          "max_drawdown": -0.02811582822825262,
+          "trade_count": 58,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -24.886214201459946,
+          "total_return": -0.021121371011509238,
+          "max_drawdown": -0.020885208599644493,
+          "trade_count": 35,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 75,
+      "test_start": "2025-07-11",
+      "test_end": "2025-10-08",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.550637899225231,
+        "lewm_auc": 0.5461253721839926,
+        "xgb_auc": 0.5924327589761254,
+        "awm_auc": 0.522344087200002
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -38.64309701151258,
+          "total_return": -0.019305538573725523,
+          "max_drawdown": -0.019070320500137825,
+          "trade_count": 56,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -27.074395229709964,
+          "total_return": -0.014588458785647962,
+          "max_drawdown": -0.014352109327654261,
+          "trade_count": 30,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -29.562845232092656,
+          "total_return": -0.013325939484575056,
+          "max_drawdown": -0.013157024070060344,
+          "trade_count": 24,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 76,
+      "test_start": "2025-10-09",
+      "test_end": "2026-01-08",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.5427308553853453,
+        "lewm_auc": 0.5393317411497687,
+        "xgb_auc": 0.5821367247202672,
+        "awm_auc": 0.5197619002692875
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.55": {
+          "sharpe": -36.15689444615019,
+          "total_return": -0.023828237851300837,
+          "max_drawdown": -0.023767122980351184,
+          "trade_count": 71,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.58": {
+          "sharpe": -32.0803609083699,
+          "total_return": -0.01903933964939941,
+          "max_drawdown": -0.018963118936041235,
+          "trade_count": 42,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "XGBoost_0.6": {
+          "sharpe": -31.580408065655234,
+          "total_return": -0.015100142483922885,
+          "max_drawdown": -0.014996770576328793,
+          "trade_count": 29,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "window": 77,
+      "test_start": "2026-01-09",
+      "test_end": "2026-04-10",
+      "regime": "Normal/Bull",
+      "n_test_obs": 2520,
+      "classification": {
+        "fusion_auc": 0.6020158140977626,
+        "lewm_auc": 0.5472826778668703,
+        "xgb_auc": 0.5365011604284509,
+        "awm_auc": 0.610129424111735
+      },
+      "backtests": {
+        "Fusion_0.55": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.55": {
+          "sharpe": -50.066375274388015,
+          "total_return": -0.0010198014397291288,
+          "max_drawdown": -0.0009744155947429459,
+          "trade_count": 3,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.55": {
+          "sharpe": -28.710026300746343,
+          "total_return": -0.030166332622413083,
+          "max_drawdown": -0.030036236376921783,
+          "trade_count": 89,
+          "win_rate": 0.0
+        },
+        "Fusion_0.58": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.58": {
+          "sharpe": null,
+          "total_return": -0.0004784020624751806,
+          "max_drawdown": -0.00038273996296747117,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.58": {
+          "sharpe": -28.948038178465907,
+          "total_return": -0.02540682373934966,
+          "max_drawdown": -0.025326917168246404,
+          "trade_count": 53,
+          "win_rate": 0.0
+        },
+        "Fusion_0.6": {
+          "sharpe": null,
+          "total_return": 0.0,
+          "max_drawdown": 0.0,
+          "trade_count": 0,
+          "win_rate": null
+        },
+        "Le-WM_0.6": {
+          "sharpe": null,
+          "total_return": -0.0004784020624751806,
+          "max_drawdown": -0.00038273996296747117,
+          "trade_count": 1,
+          "win_rate": 0.0
+        },
+        "XGBoost_0.6": {
+          "sharpe": -28.16623574272693,
+          "total_return": -0.021259578147523328,
+          "max_drawdown": -0.02117933154513026,
+          "trade_count": 39,
+          "win_rate": 0.0
+        }
+      }
+    }
+  ]
+}
