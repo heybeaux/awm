@@ -8,5 +8,8 @@
     "build": "npm run build --workspace=packages/core",
     "test": "npm run test --workspace=packages/core",
     "test:watch": "npm run test:watch --workspace=packages/core"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3", "esbuild"]
   }
 }
