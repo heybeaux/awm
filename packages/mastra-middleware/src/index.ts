@@ -12,6 +12,14 @@
 
 import type { StepPrediction, StepTrace, ACRContext } from '../../core/src/types.js';
 import type { Oracle } from '../../core/src/oracle.js';
+import {
+  ConfigValidationError,
+  requireField,
+  requireOneOf,
+  requireNonEmptyArray,
+  requireStringArray,
+  requireFunction,
+} from '../../core/src/validation.js';
 
 export { wrapStep } from './step-wrapper.js';
 export type { WrapStepConfig, StepDefinition, AWMStepData } from './step-wrapper.js';
@@ -61,6 +69,43 @@ export interface AWMStepContext {
   mode: AWMMode;
 }
 
+// ─── Validation ───
+
+const VALID_MODES: readonly AWMMode[] = ['shadow', 'advisory', 'active'];
+
+/**
+ * Validate AWMMiddlewareConfig inputs at construction time.
+ * Throws ConfigValidationError if any field is invalid.
+ */
+function validateMiddlewareConfig(config: AWMMiddlewareConfig): void {
+  requireField(config.oracle, 'oracle');
+  requireField(config.mode, 'mode');
+  requireOneOf(config.mode, 'mode', VALID_MODES);
+
+  if (config.defaultModels !== undefined) {
+    requireNonEmptyArray(config.defaultModels, 'defaultModels');
+    requireStringArray(config.defaultModels, 'defaultModels');
+  }
+
+  if (config.onPrediction !== undefined) {
+    requireFunction(config.onPrediction, 'onPrediction');
+  }
+
+  if (config.onOutcome !== undefined) {
+    requireFunction(config.onOutcome, 'onOutcome');
+  }
+
+  if (config.fingerprintFn !== undefined) {
+    requireFunction(config.fingerprintFn, 'fingerprintFn');
+  }
+
+  if (config.enableSkipping !== undefined && typeof config.enableSkipping !== 'boolean') {
+    throw new ConfigValidationError(
+      `"enableSkipping" must be a boolean, got ${typeof config.enableSkipping}.`,
+    );
+  }
+}
+
 // ─── Middleware ───
 
 export class AWMMiddleware {
@@ -69,6 +114,8 @@ export class AWMMiddleware {
   private runTraces: Map<string, StepTrace[]> = new Map();
 
   constructor(config: AWMMiddlewareConfig) {
+    validateMiddlewareConfig(config);
+
     this.oracle = config.oracle;
     this.config = {
       onPrediction: () => {},

@@ -18,6 +18,7 @@ import type {
   ApprovalResult,
   StepPrediction,
 } from '@heybeaux/awm-core';
+import { ConfigValidationError } from '@heybeaux/awm-core';
 
 export interface EquityStoreOptions {
   /** Path to the SQLite file. Use ':memory:' for tests. Default: ':memory:'. */
@@ -153,6 +154,31 @@ interface PatternRow {
   source_reasons: string;
 }
 
+/**
+ * Validate EquityStoreOptions at construction time.
+ * Throws ConfigValidationError if any field is invalid.
+ */
+function validateEquityStoreOptions(options: EquityStoreOptions): void {
+  if (options.dbPath !== undefined) {
+    if (typeof options.dbPath !== 'string') {
+      throw new ConfigValidationError(
+        `"dbPath" must be a string, got ${typeof options.dbPath}.`,
+      );
+    }
+    if (options.dbPath.trim() === '') {
+      throw new ConfigValidationError(
+        '"dbPath" must not be an empty string. Use ":memory:" for an in-memory database.',
+      );
+    }
+  }
+
+  if (options.wal !== undefined && typeof options.wal !== 'boolean') {
+    throw new ConfigValidationError(
+      `"wal" must be a boolean, got ${typeof options.wal}.`,
+    );
+  }
+}
+
 export class EquityStore implements AWMStore {
   private db: Database.Database;
 
@@ -166,6 +192,8 @@ export class EquityStore implements AWMStore {
   private upsertPatternStmt: Database.Statement;
 
   constructor(options: EquityStoreOptions = {}) {
+    validateEquityStoreOptions(options);
+
     const dbPath = options.dbPath ?? ':memory:';
     this.db = new Database(dbPath);
     if (dbPath !== ':memory:' && options.wal !== false) {
