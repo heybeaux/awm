@@ -31,9 +31,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Typecheck core
+      - name: Build core
         working-directory: packages/core
-        run: pnpm exec tsc --noEmit
+        run: pnpm exec tsc
 
       - name: Run core tests
         working-directory: packages/core
