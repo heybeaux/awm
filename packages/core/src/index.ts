@@ -11,6 +11,20 @@ export { BeliefEngine } from './beliefs.js';
 export { ModelRouter } from './bandits.js';
 export { ConstraintExtractor } from './constraints.js';
 export { InMemoryStore } from './store.js';
+export {
+  ConfigValidationError,
+  requireField,
+  requireString,
+  requireNumber,
+  requireBoolean,
+  requireFunction,
+  requireRange,
+  requireMin,
+  requirePositive,
+  requireNonEmptyArray,
+  requireStringArray,
+  requireOneOf,
+} from './validation.js';
 
 export type {
   // Trace schema

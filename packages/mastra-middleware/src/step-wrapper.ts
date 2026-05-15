@@ -23,6 +23,13 @@
  */
 
 import type { AWMMiddleware, AWMStepContext } from './index.js';
+import {
+  requireField,
+  requireString,
+  requireNonEmptyArray,
+  requireStringArray,
+  requireFunction,
+} from '../../core/src/validation.js';
 
 /**
  * Configuration for wrapping a step with AWM.
@@ -69,6 +76,34 @@ export interface AWMStepData {
 }
 
 /**
+ * Validate WrapStepConfig inputs.
+ * Throws ConfigValidationError if any field is invalid.
+ */
+function validateWrapStepConfig(stepId: string, config: WrapStepConfig): void {
+  requireField(config.awm, 'awm');
+  requireString(config.workflowType, 'workflowType');
+  requireString(config.defaultModel, 'defaultModel');
+
+  if (config.availableModels !== undefined) {
+    requireNonEmptyArray(config.availableModels, 'availableModels');
+    requireStringArray(config.availableModels, 'availableModels');
+  }
+
+  if (config.getProfileSlug !== undefined) {
+    requireFunction(config.getProfileSlug, 'getProfileSlug');
+  }
+
+  if (config.getSector !== undefined) {
+    requireFunction(config.getSector, 'getSector');
+  }
+
+  // Validate that the step definition has an id
+  if (!stepId || stepId.trim() === '') {
+    throw new Error('"stepDef.id" must be a non-empty string.');
+  }
+}
+
+/**
  * Wrap a Mastra step definition with AWM prediction hooks.
  * Returns a new step definition with the same interface.
  */
@@ -76,6 +111,8 @@ export function wrapStep<TInput extends Record<string, unknown>, TOutput>(
   stepDef: StepDefinition<TInput, TOutput>,
   config: WrapStepConfig,
 ): StepDefinition<TInput, TOutput> {
+  validateWrapStepConfig(stepDef.id, config);
+
   const originalExecute = stepDef.execute;
 
   return {

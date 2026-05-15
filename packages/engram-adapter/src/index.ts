@@ -20,6 +20,7 @@ import type {
   ConstraintPattern,
   TraceQuery,
 } from '@heybeaux/awm-core';
+import { requireString } from '@heybeaux/awm-core';
 
 export interface EngramStoreConfig {
   /** Engram API base URL */
@@ -39,6 +40,16 @@ export class EngramStore implements AWMStore {
   private userId: string;
 
   constructor(config: EngramStoreConfig) {
+    requireString(config.apiUrl, 'apiUrl');
+    requireString(config.apiKey, 'apiKey');
+
+    if (config.namespace !== undefined) {
+      requireString(config.namespace, 'namespace');
+    }
+    if (config.userId !== undefined) {
+      requireString(config.userId, 'userId');
+    }
+
     this.apiUrl = config.apiUrl.replace(/\/$/, '');
     this.apiKey = config.apiKey;
     this.namespace = config.namespace || 'awm';

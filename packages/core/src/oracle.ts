@@ -15,6 +15,11 @@ import type {
 import { BeliefEngine } from './beliefs.js';
 import { ModelRouter } from './bandits.js';
 import { ConstraintExtractor } from './constraints.js';
+import {
+  requireField,
+  requireNumber,
+  requireRange,
+} from './validation.js';
 
 export interface OracleConfig {
   store: AWMStore;
@@ -26,6 +31,29 @@ export interface OracleConfig {
   routingConfidenceThreshold?: number;
 }
 
+/**
+ * Validate OracleConfig inputs at construction time.
+ * Throws ConfigValidationError if any field is invalid.
+ */
+function validateOracleConfig(config: OracleConfig): void {
+  requireField(config.store, 'store');
+
+  if (config.costWeight !== undefined) {
+    requireNumber(config.costWeight, 'costWeight');
+    requireRange(config.costWeight, 'costWeight', -1, 1);
+  }
+
+  if (config.skipConfidenceThreshold !== undefined) {
+    requireNumber(config.skipConfidenceThreshold, 'skipConfidenceThreshold');
+    requireRange(config.skipConfidenceThreshold, 'skipConfidenceThreshold', 0, 1);
+  }
+
+  if (config.routingConfidenceThreshold !== undefined) {
+    requireNumber(config.routingConfidenceThreshold, 'routingConfidenceThreshold');
+    requireRange(config.routingConfidenceThreshold, 'routingConfidenceThreshold', 0, 1);
+  }
+}
+
 export class Oracle {
   private beliefs: BeliefEngine;
   private router: ModelRouter;
@@ -33,6 +61,8 @@ export class Oracle {
   private config: Required<OracleConfig>;
 
   constructor(config: OracleConfig) {
+    validateOracleConfig(config);
+
     this.config = {
       costWeight: 0.3,
       skipConfidenceThreshold: 0.85,
