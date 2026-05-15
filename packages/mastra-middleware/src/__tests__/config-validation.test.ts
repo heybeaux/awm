@@ -321,12 +321,11 @@ describe('wrapStep — config validation', () => {
 
     it('throws when getProfileSlug is not a function', () => {
       expectConfigError(
-        // @ts-expect-error — testing runtime behavior
         () => wrapStep(makeStep(), {
           awm: makeValidMiddleware(),
           workflowType: 'wf',
           defaultModel: 'claude-sonnet-4',
-          getProfileSlug: 'acme',
+          getProfileSlug: 'acme' as any,
         }),
         '"getProfileSlug" must be a function',
       );
@@ -334,12 +333,11 @@ describe('wrapStep — config validation', () => {
 
     it('throws when getSector is not a function', () => {
       expectConfigError(
-        // @ts-expect-error — testing runtime behavior
         () => wrapStep(makeStep(), {
           awm: makeValidMiddleware(),
           workflowType: 'wf',
           defaultModel: 'claude-sonnet-4',
-          getSector: 'tech',
+          getSector: 'tech' as any,
         }),
         '"getSector" must be a function',
       );
