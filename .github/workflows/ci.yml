@@ -33,16 +33,16 @@ jobs:
 
       - name: Typecheck core
         working-directory: packages/core
-        run: npx tsc --noEmit
+        run: pnpm exec tsc --noEmit
 
       - name: Run core tests
         working-directory: packages/core
-        run: npx vitest run
+        run: pnpm exec vitest run
 
       - name: Typecheck engram-adapter
         working-directory: packages/engram-adapter
-        run: npx tsc --noEmit
+        run: pnpm exec tsc --noEmit
 
       - name: Typecheck mastra-middleware
         working-directory: packages/mastra-middleware
-        run: npx tsc --noEmit
+        run: pnpm exec tsc --noEmit
