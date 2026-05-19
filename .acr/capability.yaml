@@ -1,0 +1,49 @@
+name: awm
+type: capability
+version: 1.0.0
+description: "Intent faculty (Agent Workflow Model) — predictive execution protocol for agent pipelines; equity trading signals as the validation domain."
+
+provides:
+  - intent-faculty
+  - workflow-model
+  - signal-generation
+
+requires:
+  tools: []
+  capabilities:
+    - ref: sonder
+      optional: true
+  context: []
+
+budget:
+  index: 20
+  summary: 200
+  standard: 1250
+  deep: 2500
+
+activation:
+  triggers:
+    - type: pattern
+      match: "(awm|agent workflow model|signal logger|daily_signal_logger|regime gate|backtest_v2)"
+  trigger_logic: OR
+  co_activates: []
+  conflicts: []
+
+permissions:
+  data:
+    awm_metadata: read-only
+
+behavioral:
+  core: |
+    When discussing or working on AWM:
+    1. AWM is the INTENT faculty of the Sonder stack. Equity signal generation is the validation domain.
+    2. AWM intentionally trades only bull/crisis regimes — 0 signals on bear/neutral/mean_revert is by design, not broken.
+    3. daily_signal_logger.py takes ~18min (full retrain each run); cron timeout 2700s, inner bash 2400s.
+    4. Announcer runs at 14:45 PT to give runner enough room.
+    5. If runtime ever exceeds 30min, refactor to nightly bake + signal-time inference instead of bumping timeout.
+  overlays: []
+
+verification:
+  checklist:
+    - "Checked regime before assuming 0-signal day is broken"
+    - "Used /Users/beauxwalton/awm tree"
