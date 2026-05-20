@@ -11,7 +11,7 @@ provides:
 requires:
   tools: []
   capabilities:
-    - ref: sonder
+    - name: sonder
       optional: true
   context: []
 
