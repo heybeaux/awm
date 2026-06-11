@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Agent Workflow Model — predictive execution protocol for agent pipelines",
   "type": "module",
+  "packageManager": "pnpm@10.33.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
